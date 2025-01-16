@@ -1,153 +1,121 @@
 'use client'
 
 import {
-  IconBook,
-  IconChartPie3,
-  IconChevronDown,
-  IconCode,
-  IconCoin,
-  IconFingerprint,
-  IconNotification,
-} from '@tabler/icons-react';
-import {
-  Anchor,
   Box,
   Burger,
   Button,
-  Center,
-  Collapse,
   Divider,
   Drawer,
   Group,
-  HoverCard,
   ScrollArea,
-  SimpleGrid,
-  Text,
-  ThemeIcon,
-  UnstyledButton,
-  useMantineTheme,
+  Image,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
-
-const mockdata = [
-  {
-    icon: IconCode,
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
-  },
-  {
-    icon: IconCoin,
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
-  },
-  {
-    icon: IconBook,
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
-  },
-  {
-    icon: IconFingerprint,
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
-  },
-  {
-    icon: IconChartPie3,
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
-  },
-  {
-    icon: IconNotification,
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
-  },
-];
+import { Iconly } from 'react-iconly';
 
 export function HeaderMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
-  const theme = useMantineTheme();
-
-  const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group wrap="nowrap" align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.colors.blue[6]} />
-        </ThemeIcon>
-        <div>
-          <Text size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" c="dimmed">
-            {item.description}
-          </Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-  ));
 
   return (
     <Box pb={120}>
-      <header className={classes.header}>
+      <header className={classes.header} style={{borderBottom: 'none', height: '100px'}}>
         <Group justify="space-between" h="100%">
-          {/* <MantineLogo size={30} /> */}
+          <Image
+            alt="logo"
+            src="/logo.png"
+            style={{ width: "100%", height: "100%" }}
+          />
 
-          <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
-              Home
+          <Group h="100%" gap="24px" visibleFrom="sm" style={{ alignItems: "center" }}>
+            <a
+              href="#"
+              className={classes.link}
+              style={{
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px", // Add space for the red dot
+              }}
+            >
+              ABOUT ME
+              <span
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "50%",
+                  top: "100%",
+                  transform: "translateX(-50%)",
+                  width: "4px",
+                  height: "4px",
+                  backgroundColor: "red",
+                  borderRadius: "50%",
+                  display: "block",
+                }}
+              ></span>
             </a>
-            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
-              <HoverCard.Target>
-                <a href="#" className={classes.link}>
-                  <Center inline>
-                    <Box component="span" mr={5}>
-                      Features
-                    </Box>
-                    <IconChevronDown size={16} color={theme.colors.blue[6]} />
-                  </Center>
-                </a>
-              </HoverCard.Target>
-
-              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
-                <Group justify="space-between" px="md">
-                  <Text fw={500}>Features</Text>
-                  <Anchor href="#" fz="xs">
-                    View all
-                  </Anchor>
-                </Group>
-
-                <Divider my="sm" />
-
-                <SimpleGrid cols={2} spacing={0}>
-                  {links}
-                </SimpleGrid>
-
-                <div className={classes.dropdownFooter}>
-                  <Group justify="space-between">
-                    <div>
-                      <Text fw={500} fz="sm">
-                        Get started
-                      </Text>
-                      <Text size="xs" c="dimmed">
-                        Their food sources have decreased, and their numbers
-                      </Text>
-                    </div>
-                    <Button variant="default">Get started</Button>
-                  </Group>
-                </div>
-              </HoverCard.Dropdown>
-            </HoverCard>
-            <a href="#" className={classes.link}>
-              Learn
+            <a
+              href="#"
+              className={classes.link}
+              style={{
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px", // Add space for the red dot
+              }}
+            >
+              MARKET
             </a>
-            <a href="#" className={classes.link}>
-              Academy
+            <a
+              href="#"
+              className={classes.link}
+              style={{
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px", // Add space for the red dot
+              }}
+            >
+              PROJECTS
             </a>
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button variant="default" style={{
+              background: "#FFFFFF",
+              height: "45px",
+              borderRadius: "12px",
+              color: "#000000",
+              fontFamily: "Manrope",
+              fontSize: "16px",
+              fontWeight: "600"
+            }}>SAY “HELLO!</Button>
+
+            <Button
+              variant="default"
+              style={{
+                background: "#171717",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                height: "45px",
+                borderRadius: "12px",
+                color: "#FFFFFF",
+                fontFamily: "Manrope",
+                fontSize: "16px",
+                fontWeight: "600",
+                display: "flex", // Flexbox layout
+                alignItems: "center", // Vertically align icon and text
+                gap: "50px", // Space between icon and text
+              }}
+            >
+              RESUME
+              <Iconly name="Download" set="bold" size="medium" primaryColor="#FFFFFF" />
+            </Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -169,15 +137,6 @@ export function HeaderMenu() {
           <a href="#" className={classes.link}>
             Home
           </a>
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Features
-              </Box>
-              <IconChevronDown size={16} color={theme.colors.blue[6]} />
-            </Center>
-          </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
             Learn
           </a>

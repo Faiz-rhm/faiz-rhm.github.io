@@ -1,7 +1,8 @@
+import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { HeaderMenu } from "@/components/header/HeaderMenu";
-import { ColorSchemeScript, MantineProvider, createTheme } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "./globals.css";
 
 const geistSans = Geist({
