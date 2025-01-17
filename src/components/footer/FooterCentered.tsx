@@ -1,7 +1,7 @@
 'use client';
 
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import { ActionIcon, Anchor, Group, Image } from '@mantine/core';
+import { ActionIcon, Anchor, Container, Group, Image } from '@mantine/core';
 import classes from './FooterCentered.module.css';
 
 const links = [
@@ -28,7 +28,7 @@ export function FooterCentered() {
 
   return (
     <div className={classes.footer}>
-      <div className={classes.inner}>
+      <Container className={classes.inner} size="xl">
         <Image
           alt="logo"
           src="/logo.png"
@@ -48,7 +48,7 @@ export function FooterCentered() {
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
-      </div>
+      </Container>
     </div>
   );
 }
