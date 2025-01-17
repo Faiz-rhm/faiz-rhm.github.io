@@ -14,7 +14,6 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
-import { Iconly } from 'react-iconly';
 import { IconDownload } from '@tabler/icons-react';
 
 export function HeaderMenu() {
