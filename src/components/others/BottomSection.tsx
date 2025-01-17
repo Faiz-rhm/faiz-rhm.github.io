@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Flex, Text, Button, Group } from "@mantine/core";
-import { Iconly } from "react-iconly";
+import { Container, Flex, Text, Button, Group, ActionIcon } from "@mantine/core";
+import { IconDownload } from "@tabler/icons-react";
 
 const BottomSection = () => {
   return (
@@ -89,7 +89,9 @@ const BottomSection = () => {
             }}
           >
             RESUME
-            <Iconly name="Download" set="bold" size="medium" primaryColor="#FFFFFF" />
+            <ActionIcon size="lg" color="gray" variant="subtle">
+              <IconDownload size={18} stroke={1.5} />
+            </ActionIcon>
           </Button>
         </Group>
       </Flex>
