@@ -10,6 +10,9 @@ import { Box, Button, Container, Flex, Text } from '@mantine/core';
 import Chip from "../components/others/Chip";
 import CustomCard from "@/components/card/CustomCard";
 import ProjectCard from "../components/others/ProjectCard";
+import CircleButton from "../components/others/CircleButton";
+import CircularButton from "../components/others/CircleButton";
+import MarketTitle from "../components/others/MarketTitle";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -89,6 +92,14 @@ export default function Home() {
         ]}
         swapColumns={true}
       />
+
+      <Box pb={100} />
+
+      <MarketTitle />
+
+      <CustomDivider/>
+
+
 
 
 

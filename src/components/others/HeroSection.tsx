@@ -25,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <Box style={{ flex: 1, minWidth: "300px" }}>
           <Text
             style={{
-              color: "#F5F5F0",
+              color: "#818181",
               fontSize: "32px",
               fontWeight: "400",
               fontFamily: "Caveat",
