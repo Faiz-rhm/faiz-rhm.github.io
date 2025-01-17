@@ -14,6 +14,18 @@
   }
 }
 
+@font-face {
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-Regular.ttf") format("truetype"),
+       url("/fonts/Caveat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Bold.ttf") format("truetype"),
+       url("/fonts/Manrope-Bold.ttf") format("truetype");
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

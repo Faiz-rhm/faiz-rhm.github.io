@@ -1,8 +1,14 @@
-import { Flex, Text, Button } from "@mantine/core";
+import { Flex, Text, Button, Image } from "@mantine/core";
+
+interface ButtonWithImage {
+  label: string; // Button label text
+  href?: string; // Optional link
+  image?: string; // Optional image
+}
 
 interface CenteredSectionProps {
   text: string; // The main text to display
-  buttons: { label: string; href?: string }[]; // Array of button data
+  buttons: ButtonWithImage[]; // Array of buttons with optional images
 }
 
 const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
@@ -10,7 +16,7 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
     <Flex
       direction="column" // Stack text and buttons vertically
       align="center" // Center items horizontally
-      justify="center" // Center items vertically (if needed)
+      justify="center" // Center items vertically
       style={{ gap: "24px", marginTop: "16px", textAlign: "center" }} // Add spacing and center text
     >
       {/* Centered Text */}
@@ -22,8 +28,7 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
           background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          marginRight: "650px",
-          marginLeft: "650px",
+          maxWidth: "650px", // Restrict text width
         }}
       >
         {text}
@@ -31,26 +36,40 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
 
       {/* Buttons */}
       <Flex align="center" justify="center" style={{ gap: "16px" }}>
-        {buttons.map(({ label, href }, index) => (
+        {buttons.map(({ label, href, image }, index) => (
           <Button
             key={index}
             variant="default"
             component="a"
             href={href}
             style={{
-              background: href ? "#171717" : "#FFFFFF", // Light or dark background based on href
-              border: href ? "1px solid rgba(255, 255, 255, 0.2)" : "none",
+              background: image ? "#FFFFFF" : "#171717",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
               height: "45px",
               borderRadius: "12px",
-              color: href ? "#FFFFFF" : "#000000", // Black text for light button, white for dark
+              color: image ? "#171717" : "#FFFFFF",
               fontFamily: "Manrope",
               fontSize: "16px",
               fontWeight: "600",
               display: "flex",
               alignItems: "center",
               gap: "10px",
+              padding: "0 16px", // Add horizontal padding
             }}
           >
+            {/* Optional Image */}
+            {image && (
+              <img
+                src={image}
+                alt={label}
+                style={{
+                  width: "24px", // Set explicit width
+                  height: "24px", // Set explicit height
+                  objectFit: "contain", // Maintain aspect ratio
+                  borderRadius: "4px", // Optional: Rounded corners
+                }}
+              />
+            )}
             {label}
           </Button>
         ))}

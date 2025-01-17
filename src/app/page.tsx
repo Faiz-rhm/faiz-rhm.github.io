@@ -16,21 +16,20 @@ const buttons = [
 ];
 
 const sections = [
-  { label: "BUY ME A COFFEE", href: "/buy-me-a-coffee" },
+  { label: "BUY ME A COFFEE", href: "/buy-me-a-coffee", image: "/images/coffee.png" },
   { label: "ALL PROJECTS", href: "/projects" },
 ];
 
-
 export default function Home() {
   const images = [
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
-    "/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
+    "/images/logo.png",
   ].map((image) => ({
     id: crypto.randomUUID(),
     image,
@@ -46,7 +45,7 @@ export default function Home() {
       />
 
       <Box>
-          <BannerAnimation images={images} speed={5000} />
+          <BannerAnimation images={images} speed={5000}  imageHeight={600} />
       </Box>
 
       <Container size="xl">
@@ -72,7 +71,7 @@ export default function Home() {
           my="xl" // Margin above and below
           style={{
             borderTop: "1px solid rgba(255, 255, 255, 0.2)", // White color with 50% opacity
-            margin: "30px auto 30px", // Center the divider horizontally
+            margin: "50px auto 100px", // Center the divider horizontally
           }}
         />
       </Container>
@@ -82,6 +81,16 @@ export default function Home() {
         buttons={sections}
       />
 
+      <Container size="xl">
+        <Divider
+          size="xl" // Length of the divider
+          my="xl" // Margin above and below
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.2)", // White color with 50% opacity
+            margin: "100px auto 50px", // Center the divider horizontally
+          }}
+        />
+      </Container>
 
 
 

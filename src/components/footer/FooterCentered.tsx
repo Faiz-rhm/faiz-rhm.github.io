@@ -31,7 +31,7 @@ export function FooterCentered() {
       <Container className={classes.inner} size="xl">
         <Image
           alt="logo"
-          src="/logo.png"
+          src="/images/logo.png"
           style={{ width: "5%", height: "5%" }}
         />
 

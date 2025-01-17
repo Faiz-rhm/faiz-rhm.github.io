@@ -26,7 +26,7 @@ export function HeaderMenu() {
             {/* Logo */}
             <Image
               alt="logo"
-              src="/logo.png"
+              src="/images/logo.png"
               style={{ width: "5%", height: "5%" }}
             />
 
