@@ -11,6 +11,25 @@ const Photo = styled.img`
   object-position: center;
 `;
 
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* Adjust width for the fade effect */
+  pointer-events: none; /* Allow interactions with the marquee */
+  z-index: 2;
+`;
+
+const LeftOverlay = styled(Overlay)`
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+`;
+
+const RightOverlay = styled(Overlay)`
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+`;
+
 const images = [
   { id: "1", image: "/images/logo.png" },
   { id: "2", image: "/images/logo.png" },
@@ -20,9 +39,13 @@ const images = [
 ];
 
 const Reviews = () => (
-  <div>
+  <div style={{ position: "relative", height: 600 }}>
+    {/* Overlays */}
+    <LeftOverlay />
+    <RightOverlay />
+
     {/* Marquee Section */}
-    <div style={{ height: 600 }}>
+    <div style={{ height: "100%", overflow: "hidden" }}>
       <Marquee
         velocity={25}
         direction="rtl"
