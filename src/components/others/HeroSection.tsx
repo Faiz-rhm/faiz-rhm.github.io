@@ -1,4 +1,6 @@
+import React from "react";
 import { Container, Flex, Box, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 interface HeroSectionProps {
   heading: string; // The main heading
@@ -13,22 +15,32 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageSrc,
   altText,
 }) => {
+  const isMobile = useMediaQuery("(max-width: 768px)"); // Mobile breakpoint
+
   return (
     <Container size="xl">
       <Flex
-        align="center"
-        justify="space-between"
-        wrap="wrap"
+        direction={isMobile ? "column" : "row"} // Stack on mobile, row on larger screens
+        align={isMobile ? "center" : "center"} // Center items vertically
+        justify="space-between" // Adjust space on larger screens
+        wrap="nowrap"
         style={{ gap: "32px" }} // Space between the text and image
       >
         {/* Left Side - Text Content */}
-        <Box style={{ flex: 1, minWidth: "300px" }}>
+        <Box
+          style={{
+            flex: isMobile ? "0 1 auto" : "1 1 auto", // Adjust flex for mobile
+            textAlign: isMobile ? "center" : "left", // Center text on mobile
+            minWidth: "300px",
+          }}
+        >
           <Text
             style={{
               color: "#818181",
-              fontSize: "32px",
+              fontSize: isMobile ? "24px" : "32px", // Smaller text on mobile
               fontWeight: "400",
               fontFamily: "Caveat",
+              marginBottom: isMobile ? "16px" : "0", // Add spacing below subheading on mobile
             }}
           >
             {subheading}
@@ -36,13 +48,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
           <Text
             style={{
-              fontSize: "64px",
+              fontSize: isMobile ? "48px" : "64px", // Smaller heading on mobile
               fontWeight: "400",
               fontFamily: "Manrope",
-              background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient from red to blue
+              background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient for text
               WebkitBackgroundClip: "text", // Clips background to text
               backgroundClip: "text", // Ensures compatibility
               WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
+              textAlign: isMobile ? "center" : "left", // Center text on mobile
             }}
           >
             {heading}
@@ -50,14 +63,21 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </Box>
 
         {/* Right Side - Image */}
-        <Box style={{ flex: "0 0 auto", minWidth: "150px" }}>
+        <Box
+          style={{
+            flex: "0 0 auto",
+            minWidth: isMobile ? "100%" : "150px", // Full width on mobile
+            display: "flex",
+            justifyContent: isMobile ? "center" : "flex-end", // Center on mobile
+          }}
+        >
           <img
             src={imageSrc}
             alt={altText}
             style={{
-              height: "139px",
-              width: "139px",
-              borderRadius: "50%", // Optional: Makes the image circular
+              height: isMobile ? "200px" : "139px", // Larger image on mobile
+              width: isMobile ? "200px" : "139px",
+              borderRadius: "50%", // Makes the image circular
             }}
           />
         </Box>
