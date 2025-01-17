@@ -53,6 +53,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           {description}
         </Text>
 
+        <Box pb={20} />
 
           {/* Top Row of Buttons */}
           <Flex

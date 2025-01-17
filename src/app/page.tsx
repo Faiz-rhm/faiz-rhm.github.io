@@ -6,7 +6,10 @@ import CustomDivider from "../components/others/CustomDivider";
 import AboutSection from "../components/others/AboutSection";
 import HeroSection from "../components/others/HeroSection";
 import Reviews from "../components/others/Review";
-import { Box,} from '@mantine/core';
+import { Box, Button, Container, Flex, Text } from '@mantine/core';
+import Chip from "../components/others/Chip";
+import CustomCard from "@/components/card/CustomCard";
+import ProjectCard from "../components/others/ProjectCard";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -59,6 +62,35 @@ export default function Home() {
       <Box pb={50} />
 
       <CustomDivider/>
+
+      <ProjectCard
+        chipText="FLUTTER"
+        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
+        buttonLabel="FULL CASE STUDY"
+        cards={[
+          {
+            image:
+              "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+          },
+        ]}
+      />
+
+      <CustomDivider/>
+
+      <ProjectCard
+        chipText="FLUTTER"
+        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
+        buttonLabel="FULL CASE STUDY"
+        cards={[
+          {
+            image:
+              "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+          },
+        ]}
+        swapColumns={true}
+      />
+
+
 
 
 
