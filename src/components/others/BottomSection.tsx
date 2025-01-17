@@ -27,7 +27,6 @@ const BottomSection = () => {
           right: "0",
           bottom: "0",
           zIndex: 10,
-          background: "rgba(0, 0, 0, 0.5)", // Optional dark overlay
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
