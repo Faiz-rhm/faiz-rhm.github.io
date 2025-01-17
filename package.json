@@ -13,10 +13,13 @@
     "@mantine/core": "^7.16.0",
     "@mantine/hooks": "^7.16.0",
     "@tabler/icons-react": "^3.28.1",
+    "lodash": "^4.17.21",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-iconly": "^2.2.10"
+    "react-iconly": "^2.2.10",
+    "react-marquee-slider": "^1.1.5",
+    "styled-components": "^6.1.14"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,11 +1,11 @@
 'use client'
 
 import { FooterCentered } from "../components/footer/FooterCentered";
-import { Box, Button, Container, Divider, Flex, Text} from '@mantine/core';
-import { BannerAnimation } from '@/components/banner/BannerAnimation';
+import { Box, Container, Divider} from '@mantine/core';
 import HeroSection from "../components/others/HeroSection";
 import AboutSection from "../components/others/AboutSection";
 import CenteredSection from "../components/others/CenterSection";
+import Reviews from "../components/others/Review";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -16,7 +16,7 @@ const buttons = [
 ];
 
 const sections = [
-  { label: "BUY ME A COFFEE", href: "/buy-me-a-coffee", image: "/images/coffee.png" },
+  { label: "BUY ME A COFFEE", href: "https://ko-fi.com/faizrhm", image: "/images/coffee.png" },
   { label: "ALL PROJECTS", href: "/projects" },
 ];
 
@@ -41,14 +41,12 @@ export default function Home() {
 
       <HeroSection
         heading="Helping Digital founders Craft unique, Empathic Applications"
-        subheading="🤟Hello, I am Chris, a Flutter developer based in Dubai Emirate"
+        subheading="🤟Hello, I am Faiz Rhm, "
         imageSrc="/images/logo.png"
-        altText="Chris"
+        altText="Faiz Rhm"
       />
 
-      <Box>
-          <BannerAnimation images={images} speed={5000}  imageHeight={600} />
-      </Box>
+      <Reviews />
 
       <Container size="xl">
         <Divider
