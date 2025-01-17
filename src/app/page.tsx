@@ -1,18 +1,16 @@
 'use client'
 
 import { FooterCentered } from "../components/footer/FooterCentered";
+import ProductCarousel from "../components/others/ProductCarousel";
 import CenteredSection from "../components/others/CenterSection";
 import CustomDivider from "../components/others/CustomDivider";
+import BottomSection from "../components/others/BottomSection";
 import AboutSection from "../components/others/AboutSection";
 import HeroSection from "../components/others/HeroSection";
-import Reviews from "../components/others/Review";
-import { Box, Button, Container, Flex, Text } from '@mantine/core';
-import Chip from "../components/others/Chip";
-import CustomCard from "@/components/card/CustomCard";
 import ProjectCard from "../components/others/ProjectCard";
-import CircleButton from "../components/others/CircleButton";
-import CircularButton from "../components/others/CircleButton";
 import MarketTitle from "../components/others/MarketTitle";
+import Reviews from "../components/others/Review";
+import { Box } from '@mantine/core';
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -25,6 +23,79 @@ const buttons = [
 const sections = [
   { label: "BUY ME A COFFEE", href: "https://ko-fi.com/faizrhm", image: "/images/coffee.png" },
   { label: "ALL PROJECTS", href: "/projects" },
+];
+
+const products = [
+  {
+    id: "1",
+    name: "Product 1",
+    description: "This is a brief description of product 1.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$100",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "This is a brief description of product 2.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$200",
+  },
+  {
+    id: "1",
+    name: "Product 1",
+    description: "This is a brief description of product 1.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$100",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "This is a brief description of product 2.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$200",
+  },
+  {
+    id: "1",
+    name: "Product 1",
+    description: "This is a brief description of product 1.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$100",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "This is a brief description of product 2.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$200",
+  },
+  {
+    id: "1",
+    name: "Product 1",
+    description: "This is a brief description of product 1.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$100",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "This is a brief description of product 2.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$200",
+  },
+  {
+    id: "1",
+    name: "Product 1",
+    description: "This is a brief description of product 1.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$100",
+  },
+  {
+    id: "2",
+    name: "Product 2",
+    description: "This is a brief description of product 2.",
+    image: "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+    price: "$200",
+  },
 ];
 
 export default function Home() {
@@ -98,6 +169,13 @@ export default function Home() {
       <MarketTitle />
 
       <CustomDivider/>
+
+      <ProductCarousel products={products} />
+
+      <Box pb={100} />
+
+      <BottomSection/>
+
 
 
 
