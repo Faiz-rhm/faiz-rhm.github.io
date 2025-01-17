@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Flex, Box, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import CircularButton from "@/components/others/CircleButton"; // Ensure CircularButton is available
+import {IconArrowNarrowLeft, IconArrowNarrowRight} from "@tabler/icons-react";
 
 const MarketTitle = () => {
   const isMobile = useMediaQuery("(max-width: 768px)"); // Define mobile breakpoint
@@ -69,13 +70,13 @@ const MarketTitle = () => {
             }}
           >
             <CircularButton
-              label="+" // Text inside the button
+              icon={<IconArrowNarrowLeft size={18} stroke={1.5} />}
               borderColor="#303030" // Dark border
               size="60px" // Button size
               onClick={() => alert("Clicked Plus Button!")} // Click handler
             />
             <CircularButton
-              label="+" // Text inside the button
+              icon={<IconArrowNarrowRight size={18} stroke={1.5} />}
               borderColor="#ADA9A9" // Light gray border
               size="60px" // Button size
               onClick={() => alert("Clicked Plus Button!")} // Click handler

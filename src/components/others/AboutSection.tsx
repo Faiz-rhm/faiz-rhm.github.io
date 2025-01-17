@@ -1,4 +1,5 @@
-import { Container, Flex, Box, Text, Button } from "@mantine/core";
+import { Container, Flex, Box, Text, Button, ActionIcon } from "@mantine/core";
+import { IconArrowUpRight } from "@tabler/icons-react";
 
 interface AboutSectionProps {
   heading: string; // Heading text (e.g., "[ ABOUT ME ]")
@@ -81,6 +82,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 }}
               >
                 {label}
+                <ActionIcon size="lg" color="gray" variant="subtle">
+                  <IconArrowUpRight size={18} stroke={1.5} />
+                </ActionIcon>
               </Button>
             ))}
           </Flex>
@@ -111,6 +115,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 }}
               >
                 {label}
+                <ActionIcon size="lg" color="gray" variant="subtle">
+                  <IconArrowUpRight size={18} stroke={1.5} />
+                </ActionIcon>
               </Button>
             ))}
           </Flex>

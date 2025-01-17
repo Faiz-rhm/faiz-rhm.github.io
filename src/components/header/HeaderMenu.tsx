@@ -10,10 +10,12 @@ import {
   ScrollArea,
   Image,
   Container,
+  ActionIcon,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 import { Iconly } from 'react-iconly';
+import { IconDownload } from '@tabler/icons-react';
 
 export function HeaderMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -124,7 +126,9 @@ export function HeaderMenu() {
                 }}
               >
                 RESUME
-                <Iconly name="Download" set="bold" size="medium" primaryColor="#FFFFFF" />
+                <ActionIcon size="lg" color="gray" variant="subtle">
+                  <IconDownload size={18} stroke={1.5} />
+                </ActionIcon>
               </Button>
             </Group>
 
