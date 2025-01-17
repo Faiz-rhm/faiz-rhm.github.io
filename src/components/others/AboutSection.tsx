@@ -11,9 +11,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   description,
   buttons,
 }) => {
-  // Split buttons into two rows (2 buttons per row)
-  const topRow = buttons.slice(0, 2);
-  const bottomRow = buttons.slice(2, 4);
+  // Split buttons into two rows: 2 on top, 3 on bottom
+  const topRow = buttons.slice(0, 2); // First 2 buttons
+  const bottomRow = buttons.slice(2); // Remaining 3 buttons
 
   return (
     <Container size="xl">
@@ -30,7 +30,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
               color: "#F5F5F0",
               fontSize: "16px",
               fontWeight: "600",
-              fontFamily: "Caveat",
+              fontFamily: "Manrope",
             }}
           >
             {heading}

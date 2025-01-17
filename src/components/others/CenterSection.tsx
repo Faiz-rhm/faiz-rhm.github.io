@@ -28,11 +28,13 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
           background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
-          maxWidth: "650px", // Restrict text width
+          display: "inline-block", // Important for gradient text to work properly
+          maxWidth: "700px", // Restrict text width
         }}
       >
         {text}
       </Text>
+
 
       {/* Buttons */}
       <Flex align="center" justify="center" style={{ gap: "16px" }}>
