@@ -57,6 +57,9 @@ const BottomSection = () => {
         <Group style={{ gap: "16px" }}>
           <Button
             variant="default"
+            onClick={() => {
+              window.location.href = "mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.";
+            }}
             style={{
               background: "#FFFFFF",
               height: "45px",
@@ -65,7 +68,6 @@ const BottomSection = () => {
               fontFamily: "Manrope",
               fontSize: "16px",
               fontWeight: "600",
-              padding: "0 24px", // Add padding for better button size
             }}
           >
             SAY “HELLO!”

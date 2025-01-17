@@ -95,6 +95,9 @@ export function HeaderMenu() {
             <Group visibleFrom="sm" style={{ marginLeft: "auto" }}>
               <Button
                 variant="default"
+                onClick={() => {
+                  window.location.href = "mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.";
+                }}
                 style={{
                   background: "#FFFFFF",
                   height: "45px",
@@ -107,6 +110,7 @@ export function HeaderMenu() {
               >
                 SAY “HELLO!”
               </Button>
+
 
               <Button
                 variant="default"
