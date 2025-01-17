@@ -1,6 +1,6 @@
 'use client'
 
-import { FooterCentered } from "../components/footer/FooterCentered";
+import { Footer } from "../components/footer/Footer";
 import ProductCarousel from "../components/others/ProductCarousel";
 import CenteredSection from "../components/others/CenterSection";
 import CustomDivider from "../components/others/CustomDivider";
@@ -176,17 +176,11 @@ export default function Home() {
 
       <BottomSection/>
 
+      <CustomDivider/>
 
+      <Footer/>
 
-
-
-
-
-
-
-
-
-      <FooterCentered/>
+      <Box pb={50} />
     </>
   );
 }
