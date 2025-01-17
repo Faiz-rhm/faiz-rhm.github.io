@@ -39,18 +39,20 @@ const AboutSection: React.FC<AboutSectionProps> = ({
 
         {/* Right Side - Description and Buttons */}
         <Box style={{ flex: 1, minWidth: "300px" }}>
-          <Text
-            style={{
-              fontSize: "32px",
-              fontWeight: "400",
-              fontFamily: "Manrope",
-              background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            {description}
-          </Text>
+        <Text
+          style={{
+            fontSize: "32px",
+            fontWeight: "400",
+            fontFamily: "Manrope",
+            background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient from red to blue
+            WebkitBackgroundClip: "text", // Clips background to text
+            backgroundClip: "text", // Ensures compatibility
+            WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
+          }}
+        >
+          {description}
+        </Text>
+
 
           {/* Top Row of Buttons */}
           <Flex

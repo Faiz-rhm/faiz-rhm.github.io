@@ -37,11 +37,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <Text
             style={{
               fontSize: "64px",
-              fontWeight: "600",
+              fontWeight: "400",
               fontFamily: "Manrope",
-              background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient from red to blue
+              WebkitBackgroundClip: "text", // Clips background to text
+              backgroundClip: "text", // Ensures compatibility
+              WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
             }}
           >
             {heading}

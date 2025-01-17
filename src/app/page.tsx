@@ -1,18 +1,19 @@
 'use client'
 
 import { FooterCentered } from "../components/footer/FooterCentered";
-import { Box, Container, Divider} from '@mantine/core';
-import HeroSection from "../components/others/HeroSection";
-import AboutSection from "../components/others/AboutSection";
 import CenteredSection from "../components/others/CenterSection";
+import CustomDivider from "../components/others/CustomDivider";
+import AboutSection from "../components/others/AboutSection";
+import HeroSection from "../components/others/HeroSection";
 import Reviews from "../components/others/Review";
+import { Box,} from '@mantine/core';
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
-  { label: "X", href: "https://twitter.com/faiz_rhm" },
   { label: "INSTAGRAM", href: "https://www.instagram.com/faiz.rhm/" },
   { label: "LINKEDIN", href: "https://www.linkedin.com/in/faiz-rhm/" },
   { label: "MEDIUM", href: "https://medium.com/@Faiz_Rhm" },
+  { label: "X", href: "https://twitter.com/faiz_rhm" },
 ];
 
 const sections = [
@@ -21,20 +22,6 @@ const sections = [
 ];
 
 export default function Home() {
-  const images = [
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-    "/images/logo.png",
-  ].map((image) => ({
-    id: crypto.randomUUID(),
-    image,
-  }));
-
   return (
     <>
       <Box pb={100} />
@@ -48,16 +35,7 @@ export default function Home() {
 
       <Reviews />
 
-      <Container size="xl">
-        <Divider
-          size="xl" // Length of the divider
-          my="xl" // Margin above and below
-          style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.2)", // White color with 50% opacity
-            margin: "30px auto 30px", // Center the divider horizontally
-          }}
-        />
-      </Container>
+      <CustomDivider/>
 
       <Box pb={30} />
 
@@ -69,15 +47,7 @@ export default function Home() {
 
       <Box pb={30} />
 
-      <Container size="xl">
-        <Divider
-          size="xl" // Length of the divider
-          my="xl" // Margin above and below
-          style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.2)", // White color with 50% opacity
-          }}
-        />
-      </Container>
+      <CustomDivider/>
 
       <Box pb={30} />
 
@@ -88,15 +58,7 @@ export default function Home() {
 
       <Box pb={50} />
 
-      <Container size="xl">
-        <Divider
-          size="xl" // Length of the divider
-          my="xl" // Margin above and below
-          style={{
-            borderTop: "1px solid rgba(255, 255, 255, 0.2)", // White color with 50% opacity
-          }}
-        />
-      </Container>
+      <CustomDivider/>
 
 
 

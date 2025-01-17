@@ -25,11 +25,11 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
           fontSize: "32px",
           fontWeight: "400",
           fontFamily: "Manrope",
-          background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          display: "inline-block", // Important for gradient text to work properly
-          maxWidth: "700px", // Restrict text width
+          background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient from red to blue
+          WebkitBackgroundClip: "text", // Clips background to text
+          backgroundClip: "text", // Ensures compatibility
+          WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
+          maxWidth: "700px", // Limit text width
         }}
       >
         {text}
