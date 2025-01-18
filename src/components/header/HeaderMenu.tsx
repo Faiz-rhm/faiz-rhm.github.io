@@ -133,8 +133,7 @@ export function HeaderMenu() {
               <Button
                 variant="default"
                 onClick={() => {
-                  window.location.href =
-                    'mailto:faiz199011@gmail.com';
+                  window.open('mailto:faiz199011@gmail.com', '_blank');
                 }}
                 style={{
                   background: '#FFFFFF',

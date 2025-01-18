@@ -57,17 +57,16 @@ const BottomSection = () => {
           <Button
             variant="default"
             onClick={() => {
-              window.location.href =
-                'mailto:faiz199011@gmail.com';
+              window.open('mailto:faiz199011@gmail.com', '_blank');
             }}
             style={{
-              background: "#FFFFFF",
-              height: "45px",
-              borderRadius: "12px",
-              color: "#000000",
-              fontFamily: "Manrope",
-              fontSize: "16px",
-              fontWeight: "600",
+              background: '#FFFFFF',
+              height: '45px',
+              borderRadius: '12px',
+              color: '#000000',
+              fontFamily: 'Manrope',
+              fontSize: '16px',
+              fontWeight: '600',
             }}
           >
             SAY “HELLO!”
