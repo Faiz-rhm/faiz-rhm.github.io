@@ -50,7 +50,7 @@ export function HeaderMenu() {
         }}
       >
         <Container size="xl" style={{ marginTop: '15px', marginBottom: '20px', position: 'relative' }}>
-          <Group justify="flex-start" h="100%" style={{ gap: '50px' }}>
+          <Group justify="flex-start" h="100%" style={{ gap: '70px' }}>
             {/* Logo */}
             <Image
               alt="logo"
@@ -83,7 +83,7 @@ export function HeaderMenu() {
                 }}
               >
                 ABOUT ME
-                <span
+                {/* <span
                   style={{
                     position: 'absolute',
                     bottom: '0',
@@ -96,7 +96,7 @@ export function HeaderMenu() {
                     borderRadius: '50%',
                     display: 'block',
                   }}
-                ></span>
+                ></span> */}
               </a>
               <a
                 href="/market"
@@ -218,7 +218,7 @@ export function HeaderMenu() {
               }}
             >
               ABOUT ME
-              <span
+              {/* <span
                 style={{
                   position: 'absolute',
                   bottom: '0',
@@ -231,7 +231,7 @@ export function HeaderMenu() {
                   borderRadius: '50%',
                   display: 'block',
                 }}
-              ></span>
+              ></span> */}
             </a>
             <a
               href="/market"
