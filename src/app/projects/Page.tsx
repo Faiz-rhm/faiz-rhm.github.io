@@ -12,8 +12,8 @@ export default function Projects() {
       <Box pb={50} />
 
       <HeroSection
-        heading="Creating Unforgettable Digital Impressions"
-        subheading="🤟 My Works "
+        heading="Explore the projects I've worked on, from concept to completion"
+        subheading="🤟Things I've Built "
         altText="Faiz Rhm"
       />
 
