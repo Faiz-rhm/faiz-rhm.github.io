@@ -8,7 +8,7 @@
   padding-right: var(--mantine-spacing-md);
   border-bottom: 1px solid var(--mantine-color-gray-3);
   background-color: var(--mantine-color-gray-0); /* Light mode */
-  background-color: var(--mantine-color-dark-10); /* Dark mode */
+  background-color: var(--mantine-color-dark-9); /* Dark mode */
   z-index: 1000;
 }
 

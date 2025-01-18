@@ -1,5 +1,6 @@
-'use client'
+'use client';
 
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Burger,
@@ -13,51 +14,87 @@ import {
   ActionIcon,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import classes from './HeaderMegaMenu.module.css';
 import { IconDownload } from '@tabler/icons-react';
+import classes from './HeaderMegaMenu.module.css';
 
 export function HeaderMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Box pb={120}>
-      <header className={classes.header} style={{ borderBottom: 'none' }}>
-        <Container size="xl" style={{ marginTop: "20px" }}>
-          <Group justify="flex-start" h="100%" style={{ gap: "50px" }}>
+      <header
+        className={classes.header}
+        style={{
+          borderBottom: 'none',
+          backgroundColor: isScrolled
+            ? 'var(--mantine-color-dark-9)'
+            : 'var(--mantine-color-dark-10)', // Change background on scroll
+          transition: 'background-color 0.3s ease', // Smooth transition
+        }}
+      >
+        <Container size="xl" style={{ marginTop: '20px', position: 'relative' }}>
+          <Group justify="flex-start" h="100%" style={{ gap: '50px' }}>
             {/* Logo */}
             <Image
               alt="logo"
               src="/images/logo.png"
-              style={{ width: "5%", height: "5%" }}
+              style={{
+                width: 'clamp(60px, 5vw, 100px)', // Responsive scaling
+                height: 'auto',
+              }}
             />
 
             {/* Navigation Links */}
-            <Group h="100%" gap="28px" visibleFrom="sm" style={{ alignItems: "center" }}>
+            <Group
+              h="100%"
+              gap="28px"
+              visibleFrom="sm"
+              style={{
+                alignItems: 'center',
+              }}
+            >
               <a
                 href="#"
                 className={classes.link}
                 style={{
-                  color: "#FFFFFF",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  fontFamily: "Manrope",
-                  position: "relative",
-                  paddingBottom: "5px",
+                  color: '#FFFFFF',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  fontFamily: 'Manrope',
+                  position: 'relative',
+                  paddingBottom: '5px',
                 }}
               >
                 ABOUT ME
                 <span
                   style={{
-                    position: "absolute",
-                    bottom: "0",
-                    left: "50%",
-                    top: "100%",
-                    transform: "translateX(-50%)",
-                    width: "4px",
-                    height: "4px",
-                    backgroundColor: "red",
-                    borderRadius: "50%",
-                    display: "block",
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '50%',
+                    top: '100%',
+                    transform: 'translateX(-50%)',
+                    width: '4px',
+                    height: '4px',
+                    backgroundColor: 'red',
+                    borderRadius: '50%',
+                    display: 'block',
                   }}
                 ></span>
               </a>
@@ -65,12 +102,12 @@ export function HeaderMenu() {
                 href="#"
                 className={classes.link}
                 style={{
-                  color: "#FFFFFF",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  fontFamily: "Manrope",
-                  position: "relative",
-                  paddingBottom: "5px",
+                  color: '#FFFFFF',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  fontFamily: 'Manrope',
+                  position: 'relative',
+                  paddingBottom: '5px',
                 }}
               >
                 MARKET
@@ -79,12 +116,12 @@ export function HeaderMenu() {
                 href="#"
                 className={classes.link}
                 style={{
-                  color: "#FFFFFF",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  fontFamily: "Manrope",
-                  position: "relative",
-                  paddingBottom: "5px",
+                  color: '#FFFFFF',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  fontFamily: 'Manrope',
+                  position: 'relative',
+                  paddingBottom: '5px',
                 }}
               >
                 PROJECTS
@@ -92,40 +129,40 @@ export function HeaderMenu() {
             </Group>
 
             {/* Action Buttons */}
-            <Group visibleFrom="sm" style={{ marginLeft: "auto" }}>
+            <Group visibleFrom="sm" style={{ marginLeft: 'auto', alignItems: 'center' }}>
               <Button
                 variant="default"
                 onClick={() => {
-                  window.location.href = "mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.";
+                  window.location.href =
+                    'mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.';
                 }}
                 style={{
-                  background: "#FFFFFF",
-                  height: "45px",
-                  borderRadius: "12px",
-                  color: "#000000",
-                  fontFamily: "Manrope",
-                  fontSize: "16px",
-                  fontWeight: "600",
+                  background: '#FFFFFF',
+                  height: '45px',
+                  borderRadius: '12px',
+                  color: '#000000',
+                  fontFamily: 'Manrope',
+                  fontSize: '16px',
+                  fontWeight: '600',
                 }}
               >
                 SAY “HELLO!”
               </Button>
 
-
               <Button
                 variant="default"
                 style={{
-                  background: "#171717",
-                  border: "1px solid rgba(255, 255, 255, 0.2)",
-                  height: "45px",
-                  borderRadius: "12px",
-                  color: "#FFFFFF",
-                  fontFamily: "Manrope",
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px", // Adjust space between icon and text
+                  background: '#171717',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  height: '45px',
+                  borderRadius: '12px',
+                  color: '#FFFFFF',
+                  fontFamily: 'Manrope',
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
                 }}
               >
                 RESUME
@@ -136,12 +173,17 @@ export function HeaderMenu() {
             </Group>
 
             {/* Mobile Menu */}
-            <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+            <Burger
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+              hiddenFrom="sm"
+              style={{
+                marginLeft: 'auto',
+              }}
+            />
           </Group>
         </Container>
       </header>
-
-
 
       <Drawer
         opened={drawerOpened}
@@ -152,7 +194,7 @@ export function HeaderMenu() {
         hiddenFrom="sm"
         zIndex={1000000}
       >
-        <ScrollArea h="calc(100vh - 80px" mx="-md">
+        <ScrollArea h="calc(100vh - 80px)" mx="-md">
           <Divider my="sm" />
 
           <a href="#" className={classes.link}>

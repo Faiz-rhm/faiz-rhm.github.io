@@ -54,7 +54,10 @@ export function Footer() {
       <Image
         alt="logo"
         src="/images/logo.png"
-        style={{ width: "5%", height: "5%" }}
+        style={{
+          width: "clamp(60px, 5vw, 100px)", // Ensures the logo scales between 60px and 100px
+          height: "auto", // Maintains aspect ratio
+        }}
       />
 
       {/* Social Links */}
