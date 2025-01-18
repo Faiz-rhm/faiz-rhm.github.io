@@ -19,6 +19,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
     loop: true,
     align: "start",
     slidesToScroll: 1,
+    skipSnaps: false, // Ensure consistent spacing
   });
 
   useEffect(() => {
@@ -82,6 +83,8 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
             display: "flex",
             userSelect: "none",
             gap: "16px", // Space between slides
+            paddingRight: "16px", // Add padding to the end of the carousel
+            paddingLeft: "16px", // Add padding to the start of the carousel
             position: "relative",
             zIndex: 2, // Ensure content is above gradient
           }}
@@ -156,7 +159,6 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
                   marginBottom: "8px",
                   fontWeight: "400",
                   textAlign: "left", // Align text to the left
-                  // fontFamily: "Manrope",
                 }}
               >
                 {product.description}
