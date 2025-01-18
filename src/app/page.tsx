@@ -139,6 +139,8 @@ export default function Home() {
 
       <CustomDivider/>
 
+      <Box pb={20} />
+
       <ProjectCard
         chipText="FLUTTER"
         description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
@@ -151,7 +153,11 @@ export default function Home() {
         ]}
       />
 
+      <Box pb={20} />
+
       <CustomDivider/>
+
+      <Box pb={20} />
 
       <ProjectCard
         chipText="FLUTTER"

@@ -62,9 +62,7 @@ export default function Market() {
         altText="Faiz Rhm"
       />
 
-      <CustomDivider />
-
-      <Box pb={50} />
+      <Box pb={70} />
 
       {/* Product List */}
       <Box

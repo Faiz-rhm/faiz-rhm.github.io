@@ -134,7 +134,7 @@ export function HeaderMenu() {
                 variant="default"
                 onClick={() => {
                   window.location.href =
-                    'mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.';
+                    'mailto:faiz199011@gmail.com';
                 }}
                 style={{
                   background: '#FFFFFF',

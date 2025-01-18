@@ -17,7 +17,7 @@ export default function Projects() {
         altText="Faiz Rhm"
       />
 
-      <CustomDivider/>
+      <Box pb={70} />
 
       <ProjectCard
         chipText="FLUTTER"
@@ -31,7 +31,48 @@ export default function Projects() {
         ]}
       />
 
+      <Box pb={20} />
+
       <CustomDivider/>
+
+      <Box pb={20} />
+
+      <ProjectCard
+        chipText="FLUTTER"
+        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
+        buttonLabel="FULL CASE STUDY"
+        cards={[
+          {
+            image:
+              "/images/project.png",
+          },
+        ]}
+        swapColumns={true}
+      />
+
+      <Box pb={20} />
+
+      <CustomDivider/>
+
+      <Box pb={20} />
+
+      <ProjectCard
+        chipText="FLUTTER"
+        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
+        buttonLabel="FULL CASE STUDY"
+        cards={[
+          {
+            image:
+              "/images/project.png",
+          },
+        ]}
+      />
+
+      <Box pb={20} />
+
+      <CustomDivider/>
+
+      <Box pb={20} />
 
       <ProjectCard
         chipText="FLUTTER"
@@ -46,34 +87,7 @@ export default function Projects() {
         swapColumns={true}
       />
 
-      <CustomDivider/>
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-      />
-
-      <CustomDivider/>
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-        swapColumns={true}
-      />
+      <Box pb={20} />
 
       <CustomDivider/>
 
