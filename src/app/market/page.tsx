@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
 import { Footer } from "@/components/footer/Footer";
 import { Box } from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
-import ProjectCard from "../../components/others/ProjectCard";
+import MarketCard from "../../components/others/MarketCard";
 
 const products = [
   {
@@ -22,60 +22,32 @@ const products = [
     price: "$200",
   },
   {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
+    id: "3",
+    name: "Product 3",
+    description: "This is a brief description of product 3.",
     image: "/images/project.png",
-    price: "$100",
+    price: "$150",
   },
   {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
+    id: "4",
+    name: "Product 4",
+    description: "This is a brief description of product 4.",
     image: "/images/project.png",
-    price: "$200",
+    price: "$180",
   },
   {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
+    id: "5",
+    name: "Product 5",
+    description: "This is a brief description of product 5.",
     image: "/images/project.png",
-    price: "$100",
+    price: "$250",
   },
   {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
+    id: "6",
+    name: "Product 6",
+    description: "This is a brief description of product 6.",
     image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
+    price: "$300",
   },
 ];
 
@@ -90,12 +62,33 @@ export default function Market() {
         altText="Faiz Rhm"
       />
 
-      <CustomDivider/>
+      <CustomDivider />
 
+      {/* Product List */}
+      <Box
+        style={{
+          display: "grid", // Use grid layout
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // 3 items per row with responsive fallback
+          gap: "24px", // Space between cards
+          justifyContent: "center",
+          margin: "0 auto", // Center the container
+          maxWidth: "1200px", // Restrict max width
+        }}
+      >
+        {products.map((product) => (
+          <MarketCard
+            key={product.id}
+            image={product.image}
+            name={product.name}
+            description={product.description}
+            price={product.price}
+          />
+        ))}
+      </Box>
 
-      <CustomDivider/>
+      <CustomDivider />
 
-      <Footer/>
+      <Footer />
 
       <Box pb={50} />
     </>

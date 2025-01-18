@@ -71,7 +71,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
             style={{
               width: "100%",
               height: "100%",
-              objectFit: "contain",
+              objectFit: "cover",
               transition: "transform 0.3s ease", // Smooth zoom transition
             }}
             className="zoom-image"
