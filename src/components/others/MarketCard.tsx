@@ -35,7 +35,6 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
           overflow: "hidden",
           marginBottom: "8px",
           backgroundColor: "rgba(35, 35, 35, 0.5)",
-          padding: "0",
         }}
       >
         {/* Price Tag */}
@@ -103,10 +102,10 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         </Text>
       </Box>
 
-      {/* Add Zoom CSS */}
-      <style jsx>{`
+      {/* Global Zoom CSS */}
+      <style jsx global>{`
         .zoom-image:hover {
-          transform: scale(1.2); // Zoom on hover
+          transform: scale(1.2); /* Zoom on hover */
         }
       `}</style>
     </Box>
