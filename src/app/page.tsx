@@ -105,7 +105,7 @@ export default function Home() {
 
       <HeroSection
         heading="Helping Digital founders Craft unique, Empathic Applications"
-        subheading="🤟Hello, I am Faiz Rhm, "
+        subheading="🤟 Hello, I am Faiz Rhm, "
         imageSrc="/images/logo.png"
         altText="Faiz Rhm"
       />

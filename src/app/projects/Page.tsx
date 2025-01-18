@@ -13,7 +13,7 @@ export default function Projects() {
 
       <HeroSection
         heading="Explore the projects I've worked on, from concept to completion"
-        subheading="🤟Things I've Built "
+        subheading="🎉 Things I've Built "
         altText="Faiz Rhm"
       />
 
