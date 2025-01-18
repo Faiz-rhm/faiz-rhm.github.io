@@ -1,6 +1,5 @@
 'use client'
 
-import { Footer } from "../components/footer/Footer";
 import ProductCarousel from "../components/others/ProductCarousel";
 import CenteredSection from "../components/others/CenterSection";
 import CustomDivider from "../components/others/CustomDivider";
@@ -9,6 +8,7 @@ import AboutSection from "../components/others/AboutSection";
 import HeroSection from "../components/others/HeroSection";
 import ProjectCard from "../components/others/ProjectCard";
 import MarketTitle from "../components/others/MarketTitle";
+import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
 import { Box } from '@mantine/core';
 
