@@ -180,6 +180,8 @@ export default function Home() {
 
       <BottomSection/>
 
+      <Box pb={70} />
+
       <CustomDivider/>
 
       <Footer/>
