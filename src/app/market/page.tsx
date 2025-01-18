@@ -64,6 +64,8 @@ export default function Market() {
 
       <CustomDivider />
 
+      <Box pb={50} />
+
       {/* Product List */}
       <Box
         style={{
@@ -85,6 +87,8 @@ export default function Market() {
           />
         ))}
       </Box>
+
+      <Box pb={50} />
 
       <CustomDivider />
 
