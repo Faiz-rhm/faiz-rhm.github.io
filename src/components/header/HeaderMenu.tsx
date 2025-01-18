@@ -99,7 +99,7 @@ export function HeaderMenu() {
                 ></span>
               </a>
               <a
-                href="/project"
+                href="/market"
                 className={classes.link}
                 style={{
                   color: '#FFFFFF',
