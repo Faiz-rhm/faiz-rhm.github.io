@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Image } from "@mantine/core";
+import { Flex, Text, Button } from "@mantine/core";
 
 interface ButtonWithImage {
   label: string; // Button label text
@@ -35,7 +35,6 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
         {text}
       </Text>
 
-
       {/* Buttons */}
       <Flex align="center" justify="center" style={{ gap: "16px" }}>
         {buttons.map(({ label, href, image }, index) => (
@@ -44,6 +43,8 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
             variant="default"
             component="a"
             href={href}
+            target={image ? "_blank" : undefined} // Open in a new window if the button has an image
+            rel="noopener noreferrer" // Prevent security vulnerabilities with "_blank"
             style={{
               background: image ? "#FFFFFF" : "#171717",
               border: "1px solid rgba(255, 255, 255, 0.2)",
