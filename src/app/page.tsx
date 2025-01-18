@@ -101,7 +101,7 @@ const products = [
 export default function Home() {
   return (
     <>
-      <Box pb={100} />
+      <Box pb={50} />
 
       <HeroSection
         heading="Helping Digital founders Craft unique, Empathic Applications"
@@ -109,6 +109,8 @@ export default function Home() {
         imageSrc="/images/logo.png"
         altText="Faiz Rhm"
       />
+
+      <Box pb={70} />
 
       <Reviews />
 

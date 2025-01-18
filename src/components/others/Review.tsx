@@ -31,11 +31,13 @@ const RightOverlay = styled(Overlay)`
 `;
 
 const images = [
-  { id: "1", image: "/images/logo.png" },
-  { id: "2", image: "/images/logo.png" },
-  { id: "3", image: "/images/logo.png" },
-  { id: "4", image: "/images/logo.png" },
-  { id: "5", image: "/images/logo.png" },
+  { id: "1", image: "/images/project.png" },
+  { id: "2", image: "/images/project.png" },
+  { id: "3", image: "/images/project.png" },
+  { id: "4", image: "/images/project.png" },
+  { id: "5", image: "/images/project.png" },
+  { id: "6", image: "/images/project.png" },
+  { id: "7", image: "/images/project.png" },
 ];
 
 const Reviews = () => (
@@ -55,16 +57,30 @@ const Reviews = () => (
         onFinish={() => console.log("Marquee finished")}
       >
         {images.map(({ id, image }) => (
+      <div
+          style={{
+            marginLeft: "7px",
+            marginRight: "80px",
+            height: "500px", // Same as the image height
+            backgroundColor: "rgba(35, 35, 35, 0.5)", // Background for the container
+            borderRadius: "32px", // Rounded corners for the container
+            overflow: "hidden", // Ensures the image doesn't overflow the container
+            padding: "32px", // No padding so the image fits perfectly
+            boxSizing: "border-box", // Ensure proper sizing
+          }}
+        >
           <Photo
             src={image}
             alt={`Image ${id}`}
-            key={`marquee-image-${id}-reverse`}
             style={{
-              marginLeft: "7px",
-              marginRight: "80px",
-              height: "500px", // Adjust height inline if needed
+              width: "100%", // Make the image take full width of the container
+              height: "100%", // Make the image take full height of the container
+              objectFit: "cover", // Ensures the image scales properly
+              borderRadius: "16px", // Rounded corners for the image
             }}
           />
+        </div>
+
         ))}
       </Marquee>
     </div>
