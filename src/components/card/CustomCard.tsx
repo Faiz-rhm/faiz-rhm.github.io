@@ -1,5 +1,5 @@
 import React from "react";
-import { AspectRatio, Card, Container, Image, SimpleGrid } from "@mantine/core";
+import { AspectRatio, Card, Image } from "@mantine/core";
 
 interface CustomCardProps {
   image: string;
@@ -22,24 +22,47 @@ const CustomCard: React.FC<CustomCardProps> = ({
       radius="md"
       component="a"
       style={{
-        height: "auto", // Automatically adjust height for responsiveness
-        maxWidth: width, // Restrict width to the specified value
+        height: "auto",
+        maxWidth: width,
         backgroundColor,
         border: `1px solid ${borderColor}`,
         overflow: "hidden",
         borderRadius: "24px",
+        position: "relative",
       }}
     >
       <AspectRatio ratio={1920 / 1080}>
-        <Image
-          src={image}
-          alt="Custom Card"
+        <div
           style={{
-            borderRadius: "24px",
-            objectFit: "cover",
+            overflow: "hidden", // Ensures the image stays within the container
+            borderRadius: "24px", // Ensures rounded corners
+            height: "100%",
+            width: "100%",
+            position: "relative", // Needed for hover effect
           }}
-        />
+        >
+          <Image
+            src={image}
+            alt="Custom Card"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "24px",
+              transition: "transform 0.3s ease", // Smooth zoom effect
+            }}
+            className="zoom-image"
+          />
+        </div>
       </AspectRatio>
+
+      <style>
+        {`
+          .zoom-image:hover {
+            transform: scale(1.2); /* Zoom in */
+          }
+        `}
+      </style>
     </Card>
   );
 };
