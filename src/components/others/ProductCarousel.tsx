@@ -91,79 +91,88 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
         >
           {products.map((product) => (
             <Box
-              key={product.id}
+            style={{
+              flex: "0 0 400px", // Fixed width for each card
+              height: "472px", // Fixed height for the card
+              position: "relative",
+              textAlign: "center",
+              backgroundColor: "rgba(35, 35, 35, 0.5)", // Background color with 50% opacity
+              border: "1px solid rgba(255, 255, 255, 0.1)", // Border with opacity
+              borderRadius: "16px", // Rounded corners
+              padding: "16px", // Space inside the card
+              boxSizing: "border-box", // Include padding in width/height
+              display: "flex", // Flex layout to stack image and content
+              flexDirection: "column", // Stack image and other content vertically
+            }}
+          >
+            {/* Image Container */}
+            <div
               style={{
-                flex: "0 0 400px", // Fixed width for each card
-                height: "472px", // Fixed height for each card
                 position: "relative",
-                textAlign: "center",
-                backgroundColor: "rgba(35, 35, 35, 0.5)", // Background color with 50% opacity
-                border: "1px solid rgba(255, 255, 255, 0.1)", // Border with opacity
-                borderRadius: "16px", // Rounded corners
-                padding: "16px", // Space inside the card
-                boxSizing: "border-box", // Include padding in width/height
+                width: "100%",
+                height: "80%", // Image will occupy 80% of the card height
+                borderRadius: "12px", // Matches the card border radius
+                overflow: "hidden", // Ensures the image stays within the container
+                marginBottom: "8px",
+                backgroundColor: "rgba(35, 35, 35, 0.5)", // Background color for the div
+                padding: "16px",
               }}
             >
-              <Box
+              {/* Price Tag */}
+              <div
                 style={{
-                  position: "relative", // Enables absolute positioning for the price tag
+                  position: "absolute",
+                  top: "8px", // Distance from the top edge
+                  right: "8px", // Distance from the right edge
+                  backgroundColor: "rgba(170,255,61,0.2)", // Semi-transparent green background
+                  color: "#D9D9D9", // Light gray text color
+                  padding: "4px 8px", // Padding inside the tag
+                  fontSize: "14px", // Font size of the price
+                  fontWeight: "600", // Bold text for price
+                  borderRadius: "8px", // Rounded corners for the price tag
+                  zIndex: 2, // Ensures the price tag appears above the image
                 }}
               >
-                {/* Image */}
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  style={{
-                    width: "100%",
-                    height: "80%", // Adjust image height within the card
-                    objectFit: "cover", // Ensure image fits nicely
-                    borderRadius: "12px", // Inner image rounded corners
-                    marginBottom: "16px", // Space below the image
-                  }}
-                />
+                ${product.price}
+              </div>
 
-                {/* Price Tag */}
-                <Box
-                  style={{
-                    position: "absolute", // Position the price tag absolutely
-                    top: "12px", // Distance from the top
-                    right: "12px", // Distance from the right
-                    background: "rgba(170, 255, 61, 0.2)", // Semi-transparent white background
-                    color: "#D9D9D9", // Text color
-                    padding: "8px 16px", // Padding inside the tag
-                    fontSize: "16px", // Font size
-                    fontWeight: "600", // Font weight for bold text
-                    borderRadius: "12px", // Rounded corners
-                    fontFamily: "'Manrope', sans-serif", // Font family
-                  }}
-                >
-                  ${product.price}
-                </Box>
-              </Box>
+              {/* Image */}
+              <Image
+                src={product.image}
+                alt={product.name}
+                style={{
+                  width: "100%", // Full width of the parent container
+                  height: "100%", // Full height of the parent container
+                  objectFit: "contain", // Ensures the image scales nicely
+                  borderRadius: "12px", // Matches the card border radius
+                }}
+              />
+            </div>
 
+            {/* Content Below the Image */}
+            <Box style={{ flex: "1", paddingTop: "8px", textAlign: "left" }}>
               <Text
                 style={{
                   fontSize: "20px",
                   fontWeight: "600",
                   color: "#F5F5F5", // Text color
                   marginBottom: "8px",
-                  textAlign: "left", // Align text to the left
                 }}
               >
                 {product.name}
               </Text>
               <Text
                 style={{
-                  fontSize: "20px",
-                  color: "rgba(245, 245, 245, 0.7)",
+                  fontSize: "16px",
+                  color: "rgba(245, 245, 245, 0.7)", // Dimmed text color
                   marginBottom: "8px",
                   fontWeight: "400",
-                  textAlign: "left", // Align text to the left
                 }}
               >
                 {product.description}
               </Text>
             </Box>
+          </Box>
           ))}
         </Flex>
       </Box>
