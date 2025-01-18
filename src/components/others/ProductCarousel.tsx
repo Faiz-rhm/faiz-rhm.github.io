@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Box, Flex } from "@mantine/core";
 import MarketCard from "./MarketCard";
+import MarketTitle from "./MarketTitle"; // Import MarketTitle component
+import CustomDivider from "./CustomDivider"; // Import CustomDivider component
+import CircularButton from "@/components/others/CircleButton"; // Ensure CircularButton is available
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 interface Product {
   id: string;
@@ -43,6 +47,14 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
     return () => clearInterval(autoplay);
   }, [embla]);
 
+  const scrollPrev = () => {
+    if (embla) embla.scrollPrev();
+  };
+
+  const scrollNext = () => {
+    if (embla) embla.scrollNext();
+  };
+
   return (
     <Box
       style={{
@@ -52,6 +64,11 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
         width: "100%",
       }}
     >
+      {/* Add Title and Divider */}
+      <MarketTitle  scrollNext={scrollNext} scrollPrev={scrollPrev}/>
+
+      <CustomDivider />
+
       {/* Gradient Overlays */}
       <Box
         style={{

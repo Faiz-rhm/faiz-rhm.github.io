@@ -1,10 +1,15 @@
 import React from "react";
 import { Container, Flex, Box, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import CircularButton from "@/components/others/CircleButton"; // Ensure CircularButton is available
-import {IconArrowNarrowLeft, IconArrowNarrowRight} from "@tabler/icons-react";
+import CircularButton from "@/components/others/CircleButton";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
-const MarketTitle = () => {
+interface MarketTitleProps {
+  scrollNext: () => void;
+  scrollPrev: () => void;
+}
+
+const MarketTitle: React.FC<MarketTitleProps> = ({ scrollNext, scrollPrev }) => {
   const isMobile = useMediaQuery("(max-width: 768px)"); // Define mobile breakpoint
 
   return (
@@ -71,15 +76,15 @@ const MarketTitle = () => {
           >
             <CircularButton
               icon={<IconArrowNarrowLeft size={18} stroke={1.5} />}
-              borderColor="#303030" // Dark border
-              size="60px" // Button size
-              onClick={() => alert("Clicked Plus Button!")} // Click handler
+              borderColor="#303030"
+              size="60px"
+              onClick={scrollPrev} // Trigger the passed scrollPrev function
             />
             <CircularButton
               icon={<IconArrowNarrowRight size={18} stroke={1.5} />}
-              borderColor="#ADA9A9" // Light gray border
-              size="60px" // Button size
-              onClick={() => alert("Clicked Plus Button!")} // Click handler
+              borderColor="#ADA9A9"
+              size="60px"
+              onClick={scrollNext} // Trigger the passed scrollNext function
             />
           </Flex>
         </Box>

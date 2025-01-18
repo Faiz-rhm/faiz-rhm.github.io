@@ -168,10 +168,6 @@ export default function Home() {
 
       <Box pb={100} />
 
-      <MarketTitle />
-
-      <CustomDivider/>
-
       <ProductCarousel products={products} />
 
       <Box pb={100} />
