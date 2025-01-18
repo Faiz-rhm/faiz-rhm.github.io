@@ -66,6 +66,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({
                 key={label}
                 variant="default"
                 component="a"
+                size="lg"
+                target="_blank"
+                rel="noopener noreferrer"
                 href={href}
                 style={{
                   background: "#171717",
