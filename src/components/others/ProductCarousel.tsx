@@ -4,8 +4,6 @@ import { Box, Flex } from "@mantine/core";
 import MarketCard from "./MarketCard";
 import MarketTitle from "./MarketTitle"; // Import MarketTitle component
 import CustomDivider from "./CustomDivider"; // Import CustomDivider component
-import CircularButton from "@/components/others/CircleButton"; // Ensure CircularButton is available
-import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 
 interface Product {
   id: string;

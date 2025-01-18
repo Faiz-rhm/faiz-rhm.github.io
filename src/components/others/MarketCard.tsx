@@ -13,7 +13,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
     <Box
       style={{
         flex: "0 0 400px",
-        height: "472px",
+        height: "500px",
         position: "relative",
         textAlign: "center",
         backgroundColor: "rgba(35, 35, 35, 0.5)",
@@ -30,12 +30,12 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         style={{
           position: "relative",
           width: "100%",
-          height: "80%",
+          height: "75%",
           borderRadius: "12px",
           overflow: "hidden",
           marginBottom: "8px",
           backgroundColor: "rgba(35, 35, 35, 0.5)",
-          padding: "16px",
+          padding: "0",
         }}
       >
         {/* Price Tag */}

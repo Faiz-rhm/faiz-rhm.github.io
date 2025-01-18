@@ -53,7 +53,7 @@ const MarketTitle: React.FC<MarketTitleProps> = ({ scrollNext, scrollPrev }) => 
               margin: isMobile ? "0 auto" : "0", // Center text block on mobile
             }}
           >
-            Here you can find a list of selected projects that I’ve recently worked on
+            Explore premium and free resources crafted to elevate your projects
           </Text>
         </Box>
 
