@@ -49,7 +49,7 @@ export function HeaderMenu() {
           transition: 'background-color 0.3s ease', // Smooth transition
         }}
       >
-        <Container size="xl" style={{ marginTop: '20px', position: 'relative' }}>
+        <Container size="xl" style={{ marginTop: '5px', marginBottom: '20px', position: 'relative' }}>
           <Group justify="flex-start" h="100%" style={{ gap: '50px' }}>
             {/* Logo */}
             <Image
