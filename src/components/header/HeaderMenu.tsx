@@ -49,14 +49,14 @@ export function HeaderMenu() {
           transition: 'background-color 0.3s ease', // Smooth transition
         }}
       >
-        <Container size="xl" style={{ marginTop: '5px', marginBottom: '20px', position: 'relative' }}>
+        <Container size="xl" style={{ marginTop: '15px', marginBottom: '20px', position: 'relative' }}>
           <Group justify="flex-start" h="100%" style={{ gap: '50px' }}>
             {/* Logo */}
             <Image
               alt="logo"
               src="/images/logo.png"
               style={{
-                width: 'clamp(60px, 5vw, 100px)', // Responsive scaling
+                width: 'clamp(60px, 5vw, 70px)', // Responsive scaling
                 height: 'auto',
               }}
             />
@@ -206,7 +206,7 @@ export function HeaderMenu() {
             }}
           >
             <a
-              href="#"
+              href="/"
               className={classes.link}
               style={{
                 color: '#FFFFFF',
@@ -234,7 +234,7 @@ export function HeaderMenu() {
               ></span>
             </a>
             <a
-              href="#"
+              href="/market"
               className={classes.link}
               style={{
                 color: '#FFFFFF',
@@ -248,7 +248,7 @@ export function HeaderMenu() {
               MARKET
             </a>
             <a
-              href="#"
+              href="/projects"
               className={classes.link}
               style={{
                 color: '#FFFFFF',

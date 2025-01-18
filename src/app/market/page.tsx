@@ -73,6 +73,7 @@ export default function Market() {
           justifyContent: "center",
           margin: "0 auto", // Center the container
           maxWidth: "1200px", // Restrict max width
+          padding: "16px",
         }}
       >
         {products.map((product) => (
