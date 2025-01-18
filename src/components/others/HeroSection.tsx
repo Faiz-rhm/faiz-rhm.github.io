@@ -5,15 +5,15 @@ import { useMediaQuery } from "@mantine/hooks";
 interface HeroSectionProps {
   heading: string; // The main heading
   subheading: string; // The subheading text
-  imageSrc: string; // URL of the image
-  altText: string; // Alt text for the image
+  imageSrc?: string; // URL of the image (optional)
+  altText?: string; // Alt text for the image
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   heading,
   subheading,
   imageSrc,
-  altText,
+  altText = "Hero image", // Default alt text if not provided
 }) => {
   const isMobile = useMediaQuery("(max-width: 768px)"); // Mobile breakpoint
 
@@ -21,7 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <Container size="xl">
       <Flex
         direction={isMobile ? "column" : "row"} // Stack on mobile, row on larger screens
-        align={isMobile ? "center" : "center"} // Center items vertically
+        align="center" // Center items vertically
         justify="space-between" // Adjust space on larger screens
         wrap="nowrap"
         style={{ gap: "32px" }} // Space between the text and image
@@ -62,25 +62,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </Text>
         </Box>
 
-        {/* Right Side - Image */}
-        <Box
-          style={{
-            flex: "0 0 auto",
-            minWidth: isMobile ? "100%" : "150px", // Full width on mobile
-            display: "flex",
-            justifyContent: isMobile ? "center" : "flex-end", // Center on mobile
-          }}
-        >
-          <img
-            src={imageSrc}
-            alt={altText}
+        {/* Right Side - Image (conditionally rendered) */}
+        {imageSrc && (
+          <Box
             style={{
-              height: isMobile ? "200px" : "139px", // Larger image on mobile
-              width: isMobile ? "200px" : "139px",
-              borderRadius: "50%", // Makes the image circular
+              flex: "0 0 auto",
+              minWidth: isMobile ? "100%" : "150px", // Full width on mobile
+              display: "flex",
+              justifyContent: isMobile ? "center" : "flex-end", // Center on mobile
             }}
-          />
-        </Box>
+          >
+            <img
+              src={imageSrc}
+              alt={altText}
+              style={{
+                height: isMobile ? "200px" : "139px", // Larger image on mobile
+                width: isMobile ? "200px" : "139px",
+                borderRadius: "50%", // Makes the image circular
+              }}
+            />
+          </Box>
+        )}
       </Flex>
     </Container>
   );

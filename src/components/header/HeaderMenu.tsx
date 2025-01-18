@@ -71,7 +71,7 @@ export function HeaderMenu() {
               }}
             >
               <a
-                href="#"
+                href="/"
                 className={classes.link}
                 style={{
                   color: '#FFFFFF',
@@ -99,7 +99,7 @@ export function HeaderMenu() {
                 ></span>
               </a>
               <a
-                href="#"
+                href="/project"
                 className={classes.link}
                 style={{
                   color: '#FFFFFF',
@@ -113,7 +113,7 @@ export function HeaderMenu() {
                 MARKET
               </a>
               <a
-                href="#"
+                href="/projects"
                 className={classes.link}
                 style={{
                   color: '#FFFFFF',
