@@ -56,6 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               backgroundClip: "text", // Ensures compatibility
               WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
               textAlign: isMobile ? "center" : "left", // Center text on mobile
+              lineHeight: "1.2", // Adjust line height for better readability
             }}
           >
             {heading}

@@ -30,6 +30,7 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
           backgroundClip: "text", // Ensures compatibility
           WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
           maxWidth: "700px", // Limit text width
+          lineHeight: "1.2", // Adjust line height for better readability
         }}
       >
         {text}

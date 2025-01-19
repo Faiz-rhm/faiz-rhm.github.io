@@ -65,6 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     backgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     marginBottom: "20px",
+                    lineHeight: "1.2", // Adjust line height for better readability
                   }}
                 >
                   {description}
@@ -163,6 +164,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     backgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     marginBottom: "20px",
+                    lineHeight: "1.2", // Adjust line height for better readability
                   }}
                 >
                   {description}

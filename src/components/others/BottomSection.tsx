@@ -47,6 +47,7 @@ const BottomSection = () => {
             WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
             maxWidth: "1000px", // Limit text width
             marginBottom: "24px", // Space between text and buttons
+            lineHeight: "1.2", // Adjust line height for better readability
           }}
         >
           Create an exceptional Flutter & React Native apps & webapps

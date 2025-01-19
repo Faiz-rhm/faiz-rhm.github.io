@@ -51,6 +51,7 @@ const MarketTitle: React.FC<MarketTitleProps> = ({ scrollNext, scrollPrev }) => 
               WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
               width: isMobile ? "100%" : "600px", // Adjust width on mobile
               margin: isMobile ? "0 auto" : "0", // Center text block on mobile
+              lineHeight: "1.2", // Adjust line height for better readability
             }}
           >
             Explore premium and free resources crafted to elevate your projects

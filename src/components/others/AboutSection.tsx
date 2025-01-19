@@ -49,6 +49,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
             WebkitBackgroundClip: "text", // Clips background to text
             backgroundClip: "text", // Ensures compatibility
             WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
+            lineHeight: "1.2", // Adjust line height for better readability
           }}
         >
           {description}
