@@ -110,7 +110,7 @@ export default function Home() {
         altText="Faiz Rhm"
       />
 
-      <Box pb={50} />
+      <Box pb={80} />
 
       <Reviews />
 

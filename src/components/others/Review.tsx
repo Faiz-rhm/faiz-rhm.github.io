@@ -31,13 +31,15 @@ const RightOverlay = styled(Overlay)`
 `;
 
 const images = [
-  { id: "1", image: "/images/project.png" },
-  { id: "2", image: "/images/project.png" },
-  { id: "3", image: "/images/project.png" },
-  { id: "4", image: "/images/project.png" },
-  { id: "5", image: "/images/project.png" },
-  { id: "6", image: "/images/project.png" },
-  { id: "7", image: "/images/project.png" },
+  { id: "1", image: "/images/preview/baran.jpg" },
+  { id: "2", image: "/images/preview/onboarding.jpg" },
+  { id: "3", image: "/images/preview/spotify.jpg" },
+  { id: "4", image: "/images/preview/food.jpg" },
+  { id: "5", image: "/images/preview/crypto.jpg" },
+  { id: "7", image: "/images/preview/hotel.jpg" },
+  { id: "6", image: "/images/preview/movie.jpg" },
+  { id: "7", image: "/images/preview/sale.jpg" },
+  { id: "7", image: "/images/preview/sport.jpg" },
 ];
 
 const Reviews = () => (
@@ -60,8 +62,9 @@ const Reviews = () => (
       <div
           style={{
             marginLeft: "7px",
-            marginRight: "80px",
-            height: "500px", // Same as the image height
+            marginRight: "40px",
+            height: "550px", // Same as the image height
+            width: "550px",
             backgroundColor: "rgba(35, 35, 35, 0.5)", // Background for the container
             borderRadius: "32px", // Rounded corners for the container
             overflow: "hidden", // Ensures the image doesn't overflow the container
