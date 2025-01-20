@@ -32,14 +32,14 @@ const RightOverlay = styled(Overlay)`
 
 const images = [
   { id: "1", image: "/images/preview/baran.jpg" },
+  { id: "7", image: "/images/preview/sport.jpg" },
   { id: "2", image: "/images/preview/onboarding.jpg" },
   { id: "3", image: "/images/preview/spotify.jpg" },
+  { id: "7", image: "/images/preview/hotel.jpg" },
   { id: "4", image: "/images/preview/food.jpg" },
   { id: "5", image: "/images/preview/crypto.jpg" },
-  { id: "7", image: "/images/preview/hotel.jpg" },
-  { id: "6", image: "/images/preview/movie.jpg" },
   { id: "7", image: "/images/preview/sale.jpg" },
-  { id: "7", image: "/images/preview/sport.jpg" },
+  { id: "6", image: "/images/preview/movie.jpg" },
 ];
 
 const Reviews = () => (
