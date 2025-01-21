@@ -215,62 +215,63 @@ export function HeaderMenu() {
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
-        size="100%"
+        size="33%" // Adjust the size
+        position="top" // Open from the top
         padding="md"
         title="Faiz Rhm"
         hiddenFrom="sm"
         zIndex={1000000}
+        styles={{
+          body: {
+            backgroundColor: 'var(--mantine-color-dark-9)', // Customize the background color
+          },
+          title: {
+            color: "#FFFFFF", // Customize the title color
+          },
+          header: {
+            backgroundColor: 'var(--mantine-color-dark-9)', // Customize the title background color
+            paddingTop: "30px", // Optional: Add padding for spacing
+          },
+        }}
       >
-        <ScrollArea h="calc(100vh - 80px)" mx="-md">
+        <ScrollArea h="calc(50vh - 80px)" mx="-md">
           <Divider my="sm" />
-
           <div
             style={{
-              display: 'flex', // Align items horizontally
-              justifyContent: 'center', // Center items horizontally
-              alignItems: 'center', // Center items vertically
-              gap: '32px', // Space between links
-              padding: '16px', // Padding around the links
+              display: "flex", // Use flexbox
+              flexDirection: "column", // Arrange items in a column
+              justifyContent: "center", // Center items vertically
+              alignItems: "center", // Center items horizontally
+              gap: "16px", // Space between links
+              padding: "16px", // Padding around the links
             }}
           >
             <a
               href="/"
               className={classes.link}
               style={{
-                color: '#FFFFFF',
-                fontSize: '16px',
-                fontWeight: '500',
-                fontFamily: 'Manrope',
-                position: 'relative',
-                paddingBottom: '5px',
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px",
+                textDecoration: "none", // Remove underline
               }}
             >
               ABOUT ME
-              {/* <span
-                style={{
-                  position: 'absolute',
-                  bottom: '0',
-                  left: '50%',
-                  top: '100%',
-                  transform: 'translateX(-50%)',
-                  width: '4px',
-                  height: '4px',
-                  backgroundColor: 'red',
-                  borderRadius: '50%',
-                  display: 'block',
-                }}
-              ></span> */}
             </a>
             <a
               href="/market"
               className={classes.link}
               style={{
-                color: '#FFFFFF',
-                fontSize: '16px',
-                fontWeight: '500',
-                fontFamily: 'Manrope',
-                position: 'relative',
-                paddingBottom: '5px',
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px",
+                textDecoration: "none",
               }}
             >
               MARKET
@@ -279,12 +280,13 @@ export function HeaderMenu() {
               href="/projects"
               className={classes.link}
               style={{
-                color: '#FFFFFF',
-                fontSize: '16px',
-                fontWeight: '500',
-                fontFamily: 'Manrope',
-                position: 'relative',
-                paddingBottom: '5px',
+                color: "#FFFFFF",
+                fontSize: "16px",
+                fontWeight: "500",
+                fontFamily: "Manrope",
+                position: "relative",
+                paddingBottom: "5px",
+                textDecoration: "none",
               }}
             >
               PROJECTS
@@ -293,21 +295,23 @@ export function HeaderMenu() {
 
           <Divider my="sm" />
 
+          <Box pb={10} />
+
           <Group justify="center" grow pb="xl" px="md">
             <Button
               variant="default"
               onClick={() => {
                 window.location.href =
-                  'mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.';
+                  "mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.";
               }}
               style={{
-                background: '#FFFFFF',
-                height: '45px',
-                borderRadius: '12px',
-                color: '#000000',
-                fontFamily: 'Manrope',
-                fontSize: '16px',
-                fontWeight: '600',
+                background: "#FFFFFF",
+                height: "45px",
+                borderRadius: "12px",
+                color: "#000000",
+                fontFamily: "Manrope",
+                fontSize: "16px",
+                fontWeight: "600",
               }}
             >
               SAY “HELLO!”
@@ -316,18 +320,18 @@ export function HeaderMenu() {
             <Button
               variant="default"
               style={{
-                background: '#171717',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                height: '45px',
-                borderRadius: '12px',
-                color: '#FFFFFF',
-                fontFamily: 'Manrope',
-                fontSize: '16px',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                paddingInline: '70px',
+                background: "#171717",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                height: "45px",
+                borderRadius: "12px",
+                color: "#FFFFFF",
+                fontFamily: "Manrope",
+                fontSize: "16px",
+                fontWeight: "600",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                paddingInline: "70px",
               }}
             >
               RESUME
@@ -338,6 +342,7 @@ export function HeaderMenu() {
           </Group>
         </ScrollArea>
       </Drawer>
+
     </Box>
   );
 }
