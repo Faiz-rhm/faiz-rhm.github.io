@@ -5,6 +5,7 @@ import { useMediaQuery } from "@mantine/hooks";
 interface HeaderLabelProps {
   heading: string; // The main heading
   subheading: string; // The subheading text
+  description: string;
   imageSrc?: string; // URL of the image (optional)
   altText?: string; // Alt text for the image
 }
@@ -12,6 +13,7 @@ interface HeaderLabelProps {
 const HeaderLabel: React.FC<HeaderLabelProps> = ({
   heading,
   subheading,
+  description,
   imageSrc,
   altText = "Hero image", // Default alt text if not provided
 }) => {
@@ -53,15 +55,27 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
               fontSize: isMobile ? "16px" : "16px", // Smaller heading on mobile
               fontWeight: "400",
               fontFamily: "Manrope",
-              background: "linear-gradient(#F5F5F5, #8F8F8F)", // Gradient for text
-              WebkitBackgroundClip: "text", // Clips background to text
-              backgroundClip: "text", // Ensures compatibility
-              WebkitTextFillColor: "transparent", // Makes the text transparent to show gradient
+              color: "#F5F5F5", // Gradient for textzz
               textAlign: isMobile ? "center" : "left", // Center text on mobile
-              lineHeight: "1.2", // Adjust line height for better readability
+              lineHeight: "1.7", // Adjust line height for better readability
             }}
           >
             {heading}
+          </Text>
+
+          <Box pb={16} />
+
+          <Text
+            style={{
+              fontSize: isMobile ? "16px" : "16px", // Smaller heading on mobile
+              fontWeight: "400",
+              fontFamily: "Manrope",
+              color: "#F5F5F5", // Gradient for textzz
+              textAlign: isMobile ? "center" : "left", // Center text on mobile
+              lineHeight: "1.7", // Adjust line height for better readability
+            }}
+          >
+            {description}
           </Text>
         </Box>
 

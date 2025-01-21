@@ -1,22 +1,21 @@
 import React from 'react';
 import { Button, Container, Group, Text } from '@mantine/core'; // Assuming Mantine library
 
-const AppPreviewBottomCard = () => {
+const AppPreviewBottomCard = ({ sourceCodeUrl, previewUrl }) => {
   return (
     <Container size="xl">
-        <div
+      <div
         style={{
-            margin: '0 auto',
-            padding: '30px',
-            backgroundColor: '#171717', // Replace with your desired color
-            // border: '1px solid  rgba(255, 255, 255, 0.2)', // Replace with your desired border color and style
-            borderRadius: '8px', // Optional: For rounded corners
-            textAlign: 'center', // Ensures everything inside is centered horizontally
+          margin: '0 auto',
+          padding: '50px',
+          backgroundColor: '#171717', // Replace with your desired color
+          borderRadius: '8px', // Optional: For rounded corners
+          textAlign: 'center', // Ensures everything inside is centered horizontally
         }}
-        >
+      >
         {/* Text */}
         <Text
-            style={{
+          style={{
             fontSize: '64px',
             fontWeight: '400',
             fontFamily: 'Manrope',
@@ -28,50 +27,56 @@ const AppPreviewBottomCard = () => {
             margin: '0 auto',
             marginBottom: '24px', // Space between text and buttons
             lineHeight: '1.2', // Adjust line height for better readability
-            }}
+          }}
         >
-            Get the FlutterShop
+          Get the FlutterShop
         </Text>
 
         {/* Buttons */}
         <Group style={{ gap: '16px', justifyContent: 'center' }}>
-            <Button
+        <Button
             variant="default"
-            onClick={() => {}}
-            style={{
-                background: '#FFFFFF',
-                height: '45px',
-                borderRadius: '12px',
-                color: '#000000',
-                fontFamily: 'Manrope',
-                fontSize: '16px',
-                fontWeight: '600',
+            onClick={() => {
+              window.open(sourceCodeUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
             }}
-            >
+            style={{
+              background: '#FFFFFF',
+              height: '45px',
+              borderRadius: '12px',
+              color: '#000000',
+              fontFamily: 'Manrope',
+              fontSize: '16px',
+              fontWeight: '600',
+            }}
+          >
             Source Code
-            </Button>
+          </Button>
 
-            <Button
+          {/* Preview Button */}
+          <Button
             variant="default"
-            style={{
-                background: '#171717',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                height: '45px',
-                borderRadius: '12px',
-                color: '#FFFFFF',
-                fontFamily: 'Manrope',
-                fontSize: '16px',
-                fontWeight: '600',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px', // Adjust space between icon and text
-                padding: '0 24px', // Add padding for better button size
+            onClick={() => {
+              window.open(previewUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
             }}
-            >
+            style={{
+              background: '#171717',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              height: '45px',
+              borderRadius: '12px',
+              color: '#FFFFFF',
+              fontFamily: 'Manrope',
+              fontSize: '16px',
+              fontWeight: '600',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              padding: '0 24px',
+            }}
+          >
             Preview
-            </Button>
+          </Button>
         </Group>
-        </div>
+      </div>
     </Container>
   );
 };
