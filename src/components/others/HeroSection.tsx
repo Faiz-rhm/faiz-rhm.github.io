@@ -2,6 +2,22 @@ import React from "react";
 import { Container, Flex, Box, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
+// Keyframe animation for rotation
+const rotationAnimation = {
+  animation: "spin 5s linear infinite", // Rotate continuously
+};
+
+// Define keyframes in global CSS
+const globalStyles = `
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}`;
+
 interface HeroSectionProps {
   heading: string; // The main heading
   subheading: string; // The subheading text
@@ -19,6 +35,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
   return (
     <Container size="xl">
+      {/* Inject global keyframes */}
+      <style>{globalStyles}</style>
+
       <Flex
         direction={isMobile ? "column" : "row"} // Stack on mobile, row on larger screens
         align="center" // Center items vertically
@@ -80,6 +99,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 height: isMobile ? "200px" : "139px", // Larger image on mobile
                 width: isMobile ? "200px" : "139px",
                 borderRadius: "50%", // Makes the image circular
+                ...rotationAnimation, // Add rotation animation
               }}
             />
           </Box>
