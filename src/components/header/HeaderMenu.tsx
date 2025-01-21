@@ -126,6 +126,20 @@ export function HeaderMenu() {
               >
                 PROJECTS
               </a>
+              <a
+                href="/shop"
+                className={classes.link}
+                style={{
+                  color: '#FFFFFF',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  fontFamily: 'Manrope',
+                  position: 'relative',
+                  paddingBottom: '5px',
+                }}
+              >
+                Flutter Shop
+              </a>
             </Group>
 
             {/* Action Buttons */}
