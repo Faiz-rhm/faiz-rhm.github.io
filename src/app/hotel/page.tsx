@@ -93,6 +93,7 @@ export default function Projects() {
       <Box pb={50} />
 
       <AppPreviewBottomCard
+        title="Get the Hotel Booking App"
         sourceCodeUrl={'https://faizrhm1.gumroad.com/l/rbwog'}
         previewUrl={'https://faiz-rhm.github.io/hotel_complete/'}
       />

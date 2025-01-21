@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Container, Group, Text } from '@mantine/core'; // Assuming Mantine library
+import { Box, Button, Container, Group, Text } from '@mantine/core'; // Assuming Mantine library
 
-const AppPreviewBottomCard = ({ sourceCodeUrl, previewUrl }) => {
+const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
   return (
     <Container size="xl">
       <div
@@ -29,12 +29,14 @@ const AppPreviewBottomCard = ({ sourceCodeUrl, previewUrl }) => {
             lineHeight: '1.2', // Adjust line height for better readability
           }}
         >
-          Get the FlutterShop
+          {title}
         </Text>
+
+        <Box pb={20} />
 
         {/* Buttons */}
         <Group style={{ gap: '16px', justifyContent: 'center' }}>
-        <Button
+          <Button
             variant="default"
             onClick={() => {
               window.open(sourceCodeUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
