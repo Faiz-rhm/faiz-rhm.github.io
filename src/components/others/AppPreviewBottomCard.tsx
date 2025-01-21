@@ -43,11 +43,12 @@ const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
             }}
             style={{
               background: '#FFFFFF',
-              height: '45px',
+              height: '56px',
               borderRadius: '12px',
               color: '#000000',
               fontFamily: 'Manrope',
               fontSize: '16px',
+              padding: '0 24px',
               fontWeight: '600',
             }}
           >
@@ -62,17 +63,14 @@ const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
             }}
             style={{
               background: '#171717',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              height: '45px',
+              height: '56px',
               borderRadius: '12px',
               color: '#FFFFFF',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
               fontFamily: 'Manrope',
               fontSize: '16px',
-              fontWeight: '600',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
               padding: '0 24px',
+              fontWeight: '600',
             }}
           >
             Preview

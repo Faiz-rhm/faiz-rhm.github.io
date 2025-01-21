@@ -52,10 +52,10 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
 
           <Text
             style={{
-              fontSize: isMobile ? "16px" : "16px", // Smaller heading on mobile
+              fontSize: isMobile ? "18px" : "18px", // Smaller heading on mobile
               fontWeight: "400",
               fontFamily: "Manrope",
-              color: "#F5F5F5", // Gradient for textzz
+              color: "#D3CEC4", // Gradient for textzz
               textAlign: isMobile ? "center" : "left", // Center text on mobile
               lineHeight: "1.7", // Adjust line height for better readability
             }}
@@ -67,10 +67,10 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
 
           <Text
             style={{
-              fontSize: isMobile ? "16px" : "16px", // Smaller heading on mobile
+              fontSize: isMobile ? "18px" : "18px", // Smaller heading on mobile
               fontWeight: "400",
               fontFamily: "Manrope",
-              color: "#F5F5F5", // Gradient for textzz
+              color: "#D3CEC4", // Gradient for textzz
               textAlign: isMobile ? "center" : "left", // Center text on mobile
               lineHeight: "1.7", // Adjust line height for better readability
             }}
