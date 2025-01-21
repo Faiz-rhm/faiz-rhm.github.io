@@ -215,7 +215,7 @@ export function HeaderMenu() {
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
-        size="33%" // Adjust the size
+        size="40%" // Adjust the size
         position="top" // Open from the top
         padding="md"
         title="Faiz Rhm"
@@ -223,13 +223,15 @@ export function HeaderMenu() {
         zIndex={1000000}
         styles={{
           body: {
-            backgroundColor: 'var(--mantine-color-dark-9)', // Customize the background color
+            backgroundColor: '#171717', // Customize the background color
+            transition: 'background-color 0.3s ease', // Smooth transition
           },
           title: {
             color: "#FFFFFF", // Customize the title color
+            fontSize: "20px", // Customize the title font size
           },
           header: {
-            backgroundColor: 'var(--mantine-color-dark-9)', // Customize the title background color
+            backgroundColor: '#171717', // Customize the title background color
             paddingTop: "30px", // Optional: Add padding for spacing
           },
         }}
@@ -241,7 +243,7 @@ export function HeaderMenu() {
               display: "flex", // Use flexbox
               flexDirection: "column", // Arrange items in a column
               justifyContent: "center", // Center items vertically
-              alignItems: "center", // Center items horizontally
+              alignItems: "flex-start", // Align items to the left
               gap: "16px", // Space between links
               padding: "16px", // Padding around the links
             }}
@@ -251,8 +253,8 @@ export function HeaderMenu() {
               className={classes.link}
               style={{
                 color: "#FFFFFF",
-                fontSize: "16px",
-                fontWeight: "500",
+                fontSize: "32px",
+                fontWeight: "900",
                 fontFamily: "Manrope",
                 position: "relative",
                 paddingBottom: "5px",
@@ -266,12 +268,12 @@ export function HeaderMenu() {
               className={classes.link}
               style={{
                 color: "#FFFFFF",
-                fontSize: "16px",
-                fontWeight: "500",
+                fontSize: "32px",
+                fontWeight: "900",
                 fontFamily: "Manrope",
                 position: "relative",
                 paddingBottom: "5px",
-                textDecoration: "none",
+                textDecoration: "none", // Remove underline
               }}
             >
               MARKET
@@ -281,17 +283,18 @@ export function HeaderMenu() {
               className={classes.link}
               style={{
                 color: "#FFFFFF",
-                fontSize: "16px",
-                fontWeight: "500",
+                fontSize: "32px",
+                fontWeight: "900",
                 fontFamily: "Manrope",
                 position: "relative",
                 paddingBottom: "5px",
-                textDecoration: "none",
+                textDecoration: "none", // Remove underline
               }}
             >
               PROJECTS
             </a>
           </div>
+
 
           <Divider my="sm" />
 
