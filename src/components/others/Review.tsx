@@ -40,6 +40,7 @@ const images = [
   { id: "5", image: "/images/review/crypto.png" },
   { id: "7", image: "/images/review/sale.png" },
   { id: "6", image: "/images/review/movie.png" },
+  { id: "6", image: "/images/review/weena.png" },
 ];
 
 const Reviews = () => (
