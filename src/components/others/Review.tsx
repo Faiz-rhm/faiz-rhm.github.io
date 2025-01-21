@@ -31,15 +31,15 @@ const RightOverlay = styled(Overlay)`
 `;
 
 const images = [
-  { id: "1", image: "/images/preview/baran.jpg" },
-  { id: "7", image: "/images/preview/sport.jpg" },
-  { id: "2", image: "/images/preview/onboarding.jpg" },
-  { id: "3", image: "/images/preview/spotify.jpg" },
-  { id: "7", image: "/images/preview/hotel.jpg" },
-  { id: "4", image: "/images/preview/food.jpg" },
-  { id: "5", image: "/images/preview/crypto.jpg" },
-  { id: "7", image: "/images/preview/sale.jpg" },
-  { id: "6", image: "/images/preview/movie.jpg" },
+  { id: "1", image: "/images/review/baran.png" },
+  { id: "7", image: "/images/review/sport.png" },
+  { id: "2", image: "/images/review/onboarding.png" },
+  { id: "3", image: "/images/review/spotify.png" },
+  { id: "7", image: "/images/review/hotel.png" },
+  { id: "4", image: "/images/review/food.png" },
+  { id: "5", image: "/images/review/crypto.png" },
+  { id: "7", image: "/images/review/sale.png" },
+  { id: "6", image: "/images/review/movie.png" },
 ];
 
 const Reviews = () => (
@@ -62,7 +62,7 @@ const Reviews = () => (
       <div
           style={{
             marginLeft: "7px",
-            marginRight: "40px",
+            marginRight: "25px",
             height: "550px", // Same as the image height
             width: "550px",
             backgroundColor: "rgba(35, 35, 35, 0.5)", // Background for the container
