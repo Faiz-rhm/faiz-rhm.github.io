@@ -154,6 +154,20 @@ export function HeaderMenu() {
               >
                 Hotel
               </a>
+              <a
+                href="/project_details"
+                className={classes.link}
+                style={{
+                  color: '#FFFFFF',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  fontFamily: 'Manrope',
+                  position: 'relative',
+                  paddingBottom: '5px',
+                }}
+              >
+                Project Details
+              </a>
             </Group>
 
             {/* Action Buttons */}
