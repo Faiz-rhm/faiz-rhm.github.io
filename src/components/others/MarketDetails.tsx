@@ -7,7 +7,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProjectDetails = ({ settings, imageList, title, description, chips }) => {
+const MarketDetails = ({ settings, imageList, title, description, chips, buttonUrl }) => {
   return (
     <Container
       size="xl"
@@ -34,7 +34,7 @@ const ProjectDetails = ({ settings, imageList, title, description, chips }) => {
             backgroundColor: "rgba(35, 35, 35, 0.5)",
             borderRadius: "32px",
             overflow: "hidden",
-            padding: "30px"
+            padding: "30px",
           }}
         >
           <Slider {...settings}>
@@ -112,7 +112,9 @@ const ProjectDetails = ({ settings, imageList, title, description, chips }) => {
           <Button
             variant="default"
             component="a"
-            href=""
+            href={buttonUrl || "#"} // Use the provided URL or default to "#"
+            target="_blank" // Open the link in a new tab
+            rel="noopener noreferrer" // Security for external links
             style={{
               background: "#171717",
               border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -136,11 +138,10 @@ const ProjectDetails = ({ settings, imageList, title, description, chips }) => {
               <IconArrowUpRight size={18} stroke={1.5} />
             </ActionIcon>
           </Button>
-
         </div>
       </div>
     </Container>
   );
 };
 
-export default ProjectDetails;
+export default MarketDetails;

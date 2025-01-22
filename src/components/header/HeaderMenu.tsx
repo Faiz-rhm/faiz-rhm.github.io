@@ -155,7 +155,7 @@ export function HeaderMenu() {
                 Hotel
               </a>
               <a
-                href="/project_details"
+                href="/market_details"
                 className={classes.link}
                 style={{
                   color: '#FFFFFF',
@@ -166,7 +166,7 @@ export function HeaderMenu() {
                   paddingBottom: '5px',
                 }}
               >
-                Project Details
+                Market Details
               </a>
             </Group>
 

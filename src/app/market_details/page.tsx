@@ -1,12 +1,12 @@
 'use client'
 
-import ProjectDetails from "../../components/others/ProjectDetailsCard";
 import CustomDivider from "../../components/others/CustomDivider";
 import { Footer } from "@/components/footer/Footer";
 import { Box } from "@mantine/core";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MarketDetails from "../../components/others/MarketDetails";
 
 const imageList = [
   "/images/review/baran.png",
@@ -32,12 +32,13 @@ export default function Projects() {
     <>
       <Box pb={100} />
 
-      <ProjectDetails
+      <MarketDetails
         settings={settings}
         imageList={imageList}
         title="Your Heading Here"
         description="Your description goes here. Add as much text as needed to explain the content related to the image on the left. You can style it further as per your requirements."
         chips={chips} // Pass the chips list
+        buttonUrl={''}
       />
 
       <Box pb={100} />
