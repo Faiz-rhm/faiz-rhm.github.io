@@ -7,15 +7,17 @@ interface MarketCardProps {
   description: string;
   price: string;
   onClick?: () => void; // Optional onClick event for navigation
+  width?: string; // Optional width for the card
 }
 
-const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price, onClick }) => {
+const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price, onClick, width }) => {
   return (
     <Box
       onClick={onClick} // Handle click events for navigation
       style={{
         flex: "0 0 400px",
         height: "550px",
+        width: width,
         position: "relative",
         textAlign: "center",
         backgroundColor: "rgba(35, 35, 35, 0.5)",
