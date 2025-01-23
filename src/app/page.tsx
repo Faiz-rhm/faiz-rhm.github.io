@@ -9,9 +9,11 @@ import HeroSection from "../components/others/HeroSection";
 import ProjectCard from "../components/others/ProjectCard";
 import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
+import ProjectData from "@/data/project.json";
 import { Box } from '@mantine/core';
 
 import Market from "@/data/market.json";
+import React from "react";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -70,14 +72,36 @@ export default function Home() {
 
       <Box pb={20} />
 
-      <ProjectCard
+      {ProjectData.projects.slice(0, 2).map((product, index) => (
+        <React.Fragment key={product.id}>
+          <ProjectCard
+            chipText={product.tag}
+            description={product.description}
+            buttonLabel="FULL CASE STUDY"
+            cards={[
+              {
+                image: product.cover,
+              },
+            ]}
+            swapColumns={index % 2 !== 0} // Alternate columns for every other project
+          />
+
+          <Box pb={20} />
+
+          {index < ProjectData.projects.length - 1 && <CustomDivider />}
+
+          <Box pb={20} />
+        </React.Fragment>
+      ))}
+
+      {/* <ProjectCard
         chipText="FLUTTER"
         description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
         buttonLabel="FULL CASE STUDY"
         cards={[
           {
             image:
-              "/images/project.png",
+              "/images/project/baran.png",
           },
         ]}
       />
@@ -95,11 +119,11 @@ export default function Home() {
         cards={[
           {
             image:
-              "/images/project.png",
+              "/images/project/daricha.png",
           },
         ]}
         swapColumns={true}
-      />
+      /> */}
 
       <Box pb={100} />
 

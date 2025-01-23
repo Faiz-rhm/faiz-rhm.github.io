@@ -5,6 +5,8 @@ import { Box } from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import ProjectCard from "../../components/others/ProjectCard";
+import ProjectData from "@/data/project.json";
+import React from "react";
 
 export default function Projects() {
   return (
@@ -19,73 +21,27 @@ export default function Projects() {
 
       <Box pb={70} />
 
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-      />
+      {ProjectData.projects.map((product, index) => (
+        <React.Fragment key={product.id}>
+          <ProjectCard
+            chipText={product.tag}
+            description={product.description}
+            buttonLabel="FULL CASE STUDY"
+            cards={[
+              {
+                image: product.cover,
+              },
+            ]}
+            swapColumns={index % 2 !== 0} // Alternate columns for every other project
+          />
 
-      <Box pb={20} />
+          <Box pb={20} />
 
-      <CustomDivider/>
+          {index < ProjectData.projects.length - 1 && <CustomDivider />}
 
-      <Box pb={20} />
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-        swapColumns={true}
-      />
-
-      <Box pb={20} />
-
-      <CustomDivider/>
-
-      <Box pb={20} />
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-      />
-
-      <Box pb={20} />
-
-      <CustomDivider/>
-
-      <Box pb={20} />
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project.png",
-          },
-        ]}
-        swapColumns={true}
-      />
+          <Box pb={20} />
+        </React.Fragment>
+      ))}
 
       <Box pb={20} />
 
