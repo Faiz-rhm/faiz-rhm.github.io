@@ -5,7 +5,7 @@
       "name": "FlutterSale - E-commerce UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "/shop",
-      "cover": "/images/projects/sale_cover.png",
+      "cover": "/images/market/sale_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -21,7 +21,7 @@
       "name": "Hotel Booking - UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "/hotel",
-      "cover": "/images/projects/hotel_cover.png",
+      "cover": "/images/market/hotel_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -37,7 +37,7 @@
       "name": "SportUp - Sport UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/sport_cover.png",
+      "cover": "/images/market/sport_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -53,7 +53,7 @@
       "name": "Crypto Wallet",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/crypto_cover.png",
+      "cover": "/images/market/crypto_cover.png",
       "images": [
         "/images/project/crypto_1.png",
         "/images/project/crypto_2.png"
@@ -68,7 +68,7 @@
       "name": "Onboarding Screen",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/onboarding_cover.png",
+      "cover": "/images/market/onboarding_cover.png",
       "images": [
         "/images/project/onboarding_1.png",
         "/images/project/onboarding_2.png",
@@ -84,7 +84,7 @@
       "name": "Movie App",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/movie_cover.png",
+      "cover": "/images/market/movie_cover.png",
       "images": [
         "/images/project/movie_1.png",
         "/images/project/movie_2.png"
@@ -99,7 +99,7 @@
       "name": "School App",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/school_cover.png",
+      "cover": "/images/market/school_cover.png",
       "images": [
         "/images/project/school_1.png",
         "/images/project/school_2.png"
