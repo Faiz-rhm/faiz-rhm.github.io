@@ -2,9 +2,10 @@
   "market": [
     {
       "id": "1",
-      "name": "Flutter Inspiration App UI Design - Day 1",
+      "name": "FlutterSale - E-commerce UI Kit",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/sale_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -17,9 +18,10 @@
     },
     {
       "id": "2",
-      "name": "Flutter Inspiration App UI Design - Day 1",
+      "name": "Hotel Booking - UI Kit",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/hotel_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -32,9 +34,10 @@
     },
     {
       "id": "3",
-      "name": "Flutter Inspiration App UI Design - Day 1",
+      "name": "SportUp - Sport UI Kit",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/sport_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -47,9 +50,10 @@
     },
     {
       "id": "4",
-      "name": "Flutter Inspiration App UI Design - Day 1",
+      "name": "Crypto Wallet",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/sale_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",
@@ -62,9 +66,42 @@
     },
     {
       "id": "5",
-      "name": "Flutter Inspiration App UI Design - Day 1",
+      "name": "Onboarding Screen",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/onboarding_cover.png",
+      "images": [
+        "/images/project.png",
+        "/images/project.png",
+        "/images/review/spotify.png"
+      ],
+      "tags": [
+        "UI", "ListView"
+      ],
+      "price": "$200"
+    },
+    {
+      "id": "6",
+      "name": "Movie App",
+      "description": "Let\\'s work with ListView in an example application.",
+      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/movie_cover.png",
+      "images": [
+        "/images/project.png",
+        "/images/project.png",
+        "/images/review/spotify.png"
+      ],
+      "tags": [
+        "UI", "ListView"
+      ],
+      "price": "$200"
+    },
+    {
+      "id": "7",
+      "name": "School App",
+      "description": "Let\\'s work with ListView in an example application.",
+      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "cover": "/images/projects/school_cover.png",
       "images": [
         "/images/project.png",
         "/images/project.png",

@@ -10,6 +10,7 @@ interface Market {
   name: string; // Product name
   description: string; // Product description
   repository: string; // Product description
+  cover: string; // Product description
   images: string[]; // Array of product image URLs
   price: string; // Product price
   tags: string[]; // Array of tags
@@ -110,7 +111,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           {products.map((product) => (
             <MarketCard
               key={product.id}
-              image={product.images[0]}
+              image={product.cover}
               name={product.name}
               description={product.description}
               price={product.price}
