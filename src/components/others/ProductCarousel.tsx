@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import { Box, Flex } from "@mantine/core";
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import { Box } from "@mantine/core";
 import MarketCard from "./MarketCard";
 import MarketTitle from "./MarketTitle";
 import CustomDivider from "./CustomDivider";
-import useEmblaCarousel from "embla-carousel-react";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Market {
   id: string;
@@ -22,39 +24,63 @@ interface ProductCarouselProps {
 }
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-      skipSnaps: false,
-      containScroll: "trimSnaps",
-    },
-    [Autoplay({
-      delay: 3000,
-      stopOnInteraction: false,
-    })]
-  );
+  const sliderRef = useRef<Slider>(null);
 
-  // Scroll actions
   const scrollPrev = () => {
-    if (emblaApi) emblaApi.scrollPrev(); // Access the Embla API to scroll to the previous slide
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
   };
 
   const scrollNext = () => {
-    if (emblaApi) emblaApi.scrollNext(); // Access the Embla API to scroll to the next slide
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Default number of slides to show
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200, // At screen widths <= 1200px
+        settings: {
+          slidesToShow: 3, // Show 3 slides
+        },
+      },
+      {
+        breakpoint: 992, // At screen widths <= 992px
+        settings: {
+          slidesToShow: 2, // Show 2 slides
+        },
+      },
+      {
+        breakpoint: 768, // At screen widths <= 768px
+        settings: {
+          slidesToShow: 1, // Show 1 slide
+        },
+      },
+    ],
   };
 
   return (
     <Box
       style={{
         position: "relative",
-        overflow: "hidden",
         margin: "0 auto",
-        width: "100%",
+        maxWidth: "100%", // Ensure the carousel fits the container
+        padding: "20px", // Add padding around the carousel
       }}
     >
       {/* Add Title and Divider */}
       <MarketTitle scrollNext={scrollNext} scrollPrev={scrollPrev} />
+
       <CustomDivider />
 
       {/* Gradient Overlays */}
@@ -65,8 +91,8 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           bottom: 0,
           left: 0,
           width: "100px",
-          background: "linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent)",
-          zIndex: 1,
+          background: "linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent)",
+          zIndex: 2,
         }}
       />
       <Box
@@ -76,30 +102,16 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           bottom: 0,
           right: 0,
           width: "100px",
-          background: "linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent)",
-          zIndex: 1,
+          background: "linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent)",
+          zIndex: 2,
         }}
       />
 
-    <Box pb={10} />
-
       {/* Carousel */}
-      <Box ref={emblaRef} style={{ overflow: "hidden" }}>
-        <Flex
-          className="embla__container"
-          style={{
-            display: "flex",
-            userSelect: "none",
-            gap: "16px",
-            paddingRight: "16px",
-            paddingLeft: "16px",
-            position: "relative",
-            zIndex: 2,
-          }}
-        >
-          {products.map((product) => (
+      <Slider {...sliderSettings} ref={sliderRef}>
+        {products.map((product) => (
+          <div key={product.id} style={{ padding: "0 8px" }}> {/* Add spacing between cards */}
             <MarketCard
-              key={product.id}
               image={product.cover}
               name={product.name}
               description={product.description}
@@ -112,9 +124,9 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
                 }
               }}
             />
-          ))}
-        </Flex>
-      </Box>
+          </div>
+        ))}
+      </Slider>
     </Box>
   );
 };

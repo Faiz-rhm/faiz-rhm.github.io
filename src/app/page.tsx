@@ -94,42 +94,11 @@ export default function Home() {
         </React.Fragment>
       ))}
 
-      {/* <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project/baran.png",
-          },
-        ]}
-      />
-
-      <Box pb={20} />
-
-      <CustomDivider/>
-
-      <Box pb={20} />
-
-      <ProjectCard
-        chipText="FLUTTER"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient."
-        buttonLabel="FULL CASE STUDY"
-        cards={[
-          {
-            image:
-              "/images/project/daricha.png",
-          },
-        ]}
-        swapColumns={true}
-      /> */}
-
       <Box pb={100} />
 
       <ProductCarousel products={Market.market} />
 
-      <Box pb={100} />
+      <Box pb={70} />
 
       <BottomSection/>
 

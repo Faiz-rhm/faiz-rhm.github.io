@@ -15,7 +15,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
       onClick={onClick} // Handle click events for navigation
       style={{
         flex: "0 0 400px",
-        height: "500px",
+        height: "550px",
         position: "relative",
         textAlign: "center",
         backgroundColor: "rgba(35, 35, 35, 0.5)",
@@ -27,6 +27,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         flexDirection: "column",
         cursor: "pointer", // Indicate clickable element
         transition: "transform 0.2s ease, box-shadow 0.2s ease", // Smooth hover effect
+        margin: "10px 10px", // Add horizontal margin
       }}
       className="market-card"
     >
