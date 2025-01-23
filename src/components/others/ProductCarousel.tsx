@@ -1,19 +1,20 @@
-import React, { useEffect } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import React, { useEffect, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Box, Flex } from "@mantine/core";
 import MarketCard from "./MarketCard";
-import MarketTitle from "./MarketTitle"; // Import MarketTitle component
-import CustomDivider from "./CustomDivider"; // Import CustomDivider component
+import MarketTitle from "./MarketTitle";
+import CustomDivider from "./CustomDivider";
+import useEmblaCarousel from "embla-carousel-react";
 
 interface Market {
-  id: string; // Unique identifier
-  name: string; // Product name
-  description: string; // Product description
-  repository: string; // Product description
-  cover: string; // Product description
-  images: string[]; // Array of product image URLs
-  price: string; // Product price
-  tags: string[]; // Array of tags
+  id: string;
+  name: string;
+  description: string;
+  repository: string;
+  cover: string;
+  images: string[];
+  price: string;
+  tags: string[];
 }
 
 interface ProductCarouselProps {
@@ -21,39 +22,26 @@ interface ProductCarouselProps {
 }
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
-  const [emblaRef, embla] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-    skipSnaps: false, // Ensure consistent spacing
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      skipSnaps: false,
+      containScroll: "trimSnaps",
+    },
+    [Autoplay({
+      delay: 3000,
+      stopOnInteraction: false,
+    })]
+  );
 
-  useEffect(() => {
-    if (!embla) return;
-
-    let autoplay: NodeJS.Timeout;
-    const startAutoplay = () => {
-      autoplay = setInterval(() => {
-        if (embla) embla.scrollNext();
-      }, 3000); // Slide every 3 seconds
-    };
-
-    const stopAutoplay = () => clearInterval(autoplay);
-
-    startAutoplay();
-
-    embla.on("pointerDown", stopAutoplay); // Pause autoplay on interaction
-    embla.on("pointerUp", startAutoplay); // Resume autoplay after interaction
-
-    return () => clearInterval(autoplay);
-  }, [embla]);
-
+  // Scroll actions
   const scrollPrev = () => {
-    if (embla) embla.scrollPrev();
+    if (emblaApi) emblaApi.scrollPrev(); // Access the Embla API to scroll to the previous slide
   };
 
   const scrollNext = () => {
-    if (embla) embla.scrollNext();
+    if (emblaApi) emblaApi.scrollNext(); // Access the Embla API to scroll to the next slide
   };
 
   return (
@@ -66,8 +54,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       }}
     >
       {/* Add Title and Divider */}
-      <MarketTitle  scrollNext={scrollNext} scrollPrev={scrollPrev}/>
-
+      <MarketTitle scrollNext={scrollNext} scrollPrev={scrollPrev} />
       <CustomDivider />
 
       {/* Gradient Overlays */}
@@ -94,6 +81,8 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
         }}
       />
 
+    <Box pb={10} />
+
       {/* Carousel */}
       <Box ref={emblaRef} style={{ overflow: "hidden" }}>
         <Flex
@@ -101,11 +90,11 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           style={{
             display: "flex",
             userSelect: "none",
-            gap: "16px", // Space between slides
-            paddingRight: "16px", // Add padding to the end of the carousel
-            paddingLeft: "16px", // Add padding to the start of the carousel
+            gap: "16px",
+            paddingRight: "16px",
+            paddingLeft: "16px",
             position: "relative",
-            zIndex: 2, // Ensure content is above gradient
+            zIndex: 2,
           }}
         >
           {products.map((product) => (
@@ -115,6 +104,15 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
               name={product.name}
               description={product.description}
               price={product.price}
+              onClick={() => {
+                if (product.price === "FREE") {
+                  // Navigate to market_details page for free products
+                  window.location.href = product.repository;
+                } else {
+                  window.location.href = "/market_details";
+                  // Redirect to the repository path for paid products
+                }
+              }}
             />
           ))}
         </Flex>

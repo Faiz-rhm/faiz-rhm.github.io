@@ -2,9 +2,9 @@
   "market": [
     {
       "id": "1",
-      "name": "FlutterSale - E-commerce UI Kit",
+      "name": "FlutterSale - E-commerce UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "repository": "/shop",
       "cover": "/images/projects/sale_cover.png",
       "images": [
         "/images/project.png",
@@ -12,15 +12,15 @@
         "/images/project.png"
       ],
       "tags": [
-        "UI", "ListView"
+        "UI", "Ios"
       ],
-      "price": "$200"
+      "price": "$99"
     },
     {
       "id": "2",
-      "name": "Hotel Booking - UI Kit",
+      "name": "Hotel Booking - UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "repository": "/hotel",
       "cover": "/images/projects/hotel_cover.png",
       "images": [
         "/images/project.png",
@@ -30,11 +30,11 @@
       "tags": [
         "UI", "ListView"
       ],
-      "price": "$200"
+      "price": "$69"
     },
     {
       "id": "3",
-      "name": "SportUp - Sport UI Kit",
+      "name": "SportUp - Sport UI Kit 👑",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/projects/sport_cover.png",
@@ -46,23 +46,22 @@
       "tags": [
         "UI", "ListView"
       ],
-      "price": "$200"
+      "price": "$69"
     },
     {
       "id": "4",
       "name": "Crypto Wallet",
       "description": "Let\\'s work with ListView in an example application.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
-      "cover": "/images/projects/sale_cover.png",
+      "cover": "/images/projects/crypto_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/project.png"
+        "/images/project/crypto_1.png",
+        "/images/project/crypto_2.png"
       ],
       "tags": [
-        "UI", "ListView"
+        "flutter", "wallet-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "$200"
+      "price": "FREE"
     },
     {
       "id": "5",
@@ -71,14 +70,14 @@
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/projects/onboarding_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/review/spotify.png"
+        "/images/project/onboarding_1.png",
+        "/images/project/onboarding_2.png",
+        "/images/project/onboarding_3.png"
       ],
       "tags": [
-        "UI", "ListView"
+        "flutter", "onboarding-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "$200"
+      "price": "FREE"
     },
     {
       "id": "6",
@@ -87,14 +86,13 @@
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/projects/movie_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/review/spotify.png"
+        "/images/project/movie_1.png",
+        "/images/project/movie_2.png"
       ],
       "tags": [
-        "UI", "ListView"
+        "flutter", "movie-app", "riverpod", "dio", "freezed", "themoviedb", "api"
       ],
-      "price": "$200"
+      "price": "FREE"
     },
     {
       "id": "7",
@@ -103,14 +101,13 @@
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/projects/school_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/review/spotify.png"
+        "/images/project/school_1.png",
+        "/images/project/school_2.png"
       ],
       "tags": [
-        "UI", "ListView"
+        "flutter", "school-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "$200"
+      "price": "FREE"
     }
   ]
 }

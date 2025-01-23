@@ -5,51 +5,7 @@ import { Box } from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import MarketCard from "../../components/others/MarketCard";
-
-const products = [
-  {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "3",
-    name: "Product 3",
-    description: "This is a brief description of product 3.",
-    image: "/images/project.png",
-    price: "$150",
-  },
-  {
-    id: "4",
-    name: "Product 4",
-    description: "This is a brief description of product 4.",
-    image: "/images/project.png",
-    price: "$180",
-  },
-  {
-    id: "5",
-    name: "Product 5",
-    description: "This is a brief description of product 5.",
-    image: "/images/project.png",
-    price: "$250",
-  },
-  {
-    id: "6",
-    name: "Product 6",
-    description: "This is a brief description of product 6.",
-    image: "/images/project.png",
-    price: "$300",
-  },
-];
+import MarketData from "@/data/market.json";
 
 export default function Market() {
   return (
@@ -76,10 +32,10 @@ export default function Market() {
           padding: "16px",
         }}
       >
-        {products.map((product) => (
+        {MarketData.market.map((product) => (
           <MarketCard
             key={product.id}
-            image={product.image}
+            image={product.cover}
             name={product.name}
             description={product.description}
             price={product.price}

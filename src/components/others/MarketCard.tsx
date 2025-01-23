@@ -46,8 +46,8 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
             position: "absolute",
             top: "8px",
             right: "8px",
-            backgroundColor: "rgba(170,255,61,0.2)",
-            color: "#D9D9D9",
+            backgroundColor: "#669924",
+            color: "#FFFFFF",
             padding: "4px 8px",
             fontSize: "14px",
             fontWeight: "600",
@@ -55,7 +55,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
             zIndex: 2,
           }}
         >
-          ${price}
+          {price}
         </div>
 
         {/* Image with Zoom Effect */}
