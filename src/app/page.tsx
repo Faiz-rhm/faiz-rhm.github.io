@@ -88,7 +88,7 @@ export default function Home() {
 
           <Box pb={20} />
 
-          {index < ProjectData.projects.length - 1 && <CustomDivider />}
+          {index < 1 && <CustomDivider />}
 
           <Box pb={20} />
         </React.Fragment>
