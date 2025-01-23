@@ -9,11 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 import MarketDetails from "../../components/others/MarketDetails";
 
 const imageList = [
-  "/images/projects/spotify_1.png",
-  "/images/projects/spotify_2.png",
-  "/images/projects/spotify_3.png",
-  "/images/projects/spotify_4.png",
-  "/images/projects/spotify_5.png",
+  "/images/market/spotify_1.png",
+  "/images/market/spotify_2.png",
+  "/images/market/spotify_3.png",
+  "/images/market/spotify_4.png",
+  "/images/market/spotify_5.png",
 ];
 
 export default function Projects() {
