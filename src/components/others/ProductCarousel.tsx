@@ -5,16 +5,18 @@ import MarketCard from "./MarketCard";
 import MarketTitle from "./MarketTitle"; // Import MarketTitle component
 import CustomDivider from "./CustomDivider"; // Import CustomDivider component
 
-interface Product {
-  id: string;
+interface Market {
+  id: string; // Unique identifier
   name: string; // Product name
   description: string; // Product description
-  image: string; // Product image URL
+  repository: string; // Product description
+  images: string[]; // Array of product image URLs
   price: string; // Product price
+  tags: string[]; // Array of tags
 }
 
 interface ProductCarouselProps {
-  products: Product[];
+  products: Market[];
 }
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
@@ -108,7 +110,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           {products.map((product) => (
             <MarketCard
               key={product.id}
-              image={product.image}
+              image={product.images[0]}
               name={product.name}
               description={product.description}
               price={product.price}

@@ -12,6 +12,8 @@ import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
 import { Box } from '@mantine/core';
 
+import Market from "@/data/market.json";
+
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
   { label: "INSTAGRAM", href: "https://www.instagram.com/faiz.rhm/" },
@@ -25,78 +27,6 @@ const sections = [
   { label: "ALL PROJECTS", href: "/projects" },
 ];
 
-const products = [
-  {
-    id: "1",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "2",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "3",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "4",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "5",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "6",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "7",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "8",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-  {
-    id: "9",
-    name: "Product 1",
-    description: "This is a brief description of product 1.",
-    image: "/images/project.png",
-    price: "$100",
-  },
-  {
-    id: "10",
-    name: "Product 2",
-    description: "This is a brief description of product 2.",
-    image: "/images/project.png",
-    price: "$200",
-  },
-];
 
 export default function Home() {
   return (
@@ -174,7 +104,7 @@ export default function Home() {
 
       <Box pb={100} />
 
-      <ProductCarousel products={products} />
+      <ProductCarousel products={Market.market} />
 
       <Box pb={100} />
 

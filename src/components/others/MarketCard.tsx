@@ -6,11 +6,13 @@ interface MarketCardProps {
   name: string;
   description: string;
   price: string;
+  onClick?: () => void; // Optional onClick event for navigation
 }
 
-const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price }) => {
+const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price, onClick }) => {
   return (
     <Box
+      onClick={onClick} // Handle click events for navigation
       style={{
         flex: "0 0 400px",
         height: "500px",
@@ -23,7 +25,10 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",
+        cursor: "pointer", // Indicate clickable element
+        transition: "transform 0.2s ease, box-shadow 0.2s ease", // Smooth hover effect
       }}
+      className="market-card"
     >
       {/* Image Container */}
       <div
@@ -102,10 +107,14 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         </Text>
       </Box>
 
-      {/* Global Zoom CSS */}
+      {/* Global Hover and Zoom CSS */}
       <style jsx global>{`
         .zoom-image:hover {
           transform: scale(1.2); /* Zoom on hover */
+        }
+        .market-card:hover {
+          transform: translateY(-5px); /* Slight lift effect on hover */
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
         }
       `}</style>
     </Box>
