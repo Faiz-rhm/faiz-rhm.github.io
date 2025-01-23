@@ -50,33 +50,27 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
 
           <Box pb={20} />
 
-          <Text
+          <p
             style={{
-              fontSize: isMobile ? "18px" : "18px", // Smaller heading on mobile
-              fontWeight: "400",
-              fontFamily: "Manrope",
-              color: "#D3CEC4", // Gradient for textzz
-              textAlign: isMobile ? "center" : "left", // Center text on mobile
-              lineHeight: "1.7", // Adjust line height for better readability
+              fontSize: "1.2rem",
+              lineHeight: "1.6",
+              color: "#E0E0E0",
             }}
           >
             {heading}
-          </Text>
+          </p>
 
           <Box pb={16} />
 
-          <Text
+          <p
             style={{
-              fontSize: isMobile ? "18px" : "18px", // Smaller heading on mobile
-              fontWeight: "400",
-              fontFamily: "Manrope",
-              color: "#D3CEC4", // Gradient for textzz
-              textAlign: isMobile ? "center" : "left", // Center text on mobile
-              lineHeight: "1.7", // Adjust line height for better readability
+              fontSize: "1.2rem",
+              lineHeight: "1.6",
+              color: "#E0E0E0",
             }}
           >
             {description}
-          </Text>
+          </p>
         </Box>
 
         {/* Right Side - Image (conditionally rendered) */}

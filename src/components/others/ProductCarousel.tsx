@@ -106,11 +106,9 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
               price={product.price}
               onClick={() => {
                 if (product.price === "FREE") {
-                  // Navigate to market_details page for free products
-                  window.location.href = product.repository;
-                } else {
                   window.location.href = "/market_details";
-                  // Redirect to the repository path for paid products
+                } else {
+                  window.location.href = product.repository;
                 }
               }}
             />
