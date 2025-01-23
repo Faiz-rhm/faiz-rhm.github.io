@@ -28,26 +28,32 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
         <div
           style={{
             flex: "1",
-            maxWidth: "550px",
+            maxWidth: "400px",
             minWidth: "300px",
-            height: "450px", // Consistent height for responsiveness
+            height: "520px", // Consistent height for responsiveness
             backgroundColor: "rgba(35, 35, 35, 0.5)",
             borderRadius: "32px",
-            overflow: "hidden",
-            padding: "30px",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingLeft: "50px",
+            paddingRight: "50px",
+            paddingTop: "20px",
           }}
         >
           <Slider {...settings}>
             {imageList.map((src, index) => (
-              <div key={index} style={{ width: "100%", height: "100%" }}>
+              <div key={index} style={{ width: "550", height: "300" }}>
                 <img
                   src={src}
                   alt={`Carousel Image ${index + 1}`}
                   style={{
+                    height: "450px",
                     width: "100%",
-                    height: "100%",
-                    objectFit: "cover", // Fill container without distortion
-                    borderRadius: "32px",
+                    objectFit: "contain", // Fill container without distortion
+                    display: "block", // Prevents inline spacing issues
+                    // display: "flex", // Use flexbox to align children
+                    justifyContent: "center", // Horizontally center the image
+                    alignItems: "center", // Vertically center the image
                   }}
                 />
               </div>

@@ -9,10 +9,10 @@ import "slick-carousel/slick/slick-theme.css";
 import MarketDetails from "../../components/others/MarketDetails";
 
 const imageList = [
-  "/images/review/baran.png",
-  "/images/review/sport.png",
-  "/images/review/onboarding.png",
-  "/images/review/spotify.png",
+  "/images/app.png",
+  "/images/app.png",
+  "/images/app.png",
+  "/images/app.png",
 ];
 
 export default function Projects() {

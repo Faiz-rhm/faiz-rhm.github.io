@@ -36,10 +36,8 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
           position: "relative",
           width: "100%",
           height: "75%",
-          borderRadius: "12px",
           overflow: "hidden",
           marginBottom: "8px",
-          backgroundColor: "rgba(35, 35, 35, 0.5)",
         }}
       >
         {/* Price Tag */}
