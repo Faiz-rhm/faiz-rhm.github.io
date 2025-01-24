@@ -73,6 +73,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <Button
                   variant="default"
+                  onClick={() => {
+                    window.location.href = "/project_details";
+                  }}
                   style={{
                     background: "#FFFFFF",
                     height: "45px",
@@ -172,6 +175,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <Button
                   variant="default"
+                  onClick={() => {
+                    window.location.href = "/project_details";
+                  }}
                   style={{
                     background: "#FFFFFF",
                     height: "45px",
