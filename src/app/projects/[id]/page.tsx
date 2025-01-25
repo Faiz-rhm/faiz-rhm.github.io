@@ -1,11 +1,27 @@
 'use client';
 
+import { useParams } from 'next/navigation';
+import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
-import StoreButtons from '../../components/others/StoreButton';
-import CustomDivider from '../../components/others/CustomDivider';
+import StoreButtons from '../../../components/others/StoreButton';
+import CustomDivider from '../../../components/others/CustomDivider';
 import { Text, Box, Container, Image, Divider } from '@mantine/core';
 
 export default function ProjectsDetails() {
+  const params = useParams();
+  const id = params?.id;
+
+  // Find the project using the ID
+  const project = ProjectData.projects.find((project) => project.id === id);
+
+  if (!project) {
+    return (
+      <Container size="xl">
+        <Text style={{ color: '#E0E0E0', textAlign: 'center' }}>Project not found</Text>
+      </Container>
+    );
+  }
+
   return (
     <>
       <Box pb={100} />
@@ -33,7 +49,7 @@ export default function ProjectsDetails() {
               padding: '16px',
             }}
           >
-            {/* <Image
+            <Image
               src={project.cover}
               alt={project.name}
               style={{
@@ -43,7 +59,7 @@ export default function ProjectsDetails() {
                 transition: 'transform 0.3s ease',
               }}
               className="zoom-image"
-            /> */}
+            />
           </div>
 
           {/* Right Text */}
@@ -68,7 +84,7 @@ export default function ProjectsDetails() {
                 lineHeight: '1.2',
               }}
             >
-              {/* {project.name} */}
+              {project.name}
             </Text>
 
             <Box pb={15} />
@@ -82,7 +98,7 @@ export default function ProjectsDetails() {
                 color: '#E0E0E0',
               }}
             >
-              {/* {project.description} */}
+              {project.description}
             </p>
 
             <Box pb={25} />

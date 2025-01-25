@@ -24,7 +24,7 @@ export default function Projects() {
       {ProjectData.projects.map((product, index) => (
         <React.Fragment key={product.id}>
           <ProjectCard
-            id={product.id}
+            id={product.id} // Ensure `product.id` exists
             chipText={product.tag}
             description={product.description}
             buttonLabel="FULL CASE STUDY"
@@ -33,7 +33,7 @@ export default function Projects() {
                 image: product.cover,
               },
             ]}
-            swapColumns={index % 2 !== 0} // Alternate columns for every other project
+            swapColumns={index % 2 !== 0}
           />
 
           <Box pb={20} />

@@ -1,9 +1,11 @@
+'use client'
+
 import React from "react";
-import { Container, Flex, Box, Text, Button } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
 import Chip from "@/components/others/Chip";
-import CustomCard from "@/components/card/CustomCard";
 import { useRouter } from "next/navigation";
+import { useMediaQuery } from "@mantine/hooks";
+import CustomCard from "@/components/card/CustomCard";
+import { Container, Flex, Box, Text, Button } from "@mantine/core";
 
 interface ProjectCardProps {
   id: string;
@@ -30,11 +32,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
+  console.log("id:", id);
+
   const router = useRouter(); // Hook for navigation
 
   const handleNavigation = () => {
     router.push(
-      `/project_details?id=${id}`
+      `/projects/2`
     ); // Navigate to '/project_details'
   };
 
@@ -85,9 +89,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <Button
                   variant="default"
-                  onClick={() => {
-                    window.location.href = "/project_details";
-                  }}
+                  onClick={handleNavigation} // Add navigation handler
+
                   style={{
                     background: "#FFFFFF",
                     height: "45px",
