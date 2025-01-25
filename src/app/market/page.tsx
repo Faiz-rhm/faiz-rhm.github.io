@@ -7,7 +7,7 @@ import HeroSection from "../../components/others/HeroSection";
 import MarketCard from "../../components/others/MarketCard";
 import MarketData from "@/data/market.json";
 
-export default function Market() {
+export default function MarketPage() {
   return (
     <>
       <Box pb={50} />

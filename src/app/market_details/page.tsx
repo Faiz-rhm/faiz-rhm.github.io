@@ -16,7 +16,7 @@ const imageList = [
   "/images/market/spotify_5.png",
 ];
 
-export default function Projects() {
+export default function MarketDetailsPage() {
   const settings = {
     dots: true, // Enable navigation dots
     infinite: true, // Infinite loop

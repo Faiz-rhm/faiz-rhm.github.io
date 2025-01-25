@@ -7,7 +7,7 @@ import HeroSection from "../../components/others/HeroSection";
 import HeaderLabel from "../../components/others/HeaderLabel";
 import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 
-export default function Projects() {
+export default function HotelPage() {
   return (
     <>
       <Box pb={50} />

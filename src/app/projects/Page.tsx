@@ -8,7 +8,7 @@ import ProjectCard from "../../components/others/ProjectCard";
 import ProjectData from "@/data/project.json";
 import React from "react";
 
-export default function Projects() {
+export default function ProjectPage() {
   return (
     <>
       <Box pb={50} />
@@ -24,6 +24,7 @@ export default function Projects() {
       {ProjectData.projects.map((product, index) => (
         <React.Fragment key={product.id}>
           <ProjectCard
+            id={product.id}
             chipText={product.tag}
             description={product.description}
             buttonLabel="FULL CASE STUDY"

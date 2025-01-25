@@ -6,6 +6,7 @@ import CustomCard from "@/components/card/CustomCard";
 import { useRouter } from "next/navigation";
 
 interface ProjectCardProps {
+  id: string;
   chipText: string;
   description: string;
   buttonLabel: string;
@@ -20,6 +21,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   chipText,
   description,
   buttonLabel,
@@ -31,7 +33,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const router = useRouter(); // Hook for navigation
 
   const handleNavigation = () => {
-    router.push("/project_details"); // Navigate to '/project_details'
+    router.push(
+      `/project_details?id=${id}`
+    ); // Navigate to '/project_details'
   };
 
 
