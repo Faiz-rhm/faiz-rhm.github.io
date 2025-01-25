@@ -8,7 +8,7 @@ import CustomCard from "@/components/card/CustomCard";
 import { Container, Flex, Box, Text, Button } from "@mantine/core";
 
 interface ProjectCardProps {
-  id: string;
+  id: string; // Make sure `id` is defined as a string
   chipText: string;
   description: string;
   buttonLabel: string;
@@ -19,7 +19,7 @@ interface ProjectCardProps {
     backgroundColor?: string;
     borderColor?: string;
   }[];
-  swapColumns?: boolean; // New prop to swap text and card
+  swapColumns?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -32,16 +32,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  console.log("id:", id);
-
   const router = useRouter(); // Hook for navigation
 
   const handleNavigation = () => {
     router.push(
-      `/projects/2`
-    ); // Navigate to '/project_details'
+      `/projects/${id}`
+    );
   };
-
 
   return (
     <Container size="xl">

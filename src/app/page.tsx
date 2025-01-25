@@ -10,9 +10,8 @@ import ProjectCard from "../components/others/ProjectCard";
 import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
 import ProjectData from "@/data/project.json";
-import { Box } from '@mantine/core';
-
 import Market from "@/data/market.json";
+import { Box } from '@mantine/core';
 import React from "react";
 
 const buttons = [
@@ -75,6 +74,7 @@ export default function Home() {
       {ProjectData.projects.slice(0, 2).map((product, index) => (
         <React.Fragment key={product.id}>
           <ProjectCard
+            id={product.id}
             chipText={product.tag}
             description={product.description}
             buttonLabel="FULL CASE STUDY"
