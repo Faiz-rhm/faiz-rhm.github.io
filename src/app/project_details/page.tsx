@@ -18,7 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
   }
 `}</style>
 
-export default function ProjectsDetailsPage() {
+export default function ProjectsDetails() {
   return (
     <>
       <Box pb={100} />

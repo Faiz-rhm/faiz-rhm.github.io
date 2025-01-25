@@ -8,7 +8,7 @@ import ProjectCard from "../../components/others/ProjectCard";
 import ProjectData from "@/data/project.json";
 import React from "react";
 
-export default function ProjectPage() {
+export default function Projects() {
   return (
     <>
       <Box pb={50} />
