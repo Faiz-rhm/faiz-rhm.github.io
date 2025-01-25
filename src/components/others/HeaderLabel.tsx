@@ -5,7 +5,7 @@ import { useMediaQuery } from "@mantine/hooks";
 interface HeaderLabelProps {
   heading: string; // The main heading
   subheading: string; // The subheading text
-  description: string;
+  description?: string;
   imageSrc?: string; // URL of the image (optional)
   altText?: string; // Alt text for the image
 }
