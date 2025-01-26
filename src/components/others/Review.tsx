@@ -31,15 +31,17 @@ const RightOverlay = styled(Overlay)`
 
 const images = [
   { id: "1", image: "/images/review/baran.png" },
-  { id: "7", image: "/images/review/sport.png" },
-  { id: "2", image: "/images/review/onboarding.png" },
-  { id: "3", image: "/images/review/spotify.png" },
-  { id: "7", image: "/images/review/hotel.png" },
-  { id: "4", image: "/images/review/food.png" },
-  { id: "5", image: "/images/review/crypto.png" },
-  { id: "7", image: "/images/review/sale.png" },
-  { id: "6", image: "/images/review/movie.png" },
-  { id: "6", image: "/images/review/weena.png" },
+  { id: "2", image: "/images/review/sport.png" },
+  { id: "3", image: "/images/review/onboarding.png" },
+  { id: "4", image: "/images/review/spotify.png" },
+  { id: "5", image: "/images/review/hotel.png" },
+  { id: "6", image: "/images/review/food.png" },
+  { id: "7", image: "/images/review/crypto.png" },
+  { id: "8", image: "/images/review/sale.png" },
+  { id: "9", image: "/images/review/movie.png" },
+  { id: "10", image: "/images/review/weena.png" },
+  { id: "11", image: "/images/review/jobs.png" },
+  { id: "12", image: "/images/review/wagi.png" },
 ];
 
 const Reviews = () => {

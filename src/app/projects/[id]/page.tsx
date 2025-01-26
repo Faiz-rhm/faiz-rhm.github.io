@@ -1,5 +1,6 @@
 'use client';
 
+import Slider from "react-slick";
 import { useParams } from 'next/navigation';
 import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
@@ -7,9 +8,22 @@ import StoreButtons from '../../../components/others/StoreButton';
 import CustomDivider from '../../../components/others/CustomDivider';
 import { Text, Box, Container, Image, Divider } from '@mantine/core';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function ProjectsDetails() {
   const params = useParams();
   const id = params?.id;
+
+  const settings = {
+    dots: true, // Enable navigation dots
+    infinite: true, // Infinite loop
+    speed: 500, // Transition speed
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Autoplay speed (in ms)
+  };
 
   // Find the project using the ID
   const project = ProjectData.projects.find((project) => project.id === id);
@@ -39,27 +53,38 @@ export default function ProjectsDetails() {
           {/* Left Image with Background */}
           <div
             style={{
-              flex: '1',
-              maxWidth: '550px',
-              minWidth: '470px',
-              backgroundColor: 'rgba(35, 35, 35, 0.5)',
-              borderRadius: '32px',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '16px',
+              flex: "1",
+              maxWidth: "500px",
+              minWidth: "470px",
+              height: "520px", // Consistent height for responsiveness
+              backgroundColor: "rgba(35, 35, 35, 0.5)",
+              borderRadius: "32px",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingLeft: "50px",
+              paddingRight: "50px",
+              paddingTop: "20px",
             }}
           >
-            <Image
-              src={project.cover}
-              alt={project.name}
-              style={{
-                width: '100%',
-                objectFit: 'contain',
-                borderRadius: '24px',
-                transition: 'transform 0.3s ease',
-              }}
-              className="zoom-image"
-            />
+            <Slider {...settings}>
+              {project.images.map((src, index) => (
+                <div key={index} style={{ width: "550", height: "300" }}>
+                  <img
+                    src={src}
+                    alt={`Carousel Image ${index + 1}`}
+                    style={{
+                      height: "450px",
+                      width: "100%",
+                      objectFit: "contain", // Fill container without distortion
+                      display: "block", // Prevents inline spacing issues
+                      // display: "flex", // Use flexbox to align children
+                      justifyContent: "center", // Horizontally center the image
+                      alignItems: "center", // Vertically center the image
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
           </div>
 
           {/* Right Text */}
@@ -120,8 +145,8 @@ export default function ProjectsDetails() {
               my="xl"
               style={{
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-                marginTop: '20px',
-                marginBottom: '20px',
+                marginTop: '18px',
+                marginBottom: '18px',
               }}
             />
 

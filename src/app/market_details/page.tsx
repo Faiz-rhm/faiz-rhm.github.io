@@ -1,12 +1,12 @@
 'use client'
 
-import CustomDivider from "../../components/others/CustomDivider";
-import { Footer } from "@/components/footer/Footer";
 import { Box } from "@mantine/core";
+import { Footer } from "@/components/footer/Footer";
+import CustomDivider from "../../components/others/CustomDivider";
+import MarketDetails from "../../components/others/MarketDetails";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MarketDetails from "../../components/others/MarketDetails";
 
 const imageList = [
   "/images/market/spotify_1.png",

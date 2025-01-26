@@ -4,28 +4,66 @@
       "id": "1",
       "name": "Job.af - Job Board App",
       "description": "Let\\'s work with ListView in an example application.",
-      "cover": "/images/project/weena.png",
+      "cover": "/images/project/jobs_cover.png",
+      "images": [
+        "/images/project/job_1.png",
+        "/images/project/job_2.png",
+        "/images/project/job_3.png",
+        "/images/project/job_4.png",
+        "/images/project/job_5.png"
+      ],
       "tag": "Flutter"
     },
     {
       "id": "2",
       "name": "Baran",
       "description": "Let\\'s work with ListView in an example application.",
-      "cover": "/images/project/baran.png",
+      "cover": "/images/project/baran_cover.png",
+      "images": [
+        "/images/project/baran_1.png",
+        "/images/project/baran_2.png",
+        "/images/project/baran_3.png",
+        "/images/project/baran_4.png"
+      ],
       "tag": "Flutter"
     },
     {
       "id": "3",
       "name": "Weena",
       "description": "Let\\'s work with ListView in an example application.",
-      "cover": "/images/project/weena.png",
+      "cover": "/images/project/weena_cover.png",
+      "images": [
+        "/images/project/weena_1.png",
+        "/images/project/weena_2.png",
+        "/images/project/weena_3.png",
+        "/images/project/weena_4.png",
+        "/images/project/weena_5.png"
+      ],
       "tag": "Flutter"
     },
     {
       "id": "4",
+      "name": "Wagey",
+      "description": "Let\\'s work with ListView in an example application.",
+      "cover": "/images/project/wagey_cover.png",
+      "images": [
+        "/images/project/wagey_1.png",
+        "/images/project/wagey_2.png",
+        "/images/project/wagey_3.png",
+        "/images/project/wagey_4.png",
+        "/images/project/wagey_5.png"
+      ],
+      "tag": "Flutter"
+    },
+    {
+      "id": "5",
       "name": "Daricha",
       "description": "Let\\'s work with ListView in an example application.",
-      "cover": "/images/project/daricha.png",
+      "cover": "/images/project/daricha_cover.png",
+      "images": [
+        "/images/project/weena_1.png",
+        "/images/project/weena_1.png"
+      ],
       "tag": "Flutter"
     }
   ]

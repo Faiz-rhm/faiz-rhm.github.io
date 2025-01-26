@@ -28,8 +28,8 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
         <div
           style={{
             flex: "1",
-            maxWidth: "400px",
-            minWidth: "300px",
+            maxWidth: "500px",
+            minWidth: "470px",
             height: "520px", // Consistent height for responsiveness
             backgroundColor: "rgba(35, 35, 35, 0.5)",
             borderRadius: "32px",
