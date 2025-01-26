@@ -14,7 +14,8 @@
       "tags": [
         "UI", "Ios"
       ],
-      "price": "$99"
+      "price": "$99",
+      "isVisible": true
     },
     {
       "id": "2",
@@ -30,7 +31,8 @@
       "tags": [
         "UI", "ListView"
       ],
-      "price": "$69"
+      "price": "$69",
+      "isVisible": true
     },
     {
       "id": "3",
@@ -46,7 +48,8 @@
       "tags": [
         "UI", "ListView"
       ],
-      "price": "$69"
+      "price": "$69",
+      "isVisible": false
     },
     {
       "id": "4",
@@ -61,7 +64,8 @@
       "tags": [
         "flutter", "wallet-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     },
     {
       "id": "5",
@@ -77,7 +81,8 @@
       "tags": [
         "flutter", "onboarding-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     },
     {
       "id": "6",
@@ -92,7 +97,8 @@
       "tags": [
         "flutter", "movie-app", "riverpod", "dio", "freezed", "themoviedb", "api"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     },
     {
       "id": "7",
@@ -107,7 +113,8 @@
       "tags": [
         "flutter", "school-app", "ui", "ios", "android", "clean-code"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     },
     {
       "id": "8",
@@ -125,7 +132,8 @@
       "tags": [
         "flutter", "spotify", "ui", "ios", "android", "clean-code", "music"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     },
     {
       "id": "9",
@@ -140,7 +148,8 @@
       "tags": [
         "flutter", "food", "restaurant", "ui", "ios", "android", "clean-code"
       ],
-      "price": "FREE"
+      "price": "FREE",
+      "isVisible": true
     }
   ]
 }

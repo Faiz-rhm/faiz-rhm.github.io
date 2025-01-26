@@ -18,6 +18,7 @@ interface Market {
   images: string[];
   price: string;
   tags: string[];
+  isVisible: boolean;
 }
 
 interface ProductCarouselProps {
@@ -119,19 +120,23 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       {/* Carousel */}
       <Slider {...sliderSettings} ref={sliderRef}>
         {products.map((product) => (
-          <MarketCard
-            image={product.cover}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-            onClick={() => {
-              if (product.price === "FREE") {
-                handleNavigation(product.id);
-              } else {
-                window.location.href = product.repository;
-              }
-            }}
-          />
+          product.isVisible && ( // Check if product.isVisible is true
+            <MarketCard
+              key={product.id}
+              image={product.cover}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              width="100%" // Set width to 100% for all cards
+              onClick={() => {
+                if (product.price === "FREE") {
+                  handleNavigation(product.id);
+                } else {
+                  window.location.href = product.repository;
+                }
+              }}
+            />
+          )
         ))}
       </Slider>
     </Box>

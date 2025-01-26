@@ -42,21 +42,23 @@ export default function Market() {
           }}
         >
           {MarketData.market.map((product) => (
-            <MarketCard
-              key={product.id}
-              image={product.cover}
-              name={product.name}
-              description={product.description}
-              price={product.price}
-              width="100%" // Set width to 100% for all cards
-              onClick={() => {
-                if (product.price === "FREE") {
-                  handleNavigation(product.id);
-                } else {
-                  window.location.href = product.repository;
-                }
-              }}
-            />
+            product.isVisible && ( // Check if product.isVisible is true
+              <MarketCard
+                key={product.id}
+                image={product.cover}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                width="100%" // Set width to 100% for all cards
+                onClick={() => {
+                  if (product.price === "FREE") {
+                    handleNavigation(product.id);
+                  } else {
+                    window.location.href = product.repository;
+                  }
+                }}
+              />
+            )
           ))}
         </Box>
       </Container>
