@@ -86,7 +86,7 @@ export default function HotelPage() {
       <HeaderLabel
         subheading="The result"
         heading="Hotel booking solution designed to accelerate app development with a fully functional, customizable Flutter template. It streamlines the development process, allowing developers to focus on creating exceptional user experiences and driving business growth."
-        description="45+ nicely crafted minimal screens that cover everything you need for your shop app."
+        description="45+ nicely crafted minimal screens that cover everything you need for your hotel app."
         altText="Fluter Shop"
       />
 
