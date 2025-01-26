@@ -88,6 +88,7 @@
         "/images/project/wagey_4.png",
         "/images/project/wagey_5.png"
       ],
+      "tag": "Flutter",
       "completed": "Under development",
       "project_restriction": "The project is under Netlinks and can’t fully disclose details.",
       "points": [
@@ -109,6 +110,7 @@
         "/images/project/daricha_2.png",
         "/images/project/daricha_3.png"
       ],
+      "tag": "Flutter",
       "completed": "Completed in: 2022",
       "project_restriction": "",
       "points": [
