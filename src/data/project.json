@@ -25,7 +25,8 @@
         "/images/project/baran_1.png",
         "/images/project/baran_2.png",
         "/images/project/baran_3.png",
-        "/images/project/baran_4.png"
+        "/images/project/baran_4.png",
+        "/images/project/baran_5.png"
       ],
       "tag": "Flutter",
       "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
@@ -67,8 +68,9 @@
       "description": "An educational app sponsored by the European Union, designed to help users learn, explore courses, and access course details—spreading awareness about people's rights and promoting informed citizenship.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
-        "/images/project/weena_1.png",
-        "/images/project/weena_1.png"
+        "/images/project/daricha_1.png",
+        "/images/project/daricha_2.png",
+        "/images/project/daricha_3.png"
       ],
       "tag": "Flutter",
       "googlePlay": "https://play.google.com/store/apps/details?id=org.sfcg.daricha2&hl=en",
