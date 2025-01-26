@@ -1,13 +1,22 @@
 'use client';
 
-import { Footer } from "@/components/footer/Footer";
+import MarketData from "@/data/market.json";
+import { useRouter } from "next/navigation";
 import { Box, Container } from '@mantine/core';
+import { Footer } from "@/components/footer/Footer";
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import MarketCard from "../../components/others/MarketCard";
-import MarketData from "@/data/market.json";
 
 export default function Market() {
+  const router = useRouter(); // Hook for navigation
+
+  const handleNavigation = (id: string) => {
+    router.push(
+      `/market/${id}`
+    );
+  };
+
   return (
     <>
       <Box pb={50} />
@@ -15,7 +24,7 @@ export default function Market() {
       <HeroSection
         heading="Explore premium and free resources crafted to elevate your projects"
         subheading="🎁 Some of paid & freebies of my resources"
-        altText="Faiz Rhm"
+        altText="Market"
       />
 
       <Box pb={70} />
@@ -40,6 +49,9 @@ export default function Market() {
               description={product.description}
               price={product.price}
               width="100%" // Set width to 100% for all cards
+              onClick={() => {
+                handleNavigation(product.id);
+              }}
             />
           ))}
         </Box>

@@ -6,7 +6,7 @@ import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
 import StoreButtons from '../../../components/others/StoreButton';
 import CustomDivider from '../../../components/others/CustomDivider';
-import { Text, Box, Container, Image, Divider } from '@mantine/core';
+import { Text, Box, Container, Divider } from '@mantine/core';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -92,7 +92,7 @@ export default function ProjectsDetails() {
             style={{
               flex: '1',
               maxWidth: '750px',
-              minWidth: '300px',
+              minWidth: '400px',
               padding: '0 20px',
             }}
           >

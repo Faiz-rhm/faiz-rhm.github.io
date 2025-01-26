@@ -18,7 +18,7 @@
     },
     {
       "id": "2",
-      "name": "Baran - Electronic Reading App",
+      "name": "Baran - Reading App",
       "description": "It offers children the ability to read books, listen to audio books, and explore engaging book details, all within a fun and subscription-based platform tailored for young readers.",
       "cover": "/images/project/baran_cover.png",
       "images": [
@@ -64,7 +64,7 @@
     },
     {
       "id": "5",
-      "name": "Daricha - Education App",
+      "name": "Daricha - Educational App",
       "description": "An educational app sponsored by the European Union, designed to help users learn, explore courses, and access course details—spreading awareness about people's rights and promoting informed citizenship.",
       "cover": "/images/project/daricha_cover.png",
       "images": [

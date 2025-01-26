@@ -7,6 +7,7 @@ import CustomDivider from "./CustomDivider";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRouter } from "next/navigation";
 
 interface Market {
   id: string;
@@ -24,6 +25,14 @@ interface ProductCarouselProps {
 }
 
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
+  const router = useRouter(); // Hook for navigation
+
+  const handleNavigation = (id: string) => {
+    router.push(
+      `/market/${id}`
+    );
+  };
+
   const sliderRef = useRef<Slider>(null);
 
   const scrollPrev = () => {
@@ -110,21 +119,15 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       {/* Carousel */}
       <Slider {...sliderSettings} ref={sliderRef}>
         {products.map((product) => (
-          <div key={product.id} style={{ padding: "0 8px" }}> {/* Add spacing between cards */}
-            <MarketCard
-              image={product.cover}
-              name={product.name}
-              description={product.description}
-              price={product.price}
-              onClick={() => {
-                if (product.price === "FREE") {
-                  window.location.href = "/market_details";
-                } else {
-                  window.location.href = product.repository;
-                }
-              }}
-            />
-          </div>
+          <MarketCard
+            image={product.cover}
+            name={product.name}
+            description={product.description}
+            price={product.price}
+            onClick={() => {
+              handleNavigation(product.id);
+            }}
+          />
         ))}
       </Slider>
     </Box>

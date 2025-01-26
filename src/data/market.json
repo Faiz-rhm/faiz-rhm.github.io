@@ -3,13 +3,13 @@
     {
       "id": "1",
       "name": "FlutterSale - E-commerce UI Kit 👑",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "Flutter Grocery is a premium E-commerce UI kit that you can use to build various e-commerce apps using Flutter that works on both Android & iOS.",
       "repository": "/shop",
       "cover": "/images/market/sale_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/project.png"
+        "/images/market.png",
+        "/images/market.png",
+        "/images/market.png"
       ],
       "tags": [
         "UI", "Ios"
@@ -19,13 +19,13 @@
     {
       "id": "2",
       "name": "Hotel Booking - UI Kit 👑",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "Flutter Hotel Booking is a premium UI kit that you can use to build various hotel booking apps using Flutter that works on both Android & iOS.",
       "repository": "/hotel",
       "cover": "/images/market/hotel_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/project.png"
+        "/images/market.png",
+        "/images/market.png",
+        "/images/market.png"
       ],
       "tags": [
         "UI", "ListView"
@@ -35,13 +35,13 @@
     {
       "id": "3",
       "name": "SportUp - Sport UI Kit 👑",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "SportUp is a premium Flutter UI kit designed for building modern and feature-rich sports apps, compatible with both Android and iOS platforms.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/market/sport_cover.png",
       "images": [
-        "/images/project.png",
-        "/images/project.png",
-        "/images/project.png"
+        "/images/market.png",
+        "/images/market.png",
+        "/images/market.png"
       ],
       "tags": [
         "UI", "ListView"
@@ -51,12 +51,12 @@
     {
       "id": "4",
       "name": "Crypto Wallet",
-      "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "description": "The Crypto Wallet App UI Concept is built with Flutter and dynamic animations for an engaging user experience. It features smooth transitions and interactive elements for managing digital assets. The intuitive design makes cryptocurrency management easy and visually appealing.",
+      "repository": "https://github.com/Faiz-rhm/Flutter-Crypto-App",
       "cover": "/images/market/crypto_cover.png",
       "images": [
-        "/images/project/crypto_1.png",
-        "/images/project/crypto_2.png"
+        "/images/market/crypto_1.png",
+        "/images/market/crypto_2.png"
       ],
       "tags": [
         "flutter", "wallet-app", "ui", "ios", "android", "clean-code"
@@ -66,13 +66,13 @@
     {
       "id": "5",
       "name": "Onboarding Screen",
-      "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "description": "The Onboarding Screen for the cooking app, built with Flutter, introduces users to the app's core features with smooth animations. It guides users through key functions like browsing recipes, saving favorites, and creating shopping lists. The simple, engaging design ensures a seamless and enjoyable setup experience for new users.",
+      "repository": "https://github.com/Faiz-rhm/Flutter_Intro",
       "cover": "/images/market/onboarding_cover.png",
       "images": [
-        "/images/project/onboarding_1.png",
-        "/images/project/onboarding_2.png",
-        "/images/project/onboarding_3.png"
+        "/images/market/onboarding_1.png",
+        "/images/market/onboarding_2.png",
+        "/images/market/onboarding_3.png"
       ],
       "tags": [
         "flutter", "onboarding-app", "ui", "ios", "android", "clean-code"
@@ -82,12 +82,12 @@
     {
       "id": "6",
       "name": "Movie App",
-      "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "description": "The Movie App is built using Riverpod for state management, Dio for API integration, and Freezed for immutable data modeling. It fetches movie data from TheMovieDB API, providing users with a seamless experience to browse movie details, watch trailers, and explore ratings. The app offers smooth navigation and real-time updates, ensuring an engaging and dynamic movie discovery experience.",
+      "repository": "https://github.com/Faiz-rhm/Flutter-Movie-App",
       "cover": "/images/market/movie_cover.png",
       "images": [
-        "/images/project/movie_1.png",
-        "/images/project/movie_2.png"
+        "/images/market/movie_1.png",
+        "/images/market/movie_2.png"
       ],
       "tags": [
         "flutter", "movie-app", "riverpod", "dio", "freezed", "themoviedb", "api"
@@ -97,15 +97,48 @@
     {
       "id": "7",
       "name": "School App",
-      "description": "Let\\'s work with ListView in an example application.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "description": "The School App UI Concept is designed to help students manage assignments and tasks efficiently. The app features an intuitive interface for tracking deadlines, submitting assignments, and viewing grades. With a clean layout and easy navigation, it ensures students stay organized and on top of their academic responsibilities.",
+      "repository": "https://github.com/Faiz-rhm/Flutter-School-Assignment-UI",
       "cover": "/images/market/school_cover.png",
       "images": [
-        "/images/project/school_1.png",
-        "/images/project/school_2.png"
+        "/images/market/school_1.png",
+        "/images/market/school_2.png"
       ],
       "tags": [
         "flutter", "school-app", "ui", "ios", "android", "clean-code"
+      ],
+      "price": "FREE"
+    },
+    {
+      "id": "8",
+      "name": "Spotify Clone",
+      "description": "The Apotify UI Concept is a sleek and modern music streaming app design that offers an intuitive user interface. It features seamless navigation for discovering playlists, albums, and artists, along with easy controls for music playback. The design emphasizes a smooth, engaging experience with vibrant visuals and dynamic transitions.",
+      "repository": "https://github.com/Faiz-rhm/Flutter-Spotify",
+      "cover": "/images/market/spotify_cover.png",
+      "images": [
+        "/images/market/spotify_1.png",
+        "/images/market/spotify_2.png",
+        "/images/market/spotify_3.png",
+        "/images/market/spotify_4.png",
+        "/images/market/spotify_5.png"
+      ],
+      "tags": [
+        "flutter", "spotify", "ui", "ios", "android", "clean-code", "music"
+      ],
+      "price": "FREE"
+    },
+    {
+      "id": "9",
+      "name": "Restaurant App",
+      "description": "The Restaurant Food App offers a user-friendly interface for browsing menus, placing orders, and discovering new dishes. With intuitive navigation, users can easily customize their orders, view restaurant details, and track delivery. The app is designed to provide a seamless and enjoyable food ordering experience.",
+      "repository": "https://github.com/Faiz-rhm/Flutter-Food-Delivery",
+      "cover": "/images/market/food_cover.png",
+      "images": [
+        "/images/market/food_1.png",
+        "/images/market/food_2.png"
+      ],
+      "tags": [
+        "flutter", "food", "restaurant", "ui", "ios", "android", "clean-code"
       ],
       "price": "FREE"
     }

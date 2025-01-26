@@ -23,7 +23,9 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         backgroundColor: "rgba(35, 35, 35, 0.5)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
         borderRadius: "16px",
-        padding: "16px",
+        paddingTop: "16px",
+        paddingLeft: "16px",
+        paddingRight: "16px",
         boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",
@@ -38,7 +40,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         style={{
           position: "relative",
           width: "100%",
-          height: "75%",
+          height: "80%",
           overflow: "hidden",
           marginBottom: "8px",
         }}
@@ -96,12 +98,18 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         >
           {name}
         </Text>
+
         <Text
           style={{
-            fontSize: "16px",
-            color: "rgba(245, 245, 245, 0.7)",
-            marginBottom: "8px",
-            fontWeight: "400",
+            fontSize: "1rem",
+            lineHeight: "1.6",
+            marginBottom: "30px",
+            color: "#E0E0E0",
+            overflow: "hidden", // Hides the overflow content
+            textOverflow: "ellipsis", // Adds ellipsis (...) for overflow content
+            display: "-webkit-box", // Required for line clamping
+            WebkitLineClamp: 2, // Limits to 2 lines
+            WebkitBoxOrient: "vertical", // Required for line clamping
           }}
         >
           {description}

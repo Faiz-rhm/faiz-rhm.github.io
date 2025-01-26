@@ -64,27 +64,29 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
         {/* Right Text */}
         <div
           style={{
-            flex: "1",
-            maxWidth: "550px",
-            minWidth: "300px",
-            padding: "0 20px",
+            flex: '1',
+            maxWidth: '750px',
+            minWidth: '400px',
+            padding: '0 20px',
           }}
         >
           {/* Title */}
           <h1
             style={{
-              fontSize: "2.5rem",
-              fontWeight: "700",
-              fontFamily: "Manrope",
-              background: "linear-gradient(to right, #F5F5F5, #8F8F8F)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              lineHeight: "1.2",
-              marginBottom: "20px",
+              fontSize: '32px',
+              fontWeight: '400',
+              fontFamily: 'Manrope',
+              background: 'linear-gradient(#F5F5F5, #8F8F8F)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              lineHeight: '1.2',
             }}
           >
             {title}
           </h1>
+
+          <Box pb={20} />
 
           {/* Chips Row */}
           <div
