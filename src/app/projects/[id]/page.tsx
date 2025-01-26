@@ -145,8 +145,6 @@ export default function ProjectsDetails() {
               my="xl"
               style={{
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-                marginTop: '0px',
-                marginBottom: '0px',
               }}
             />
 
@@ -181,7 +179,14 @@ export default function ProjectsDetails() {
 
             <ul style={{ paddingLeft: '20px', listStyle: 'none' }}>
               {project.points.map((point, index) => (
-                <li key={index} style={{ position: 'relative', color: '#E0E0E0' }}>
+                <li
+                  key={index}
+                  style={{
+                    position: 'relative',
+                    color: '#E0E0E0',
+                    marginBottom: '10px' // Add space between list items
+                  }}
+                >
                   <span
                     style={{
                       position: 'absolute',
@@ -196,6 +201,7 @@ export default function ProjectsDetails() {
                 </li>
               ))}
             </ul>
+
 
             <Box pb={50} />
 
