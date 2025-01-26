@@ -16,7 +16,7 @@
     },
     {
       "id": "2",
-      "name": "Baran",
+      "name": "Baran - Electronic Bookstore",
       "description": "Let\\'s work with ListView in an example application.",
       "cover": "/images/project/baran_cover.png",
       "images": [
@@ -29,7 +29,7 @@
     },
     {
       "id": "3",
-      "name": "Weena",
+      "name": "Weena.af - Blood Donation App",
       "description": "Let\\'s work with ListView in an example application.",
       "cover": "/images/project/weena_cover.png",
       "images": [
@@ -43,7 +43,7 @@
     },
     {
       "id": "4",
-      "name": "Wagey",
+      "name": "Wagey - Food Ordering App",
       "description": "Let\\'s work with ListView in an example application.",
       "cover": "/images/project/wagey_cover.png",
       "images": [
@@ -57,7 +57,7 @@
     },
     {
       "id": "5",
-      "name": "Daricha",
+      "name": "Daricha - Education App",
       "description": "Let\\'s work with ListView in an example application.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
