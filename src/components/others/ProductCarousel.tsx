@@ -125,7 +125,11 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
             description={product.description}
             price={product.price}
             onClick={() => {
-              handleNavigation(product.id);
+              if (product.price === "FREE") {
+                handleNavigation(product.id);
+              } else {
+                window.location.href = product.repository;
+              }
             }}
           />
         ))}

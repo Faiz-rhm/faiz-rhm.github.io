@@ -50,7 +50,11 @@ export default function Market() {
               price={product.price}
               width="100%" // Set width to 100% for all cards
               onClick={() => {
-                handleNavigation(product.id);
+                if (product.price === "FREE") {
+                  handleNavigation(product.id);
+                } else {
+                  window.location.href = product.repository;
+                }
               }}
             />
           ))}
