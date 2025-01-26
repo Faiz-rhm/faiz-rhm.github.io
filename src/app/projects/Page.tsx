@@ -25,7 +25,7 @@ export default function Projects() {
         <React.Fragment key={product.id}>
            <ProjectCard
             key={product.id}
-            id={product.id} // Ensure `product.id` is passed
+            id={product.id} // Esnsure `product.id` is passed
             chipText={product.tag}
             description={product.description}
             buttonLabel="FULL CASE STUDY"

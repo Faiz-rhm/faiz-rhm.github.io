@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Job.af - Job Board App",
-      "description": "A job board app for job seekers. It is a mobile application that allows users to search for jobs, apply for jobs, and view job details.",
+      "description": "The Job Board App is a mobile application designed for job seekers, offering features to search and apply for jobs, view detailed job descriptions, and explore company profiles. Users can create and manage their personal profiles, showcasing their skills and experience. The app provides a seamless experience for browsing job opportunities, applying directly, and connecting with potential employers.",
       "cover": "/images/project/jobs_cover.png",
       "images": [
         "/images/project/job_1.png",
@@ -13,13 +13,23 @@
         "/images/project/job_5.png"
       ],
       "tag": "Flutter",
+      "completed": "Completed in: 2022",
+      "project_restriction": "",
+      "points": [
+        "Initiated Flutter as the main mobile framework, significantly shortening the development cycle and enhancing the speed to market.",
+        "Built the job portal app using Flutter, allowing for a seamless user experience on both iOS and Android platforms.",
+        "Allowed job seekers to create and manage profiles showcasing their skills, experience, and resume for better visibility to potential employers.",
+        "Designed a clean, intuitive interface to ensure a seamless user experience, from job search to application submission.",
+        "Built with Flutter to provide a consistent and optimized experience on both iOS and Android devices.",
+        "Integrated third-party packages and libraries to extend functionality and improve app performance, while also contributing to the development of custom packages when needed."
+      ],
       "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
       "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
     },
     {
       "id": "2",
       "name": "Baran - Reading App",
-      "description": "It offers children the ability to read books, listen to audio books, and explore engaging book details, all within a fun and subscription-based platform tailored for young readers.",
+      "description": "The Baran App is a fun and interactive reading platform designed for children. It offers a wide range of books for young readers to explore, with options to read stories or listen to audiobooks. The app features engaging book details, making the reading experience both educational and enjoyable. With a subscription-based model, Baran provides a curated library of age-appropriate content to foster a love for reading in children.",
       "cover": "/images/project/baran_cover.png",
       "images": [
         "/images/project/baran_1.png",
@@ -29,13 +39,22 @@
         "/images/project/baran_5.png"
       ],
       "tag": "Flutter",
-      "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
-      "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
+      "completed": "Completed in: 2024",
+      "project_restriction": "The project is under Baran Publication and can’t fully disclose details.",
+      "points": [
+        "Designed an engaging, colorful interface with dynamic animations to make reading fun and interactive for children.",
+        "Included features for downloading books, ensuring users can access content even without an internet connection.",
+        "Built with Flutter, enabling a seamless experience across both iOS and Android devices.",
+        "Allowed users (or parents) to create personalized profiles to track reading progress, favorite books, and audio books.",
+        "Integrated settings to help parents monitor and control the content their children access, ensuring a safe environment."
+      ],
+      "googlePlay": "",
+      "appStore": ""
     },
     {
       "id": "3",
       "name": "Weena.af - Blood Donation App",
-      "description": "The platform enables users to donate blood, search for blood donors, and access detailed blood information. Users can also explore a donor map, search for donors nearby, and create personalized donor profiles for seamless connections.",
+      "description": "The Weena.af App is a platform designed to connect blood donors and recipients in a seamless and efficient way. Users can donate blood, search for nearby blood donors, and access detailed information about blood types and availability. The app also features a donor map for easy location tracking, along with personalized donor profiles to facilitate quick connections and support those in need of blood.",
       "cover": "/images/project/weena_cover.png",
       "images": [
         "/images/project/weena_1.png",
@@ -44,12 +63,23 @@
         "/images/project/weena_4.png",
         "/images/project/weena_5.png"
       ],
-      "tag": "Flutter"
+      "tag": "Flutter",
+      "completed": "Completed in: 2023",
+      "project_restriction": "The project is under Netlinks and can’t fully disclose details.",
+      "points": [
+        "Developed a platform to connect blood donors and recipients, enabling users to donate and search for blood donations.",
+        "Integrated a feature to search for blood donors nearby through a map, improving accessibility and response time.",
+        "Allowed users to create personalized profiles, showcasing their blood type and availability for donation.",
+        "Designed a clean, intuitive interface to ensure easy navigation for users of all technical levels.",
+        "Used Flutter to build the app, ensuring seamless user experiences across both iOS and Android platforms."
+      ],
+      "googlePlay": "",
+      "appStore": ""
     },
     {
       "id": "4",
       "name": "Wagey - Food Ordering App",
-      "description": "A restaurant-based app that allows users to order food, explore detailed menus, and track their orders, offering a seamless dining experience.",
+      "description": "The Weegy App is a restaurant-based mobile application that allows users to easily order food, explore detailed menus, and track their orders in real-time. It offers a seamless and interactive dining experience, helping customers discover new dishes, customize their orders, and stay updated on the status of their deliveries. The app is designed for convenience and efficiency, ensuring a smooth food ordering process from start to finish.",
       "cover": "/images/project/wagey_cover.png",
       "images": [
         "/images/project/wagey_1.png",
@@ -58,21 +88,34 @@
         "/images/project/wagey_4.png",
         "/images/project/wagey_5.png"
       ],
-      "tag": "Flutter",
-      "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
-      "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
+      "completed": "Under development",
+      "project_restriction": "The project is under Netlinks and can’t fully disclose details.",
+      "points": [
+        "Built the core architecture of the Weegy App, focusing on performance, scalability, and user experience for seamless food ordering.",
+        "Accelerated the development process by integrating third-party services, such as payment gateways, order tracking, and restaurant APIs, ensuring a faster go-to-market strategy.",
+        "Worked closely with cross-functional teams, including designers, developers, and QA, to ensure high product quality and smooth user interactions.",
+        " Leveraged Flutter to create a unified cross-platform app, ensuring the app’s consistency and performance across both iOS and Android devices."
+      ],
+      "googlePlay": "",
+      "appStore": ""
     },
     {
       "id": "5",
       "name": "Daricha - Educational App",
-      "description": "An educational app sponsored by the European Union, designed to help users learn, explore courses, and access course details—spreading awareness about people's rights and promoting informed citizenship.",
+      "description": "The Daricha App is an educational platform sponsored by the European Union, designed to help users learn and explore a variety of courses. It provides access to detailed course information, focusing on spreading awareness about people's rights and promoting informed citizenship. The app aims to empower individuals with knowledge, offering educational resources that encourage active participation in society and foster a deeper understanding of democratic values.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
         "/images/project/daricha_1.png",
         "/images/project/daricha_2.png",
         "/images/project/daricha_3.png"
       ],
-      "tag": "Flutter",
+      "completed": "Completed in: 2022",
+      "project_restriction": "",
+      "points": [
+        "Created UI kit and reusable widgets that are used across the app",
+        "Implemented coding standards and best practices within the Flutter codebase",
+        "Successfully launched Daricha on the App Store and Google Play, showcasing the app's functionality and user engagement."
+      ],
       "googlePlay": "https://play.google.com/store/apps/details?id=org.sfcg.daricha2&hl=en",
       "appStore": "https://apps.apple.com/tr/app/daricha/id6499460360"
     }

@@ -79,6 +79,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     WebkitTextFillColor: "transparent",
                     marginBottom: "20px",
                     lineHeight: "1.2", // Adjust line height for better readability
+                    display: "-webkit-box",  // Corrected display property for multi-line clamping
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 3, // Limit to 3 lines
+                    overflow: "hidden", // Hide overflow text
+                    textOverflow: "ellipsis", // Optional: adds ellipsis (...) when text is truncated
                   }}
                 >
                   {description}
@@ -180,10 +185,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     WebkitTextFillColor: "transparent",
                     marginBottom: "20px",
                     lineHeight: "1.2", // Adjust line height for better readability
+                    display: "-webkit-box",  // Corrected display property for multi-line clamping
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 3, // Limit to 3 lines
+                    overflow: "hidden", // Hide overflow text
+                    textOverflow: "ellipsis", // Optional: adds ellipsis (...) when text is truncated
                   }}
                 >
                   {description}
                 </Text>
+
 
                 <Button
                   variant="default"

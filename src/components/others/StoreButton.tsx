@@ -11,8 +11,8 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({ appleUrl, googlePlayUrl }) 
     <Box
       style={{
         display: "flex",
-        justifyContent: "center", // Center the images
-        alignItems: "center",
+        justifyContent: "left", // Center the images
+        alignItems: "left",
         gap: "20px", // Space between the images
       }}
     >

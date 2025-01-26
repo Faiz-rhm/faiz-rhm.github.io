@@ -138,29 +138,32 @@ export default function ProjectsDetails() {
                 lineHeight: '0',
               }}
             >
-              Completed in: 2024
+             {project.completed}
             </p>
 
             <Divider
               my="xl"
               style={{
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-                marginTop: '18px',
-                marginBottom: '18px',
+                marginTop: '0px',
+                marginBottom: '0px',
               }}
             />
 
             {/* NDA Note */}
-            <p
-              style={{
-                fontSize: '16px',
-                color: '#E0E0E0',
-                marginBottom: '30px',
-                lineHeight: '0',
-              }}
-            >
-              The project is under NDA and can’t fully disclose details.
-            </p>
+            {project.project_restriction && project.project_restriction.trim() !== "" && (
+              <p
+                style={{
+                  fontSize: '16px',
+                  color: '#E0E0E0',
+                  marginBottom: '30px',
+                  lineHeight: '1.5', // Adjust lineHeight for better readability
+                }}
+              >
+                {project.project_restriction}
+              </p>
+            )}
+
 
             <Box pb={25} />
 
@@ -177,53 +180,32 @@ export default function ProjectsDetails() {
             </h2>
 
             <ul style={{ paddingLeft: '20px', listStyle: 'none' }}>
-              <li style={{ position: 'relative', color: '#E0E0E0' }}>
-                <span
-                  style={{
-                    position: 'absolute',
-                    left: '-20px',
-                    color: '#818181',
-                    fontSize: '16px',
-                  }}
-                >
-                  ●
-                </span>
-                Created main features like video recording, editing, and sharing
-              </li>
-              <li style={{ position: 'relative', color: '#E0E0E0' }}>
-                <span
-                  style={{
-                    position: 'absolute',
-                    left: '-20px',
-                    color: '#818181',
-                    fontSize: '16px',
-                  }}
-                >
-                  ●
-                </span>
-                Created UI kit and reusable widgets that are used across the app
-              </li>
-              <li style={{ position: 'relative', color: '#E0E0E0' }}>
-                <span
-                  style={{
-                    position: 'absolute',
-                    left: '-20px',
-                    color: '#818181',
-                    fontSize: '16px',
-                  }}
-                >
-                  ●
-                </span>
-                Implemented coding standards and best practices within the Flutter codebase
-              </li>
+              {project.points.map((point, index) => (
+                <li key={index} style={{ position: 'relative', color: '#E0E0E0' }}>
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '-20px',
+                      color: '#818181',
+                      fontSize: '16px',
+                    }}
+                  >
+                    ●
+                  </span>
+                  {point}
+                </li>
+              ))}
             </ul>
 
-            <Box pb={100} />
+            <Box pb={50} />
 
-            <StoreButtons
-              appleUrl="https://www.apple.com/app-store/"
-              googlePlayUrl="https://play.google.com/store"
-            />
+            {(project.appStore && project.appStore.trim() !== "") && (
+              <StoreButtons
+                appleUrl={project.appStore}
+                googlePlayUrl={project.appStore}
+              />
+            )}
+
           </div>
         </div>
       </Container>
