@@ -66,6 +66,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Chip text={chipText} />
               </Box>
 
+              <Box pb={50} />
+
               {/* Text and Button */}
               <Box>
                 <Text
@@ -171,6 +173,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <Box>
                 <Chip text={chipText} />
               </Box>
+
+              <Box pb={50} />
 
               {/* Text and Button */}
               <Box>
