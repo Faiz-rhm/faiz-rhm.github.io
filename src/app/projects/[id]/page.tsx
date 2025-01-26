@@ -134,17 +134,18 @@ export default function ProjectsDetails() {
                 color: '#818181',
                 fontSize: '16px',
                 fontWeight: '500',
-                marginBottom: '10px',
-                lineHeight: '0',
+                marginBottom: '5px', // Reduced margin to bring Divider closer
+                lineHeight: '1', // Adjust lineHeight for proper spacing
               }}
             >
-             {project.completed}
+              {project.completed}
             </p>
 
             <Divider
-              my="xl"
+              my="sm" // Reduce the vertical margin of the Divider
               style={{
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+                marginTop: '0', // Ensure no extra margin above
               }}
             />
 
@@ -161,6 +162,7 @@ export default function ProjectsDetails() {
                 {project.project_restriction}
               </p>
             )}
+
 
 
             <Box pb={25} />
