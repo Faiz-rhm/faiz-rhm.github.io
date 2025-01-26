@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Job.af - Job Board App",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "A job board app for job seekers. It is a mobile application that allows users to search for jobs, apply for jobs, and view job details.",
       "cover": "/images/project/jobs_cover.png",
       "images": [
         "/images/project/job_1.png",
@@ -12,12 +12,14 @@
         "/images/project/job_4.png",
         "/images/project/job_5.png"
       ],
-      "tag": "Flutter"
+      "tag": "Flutter",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
+      "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
     },
     {
       "id": "2",
-      "name": "Baran - Electronic Bookstore",
-      "description": "Let\\'s work with ListView in an example application.",
+      "name": "Baran - Electronic Reading App",
+      "description": "It offers children the ability to read books, listen to audio books, and explore engaging book details, all within a fun and subscription-based platform tailored for young readers.",
       "cover": "/images/project/baran_cover.png",
       "images": [
         "/images/project/baran_1.png",
@@ -25,12 +27,14 @@
         "/images/project/baran_3.png",
         "/images/project/baran_4.png"
       ],
-      "tag": "Flutter"
+      "tag": "Flutter",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
+      "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
     },
     {
       "id": "3",
       "name": "Weena.af - Blood Donation App",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "The platform enables users to donate blood, search for blood donors, and access detailed blood information. Users can also explore a donor map, search for donors nearby, and create personalized donor profiles for seamless connections.",
       "cover": "/images/project/weena_cover.png",
       "images": [
         "/images/project/weena_1.png",
@@ -44,7 +48,7 @@
     {
       "id": "4",
       "name": "Wagey - Food Ordering App",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "A restaurant-based app that allows users to order food, explore detailed menus, and track their orders, offering a seamless dining experience.",
       "cover": "/images/project/wagey_cover.png",
       "images": [
         "/images/project/wagey_1.png",
@@ -53,18 +57,22 @@
         "/images/project/wagey_4.png",
         "/images/project/wagey_5.png"
       ],
-      "tag": "Flutter"
+      "tag": "Flutter",
+      "googlePlay": "https://play.google.com/store/apps/details?id=com.netlinks.jobsaf",
+      "appStore": "https://apps.apple.com/us/app/jobs-af/id1454024020"
     },
     {
       "id": "5",
       "name": "Daricha - Education App",
-      "description": "Let\\'s work with ListView in an example application.",
+      "description": "An educational app sponsored by the European Union, designed to help users learn, explore courses, and access course details—spreading awareness about people's rights and promoting informed citizenship.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
         "/images/project/weena_1.png",
         "/images/project/weena_1.png"
       ],
-      "tag": "Flutter"
+      "tag": "Flutter",
+      "googlePlay": "https://play.google.com/store/apps/details?id=org.sfcg.daricha2&hl=en",
+      "appStore": "https://apps.apple.com/tr/app/daricha/id6499460360"
     }
   ]
 }
