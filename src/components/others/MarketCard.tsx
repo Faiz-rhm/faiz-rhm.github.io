@@ -31,7 +31,7 @@ const MarketCard: React.FC<MarketCardProps> = ({ image, name, description, price
         flexDirection: "column",
         cursor: "pointer", // Indicate clickable element
         transition: "transform 0.2s ease, box-shadow 0.2s ease", // Smooth hover effect
-        margin: "10px 10px", // Add horizontal margin
+        margin: "10px", // Add consistent spacing around each card
       }}
       className="market-card"
     >

@@ -52,14 +52,21 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Default number of slides to show
+    slidesToShow: 5, // Default number of slides to show
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1500,
     arrows: false,
+    spaceBetween: 60,
     responsive: [
       {
-        breakpoint: 1200, // At screen widths <= 1200px
+        breakpoint: 1800, // At screen widths <= 1200px
+        settings: {
+          slidesToShow: 4, // Show 3 slides
+        },
+      },
+      {
+        breakpoint: 1400, // At screen widths <= 1200px
         settings: {
           slidesToShow: 3, // Show 3 slides
         },
@@ -127,7 +134,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
               name={product.name}
               description={product.description}
               price={product.price}
-              width="100%" // Set width to 100% for all cards
+              width="95%" // Set width to 100% for all cards
               onClick={() => {
                 if (product.price === "FREE") {
                   handleNavigation(product.id);
