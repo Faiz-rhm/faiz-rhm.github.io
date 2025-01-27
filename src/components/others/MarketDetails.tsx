@@ -1,7 +1,7 @@
 import React from "react";
 import Chip from "./Chip"; // Import your Chip component
 import Slider from "react-slick";
-import { ActionIcon, Container, Button, Box } from "@mantine/core";
+import { ActionIcon, Container, Button, Box, Image } from "@mantine/core";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
 import "slick-carousel/slick/slick.css";
@@ -43,7 +43,7 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
           <Slider {...settings}>
             {imageList.map((src, index) => (
               <div key={index} style={{ width: "550", height: "300" }}>
-                <img
+                <Image
                   src={src}
                   alt={`Carousel Image ${index + 1}`}
                   style={{

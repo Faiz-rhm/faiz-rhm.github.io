@@ -1,7 +1,7 @@
 'use client'
 
 import { Footer } from "@/components/footer/Footer";
-import { Box, Container} from '@mantine/core';
+import { Box, Container, Image} from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import HeaderLabel from "../../components/others/HeaderLabel";
@@ -21,7 +21,7 @@ export default function HotelPage() {
       <Box pb={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_1.png'}
           alt={'Hotel Booking App'}
         />
@@ -39,7 +39,7 @@ export default function HotelPage() {
       <Box pb={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_2.png'}
           alt={'Hotel Booking App'}
         />
@@ -57,7 +57,7 @@ export default function HotelPage() {
       <Box pb={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_3.png'}
           alt={'Hotel Booking App'}
         />
@@ -75,7 +75,7 @@ export default function HotelPage() {
       <Box pb={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_4.jpg'}
           alt={'Hotel Booking App'}
         />

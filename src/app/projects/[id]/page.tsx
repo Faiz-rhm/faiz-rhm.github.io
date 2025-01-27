@@ -6,7 +6,7 @@ import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
 import StoreButtons from '../../../components/others/StoreButton';
 import CustomDivider from '../../../components/others/CustomDivider';
-import { Text, Box, Container, Divider } from '@mantine/core';
+import { Text, Box, Container, Divider, Image } from '@mantine/core';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -69,7 +69,7 @@ export default function ProjectsDetails() {
             <Slider {...settings}>
               {project.images.map((src, index) => (
                 <div key={index} style={{ width: "550", height: "300" }}>
-                  <img
+                  <Image
                     src={src}
                     alt={`Carousel Image ${index + 1}`}
                     style={{

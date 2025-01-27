@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Flex, Box, Text } from "@mantine/core";
+import { Container, Flex, Box, Text, Image } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 interface HeaderLabelProps {
@@ -76,6 +76,7 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
         {/* Right Side - Image (conditionally rendered) */}
         {imageSrc && (
           <Box
+            // w={{ base: "100%", md: "150" }}
             style={{
               flex: "0 0 auto",
               minWidth: isMobile ? "100%" : "150px", // Full width on mobile
@@ -83,7 +84,7 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
               justifyContent: isMobile ? "center" : "flex-end", // Center on mobile
             }}
           >
-            <img
+            <Image
               src={imageSrc}
               alt={altText}
               style={{

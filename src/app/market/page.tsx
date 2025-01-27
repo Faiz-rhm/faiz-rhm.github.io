@@ -2,7 +2,7 @@
 
 import MarketData from "@/data/market.json";
 import { useRouter } from "next/navigation";
-import { Box, Container } from '@mantine/core';
+import { Box, Container, Space } from '@mantine/core';
 import { Footer } from "@/components/footer/Footer";
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
@@ -20,6 +20,7 @@ export default function Market() {
   return (
     <>
       <Box pb={50} />
+      {/* <Space h={50} /> */}
 
       <HeroSection
         heading="Explore premium and free resources crafted to elevate your projects"
@@ -32,6 +33,8 @@ export default function Market() {
       {/* Product List */}
       <Container size="xl">
         <Box
+          p={16}
+
           style={{
             display: "grid", // Use grid layout
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // 3 items per row with responsive fallback
