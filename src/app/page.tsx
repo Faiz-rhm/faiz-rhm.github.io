@@ -74,7 +74,7 @@ export default function Home() {
       {ProjectData.projects.slice(0, 2).map((product, index) => (
         <React.Fragment key={product.id}>
           <ProjectCard
-            id={product.id}
+            slug={product.slug}
             chipText={product.tag}
             description={product.description}
             buttonLabel="FULL CASE STUDY"

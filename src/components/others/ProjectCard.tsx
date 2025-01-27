@@ -8,7 +8,7 @@ import CustomCard from "@/components/card/CustomCard";
 import { Container, Flex, Box, Text, Button, Space } from "@mantine/core";
 
 interface ProjectCardProps {
-  id: string; // Make sure `id` is defined as a string
+  slug: string; // Make sure `id` is defined as a string
   chipText: string;
   description: string;
   buttonLabel: string;
@@ -23,7 +23,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  id,
+  slug,
   chipText,
   description,
   buttonLabel,
@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   const handleNavigation = () => {
     router.push(
-      `/projects/${id}`
+      `/projects/${slug}`
     );
   };
 
