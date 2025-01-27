@@ -3,6 +3,7 @@
     {
       "id": "1",
       "name": "FlutterSale - E-commerce UI Kit 👑",
+      "slug": "flutter-sale-ecommerce-ui-kit",
       "description": "Flutter Grocery is a premium E-commerce UI kit that you can use to build various e-commerce apps using Flutter that works on both Android & iOS.",
       "repository": "/shop",
       "cover": "/images/market/sale_cover.png",
@@ -11,15 +12,14 @@
         "/images/market.png",
         "/images/market.png"
       ],
-      "tags": [
-        "UI", "Ios"
-      ],
+      "tags": ["UI", "Ios"],
       "price": "$99",
       "isVisible": true
     },
     {
       "id": "2",
       "name": "Hotel Booking - UI Kit 👑",
+      "slug": "hotel-booking-ui-kit",
       "description": "Flutter Hotel Booking is a premium UI kit that you can use to build various hotel booking apps using Flutter that works on both Android & iOS.",
       "repository": "/hotel",
       "cover": "/images/market/hotel_cover.png",
@@ -28,15 +28,14 @@
         "/images/market.png",
         "/images/market.png"
       ],
-      "tags": [
-        "UI", "ListView"
-      ],
+      "tags": ["UI", "ListView"],
       "price": "$69",
       "isVisible": true
     },
     {
       "id": "3",
       "name": "SportUp - Sport UI Kit 👑",
+      "slug": "sportup-sport-ui-kit",
       "description": "SportUp is a premium Flutter UI kit designed for building modern and feature-rich sports apps, compatible with both Android and iOS platforms.",
       "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
       "cover": "/images/market/sport_cover.png",
@@ -45,15 +44,14 @@
         "/images/market.png",
         "/images/market.png"
       ],
-      "tags": [
-        "UI", "ListView"
-      ],
+      "tags": ["UI", "ListView"],
       "price": "$69",
       "isVisible": false
     },
     {
       "id": "4",
       "name": "Crypto Wallet",
+      "slug": "crypto-wallet",
       "description": "The Crypto Wallet App UI Concept is built with Flutter and dynamic animations for an engaging user experience. It features smooth transitions and interactive elements for managing digital assets. The intuitive design makes cryptocurrency management easy and visually appealing.",
       "repository": "https://github.com/Faiz-rhm/Flutter-Crypto-App",
       "cover": "/images/market/crypto_cover.png",
@@ -61,15 +59,14 @@
         "/images/market/crypto_1.png",
         "/images/market/crypto_2.png"
       ],
-      "tags": [
-        "flutter", "wallet-app", "ui", "ios", "android", "clean-code"
-      ],
+      "tags": ["flutter", "wallet-app", "ui", "ios", "android", "clean-code"],
       "price": "FREE",
       "isVisible": true
     },
     {
       "id": "5",
       "name": "Onboarding Screen",
+      "slug": "onboarding-screen",
       "description": "The Onboarding Screen for the cooking app, built with Flutter, introduces users to the app's core features with smooth animations. It guides users through key functions like browsing recipes, saving favorites, and creating shopping lists. The simple, engaging design ensures a seamless and enjoyable setup experience for new users.",
       "repository": "https://github.com/Faiz-rhm/Flutter_Intro",
       "cover": "/images/market/onboarding_cover.png",
@@ -78,15 +75,14 @@
         "/images/market/onboarding_2.png",
         "/images/market/onboarding_3.png"
       ],
-      "tags": [
-        "flutter", "onboarding-app", "ui", "ios", "android", "clean-code"
-      ],
+      "tags": ["flutter", "onboarding-app", "ui", "ios", "android", "clean-code"],
       "price": "FREE",
       "isVisible": true
     },
     {
       "id": "6",
       "name": "Movie App",
+      "slug": "movie-app",
       "description": "The Movie App is built using Riverpod for state management, Dio for API integration, and Freezed for immutable data modeling. It fetches movie data from TheMovieDB API, providing users with a seamless experience to browse movie details, watch trailers, and explore ratings. The app offers smooth navigation and real-time updates, ensuring an engaging and dynamic movie discovery experience.",
       "repository": "https://github.com/Faiz-rhm/Flutter-Movie-App",
       "cover": "/images/market/movie_cover.png",
@@ -94,15 +90,14 @@
         "/images/market/movie_1.png",
         "/images/market/movie_2.png"
       ],
-      "tags": [
-        "flutter", "movie-app", "riverpod", "dio", "freezed", "themoviedb", "api"
-      ],
+      "tags": ["flutter", "movie-app", "riverpod", "dio", "freezed", "themoviedb", "api"],
       "price": "FREE",
       "isVisible": true
     },
     {
       "id": "7",
       "name": "School App",
+      "slug": "school-app",
       "description": "The School App UI Concept is designed to help students manage assignments and tasks efficiently. The app features an intuitive interface for tracking deadlines, submitting assignments, and viewing grades. With a clean layout and easy navigation, it ensures students stay organized and on top of their academic responsibilities.",
       "repository": "https://github.com/Faiz-rhm/Flutter-School-Assignment-UI",
       "cover": "/images/market/school_cover.png",
@@ -110,15 +105,14 @@
         "/images/market/school_1.png",
         "/images/market/school_2.png"
       ],
-      "tags": [
-        "flutter", "school-app", "ui", "ios", "android", "clean-code"
-      ],
+      "tags": ["flutter", "school-app", "ui", "ios", "android", "clean-code"],
       "price": "FREE",
       "isVisible": true
     },
     {
       "id": "8",
       "name": "Spotify Clone",
+      "slug": "spotify-clone",
       "description": "The Apotify UI Concept is a sleek and modern music streaming app design that offers an intuitive user interface. It features seamless navigation for discovering playlists, albums, and artists, along with easy controls for music playback. The design emphasizes a smooth, engaging experience with vibrant visuals and dynamic transitions.",
       "repository": "https://github.com/Faiz-rhm/Flutter-Spotify",
       "cover": "/images/market/spotify_cover.png",
@@ -129,15 +123,14 @@
         "/images/market/spotify_4.png",
         "/images/market/spotify_5.png"
       ],
-      "tags": [
-        "flutter", "spotify", "ui", "ios", "android", "clean-code", "music"
-      ],
+      "tags": ["flutter", "spotify", "ui", "ios", "android", "clean-code", "music"],
       "price": "FREE",
       "isVisible": true
     },
     {
       "id": "9",
       "name": "Restaurant App",
+      "slug": "restaurant-app",
       "description": "The Restaurant Food App offers a user-friendly interface for browsing menus, placing orders, and discovering new dishes. With intuitive navigation, users can easily customize their orders, view restaurant details, and track delivery. The app is designed to provide a seamless and enjoyable food ordering experience.",
       "repository": "https://github.com/Faiz-rhm/Flutter-Food-Delivery",
       "cover": "/images/market/food_cover.png",
@@ -145,9 +138,7 @@
         "/images/market/food_1.png",
         "/images/market/food_2.png"
       ],
-      "tags": [
-        "flutter", "food", "restaurant", "ui", "ios", "android", "clean-code"
-      ],
+      "tags": ["flutter", "food", "restaurant", "ui", "ios", "android", "clean-code"],
       "price": "FREE",
       "isVisible": true
     }

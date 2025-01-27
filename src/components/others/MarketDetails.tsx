@@ -7,7 +7,23 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const MarketDetails = ({ settings, imageList, title, description, chips, buttonUrl }) => {
+interface MarketDetailsProps {
+  settings: object; // Type this based on your settings structure (replace `object` with the correct type if available)
+  imageList: string[]; // Assuming imageList is an array of strings (URLs or image paths)
+  title: string;
+  description: string;
+  chips: string[]; // Assuming chips is an array of strings
+  buttonUrl?: string; // Optional button URL
+}
+
+const MarketDetails: React.FC<MarketDetailsProps> = ({
+  settings,
+  imageList,
+  title,
+  description,
+  chips,
+  buttonUrl,
+}) => {
   return (
     <Container
       size="xl"

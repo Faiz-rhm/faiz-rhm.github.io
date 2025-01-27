@@ -3,7 +3,7 @@ import { AspectRatio, Card, Image } from "@mantine/core";
 
 interface CustomCardProps {
   image: string;
-  height?: string; // Default height
+  height?: string; // Default heights
   width?: string; // Default width
   backgroundColor?: string; // Background color
   borderColor?: string; // Border color
@@ -11,7 +11,6 @@ interface CustomCardProps {
 
 const CustomCard: React.FC<CustomCardProps> = ({
   image,
-  height = "380px",
   width = "618px",
   backgroundColor = "rgba(35, 35, 35, 0.5)",
   borderColor = "rgba(255, 255, 255, 0.1)",
@@ -22,7 +21,6 @@ const CustomCard: React.FC<CustomCardProps> = ({
       radius="md"
       component="a"
       style={{
-        height: "auto",
         maxWidth: width,
         backgroundColor,
         border: `1px solid ${borderColor}`,
