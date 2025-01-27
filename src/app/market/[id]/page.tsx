@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { Footer } from "@/components/footer/Footer";
-import { Box, Container, Text } from "@mantine/core";
+import { Container, Space, Text } from "@mantine/core";
 import MarketData from "@/data/market.json";
 
 import MarketDetails from "../../../components/others/MarketDetails";
@@ -37,7 +37,7 @@ export default function MarketDetailsPage() {
 
   return (
     <>
-      <Box pb={100} />
+      <Space h={100} />
 
       <MarketDetails
         settings={settings}
@@ -48,13 +48,13 @@ export default function MarketDetailsPage() {
         buttonUrl={market.repository}
       />
 
-      <Box pb={100} />
+      <Space h={100} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

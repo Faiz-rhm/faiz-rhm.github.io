@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  Box,
   Burger,
   Button,
   Divider,
@@ -12,6 +11,7 @@ import {
   Image,
   Container,
   ActionIcon,
+  Space,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconDownload } from '@tabler/icons-react';
@@ -39,7 +39,7 @@ export function HeaderMenu() {
   }, []);
 
   return (
-    <Box pb={120}>
+    <Space h={120}>
       <header
         className={classes.header}
         style={{
@@ -271,7 +271,7 @@ export function HeaderMenu() {
 
           <Divider my="sm" />
 
-          <Box pb={10} />
+          <Space h={10} />
 
           <Group justify="center" grow pb="xl" px="md">
             <Button
@@ -319,6 +319,6 @@ export function HeaderMenu() {
         </ScrollArea>
       </Drawer>
 
-    </Box>
+    </Space>
   );
 }

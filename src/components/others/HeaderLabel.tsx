@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Flex, Box, Text, Image } from "@mantine/core";
+import { Container, Flex, Box, Text, Image, Space } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 interface HeaderLabelProps {
@@ -48,7 +48,7 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
             {subheading}
           </Text>
 
-          <Box pb={20} />
+          <Space h={20} />
 
           <p
             style={{
@@ -60,7 +60,7 @@ const HeaderLabel: React.FC<HeaderLabelProps> = ({
             {heading}
           </p>
 
-          <Box pb={16} />
+          <Space h={16} />
 
           <p
             style={{

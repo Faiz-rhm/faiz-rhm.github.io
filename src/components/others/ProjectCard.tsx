@@ -5,7 +5,7 @@ import Chip from "@/components/others/Chip";
 import { useRouter } from "next/navigation";
 import { useMediaQuery } from "@mantine/hooks";
 import CustomCard from "@/components/card/CustomCard";
-import { Container, Flex, Box, Text, Button } from "@mantine/core";
+import { Container, Flex, Box, Text, Button, Space } from "@mantine/core";
 
 interface ProjectCardProps {
   id: string; // Make sure `id` is defined as a string
@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Chip text={chipText} />
               </Box>
 
-              <Box pb={50} />
+              <Space h={50} />
 
               {/* Text and Button */}
               <Box>
@@ -174,7 +174,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 <Chip text={chipText} />
               </Box>
 
-              <Box pb={50} />
+              <Space h={50} />
 
               {/* Text and Button */}
               <Box>

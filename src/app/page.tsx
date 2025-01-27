@@ -11,7 +11,7 @@ import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
 import ProjectData from "@/data/project.json";
 import Market from "@/data/market.json";
-import { Box } from '@mantine/core';
+import { Space } from '@mantine/core';
 import React from "react";
 
 const buttons = [
@@ -31,7 +31,7 @@ const sections = [
 export default function Home() {
   return (
     <>
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeroSection
         heading="Helping Digital founders Craft unique, Empathic Applications"
@@ -40,13 +40,13 @@ export default function Home() {
         altText="Faiz Rhm"
       />
 
-      <Box pb={80} />
+      <Space h={80} />
 
       <Reviews />
 
       <CustomDivider/>
 
-      <Box pb={30} />
+      <Space h={30} />
 
       <AboutSection
         heading="[ ABOUT ME ]"
@@ -54,22 +54,22 @@ export default function Home() {
         buttons={buttons}
       />
 
-      <Box pb={30} />
+      <Space h={30} />
 
       <CustomDivider/>
 
-      <Box pb={30} />
+      <Space h={30} />
 
       <CenteredSection
         text="Here you can find a list of selected projects that I’ve recently worked on"
         buttons={sections}
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <CustomDivider/>
 
-      <Box pb={20} />
+      <Space h={20} />
 
       {ProjectData.projects.slice(0, 2).map((product, index) => (
         <React.Fragment key={product.id}>
@@ -86,29 +86,29 @@ export default function Home() {
             swapColumns={index % 2 !== 0} // Alternate columns for every other project
           />
 
-          <Box pb={20} />
+          <Space h={20} />
 
           {index < 1 && <CustomDivider />}
 
-          <Box pb={20} />
+          <Space h={20} />
         </React.Fragment>
       ))}
 
-      <Box pb={100} />
+      <Space h={100} />
 
       <ProductCarousel products={Market.market} />
 
-      <Box pb={70} />
+      <Space h={70} />
 
       <BottomSection/>
 
-      <Box pb={70} />
+      <Space h={70} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

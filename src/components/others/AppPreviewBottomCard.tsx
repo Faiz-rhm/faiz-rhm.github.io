@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Group, Text } from '@mantine/core'; // Assuming Mantine library
+import { Button, Container, Group, Space, Text } from '@mantine/core'; // Assuming Mantine library
 
 const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
   return (
@@ -32,7 +32,7 @@ const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
           {title}
         </Text>
 
-        <Box pb={20} />
+        <Space h={20} />
 
         {/* Buttons */}
         <Group style={{ gap: '16px', justifyContent: 'center' }}>
