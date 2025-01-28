@@ -2,7 +2,7 @@
 
 import MarketData from "@/data/market.json";
 import { useRouter } from "next/navigation";
-import { Container, Space } from '@mantine/core';
+import { Box, Container, Space } from '@mantine/core';
 import { Footer } from "@/components/footer/Footer";
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
@@ -19,7 +19,8 @@ export default function Market() {
 
   return (
     <>
-      <Space h={50} />
+      <Box pb={50} />
+      {/* <Space h={50} /> */}
 
       <HeroSection
         heading="Explore premium and free resources crafted to elevate your projects"
@@ -27,11 +28,13 @@ export default function Market() {
         altText="Market"
       />
 
-      <Space h={70} />
+      <Box pb={70} />
 
       {/* Product List */}
       <Container size="xl">
-        <Space h={16}
+        <Box
+          p={16}
+
           style={{
             display: "grid", // Use grid layout
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // 3 items per row with responsive fallback
@@ -52,7 +55,7 @@ export default function Market() {
                 width="100%" // Set width to 100% for all cards
                 onClick={() => {
                   if (product.price === "FREE") {
-                    handleNavigation(product.id);
+                    handleNavigation(product.slug);
                   } else {
                     window.location.href = product.repository;
                   }
@@ -60,16 +63,16 @@ export default function Market() {
               />
             )
           ))}
-        </Space>
+        </Box>
       </Container>
 
-      <Space h={50} />
+      <Box pb={50} />
 
       <CustomDivider />
 
       <Footer />
 
-      <Space h={50} />
+      <Box pb={50} />
     </>
   );
 }
