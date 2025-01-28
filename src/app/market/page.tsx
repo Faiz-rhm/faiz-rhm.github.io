@@ -11,9 +11,9 @@ import MarketCard from "../../components/others/MarketCard";
 export default function Market() {
   const router = useRouter(); // Hook for navigation
 
-  const handleNavigation = (id: string) => {
+  const handleNavigation = (slug: string) => {
     router.push(
-      `/market/${id}`
+      `/market/${slug}`
     );
   };
 

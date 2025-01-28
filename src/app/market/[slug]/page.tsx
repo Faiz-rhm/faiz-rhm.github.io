@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function MarketDetailsPage() {
   const params = useParams();
-  const id = params?.id;
+  const slug = params?.slug;
 
   const settings = {
     dots: true, // Enable navigation dots
@@ -25,7 +25,7 @@ export default function MarketDetailsPage() {
     autoplaySpeed: 3000, // Autoplay speed (in ms)
   };
 
-  const market = MarketData.market.find((market) => market.id === id);
+  const market = MarketData.market.find((market) => market.slug === slug);
 
   if (!market) {
     return (

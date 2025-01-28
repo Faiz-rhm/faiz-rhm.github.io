@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 
 interface Market {
   id: string;
+  slug: string;
   name: string;
   description: string;
   repository: string;
@@ -28,9 +29,9 @@ interface ProductCarouselProps {
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
   const router = useRouter(); // Hook for navigation
 
-  const handleNavigation = (id: string) => {
+  const handleNavigation = (slug: string) => {
     router.push(
-      `/market/${id}`
+      `/market/${slug}`
     );
   };
 
@@ -137,7 +138,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
               width="95%" // Set width to 100% for all cards
               onClick={() => {
                 if (product.price === "FREE") {
-                  handleNavigation(product.id);
+                  handleNavigation(product.slug);
                 } else {
                   window.location.href = product.repository;
                 }
