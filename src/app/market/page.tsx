@@ -32,7 +32,6 @@ export default function Market() {
       {/* Product List */}
       <Container size="xl">
         <Space h={16}
-
           style={{
             display: "grid", // Use grid layout
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // 3 items per row with responsive fallback

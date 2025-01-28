@@ -75,19 +75,21 @@ const BottomSection = () => {
 
           <Button
             variant="default"
+            onClick={() => {
+              window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+            }}
             style={{
-              background: "#171717",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
-              height: "45px",
-              borderRadius: "12px",
-              color: "#FFFFFF",
-              fontFamily: "Manrope",
-              fontSize: "16px",
-              fontWeight: "600",
-              display: "flex",
-              alignItems: "center",
-              gap: "10px", // Adjust space between icon and text
-              padding: "0 24px", // Add padding for better button size
+              background: '#171717',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              height: '45px',
+              borderRadius: '12px',
+              color: '#FFFFFF',
+              fontFamily: 'Manrope',
+              fontSize: '16px',
+              fontWeight: '600',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
             }}
           >
             RESUME

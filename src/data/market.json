@@ -5,7 +5,7 @@
       "name": "FlutterSale - E-commerce UI Kit 👑",
       "slug": "flutter-sale-ecommerce-ui-kit",
       "description": "Flutter Grocery is a premium E-commerce UI kit that you can use to build various e-commerce apps using Flutter that works on both Android & iOS.",
-      "repository": "/shop",
+      "repository": "/flutter-sale-ecommerce-ui-kit",
       "cover": "/images/market/sale_cover.png",
       "images": [
         "/images/market.png",
@@ -21,7 +21,7 @@
       "name": "Hotel Booking - UI Kit 👑",
       "slug": "hotel-booking-ui-kit",
       "description": "Flutter Hotel Booking is a premium UI kit that you can use to build various hotel booking apps using Flutter that works on both Android & iOS.",
-      "repository": "/hotel",
+      "repository": "/hotel-booking-ui-kit",
       "cover": "/images/market/hotel_cover.png",
       "images": [
         "/images/market.png",

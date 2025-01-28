@@ -151,6 +151,9 @@ export function HeaderMenu() {
 
               <Button
                 variant="default"
+                onClick={() => {
+                  window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+                }}
                 style={{
                   background: '#171717',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
