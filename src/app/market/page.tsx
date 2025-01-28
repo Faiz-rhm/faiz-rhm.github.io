@@ -11,15 +11,16 @@ import MarketCard from "../../components/others/MarketCard";
 export default function Market() {
   const router = useRouter(); // Hook for navigation
 
-  const handleNavigation = (id: string) => {
+  const handleNavigation = (slug: string) => {
     router.push(
-      `/market/${id}`
+      `/market/${slug}`
     );
   };
 
   return (
     <>
       <Box pb={50} />
+      {/* <Space h={50} /> */}
 
       <HeroSection
         heading="Explore premium and free resources crafted to elevate your projects"
@@ -32,6 +33,8 @@ export default function Market() {
       {/* Product List */}
       <Container size="xl">
         <Box
+          p={16}
+
           style={{
             display: "grid", // Use grid layout
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // 3 items per row with responsive fallback
@@ -52,7 +55,7 @@ export default function Market() {
                 width="100%" // Set width to 100% for all cards
                 onClick={() => {
                   if (product.price === "FREE") {
-                    handleNavigation(product.id);
+                    handleNavigation(product.slug);
                   } else {
                     window.location.href = product.repository;
                   }

@@ -1,4 +1,4 @@
-import { Container, Flex, Box, Text, Button, ActionIcon } from "@mantine/core";
+import { Container, Flex, Box, Text, Button, ActionIcon, Space } from "@mantine/core";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
 interface AboutSectionProps {
@@ -55,7 +55,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           {description}
         </Text>
 
-        <Box pb={20} />
+        <Space h={20} />
 
           {/* Top Row of Buttons */}
           <Flex

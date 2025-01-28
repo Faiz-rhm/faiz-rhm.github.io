@@ -1,7 +1,7 @@
 'use client'
 
 import { Footer } from "@/components/footer/Footer";
-import { Box, Container} from '@mantine/core';
+import { Container, Image, Space} from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import HeaderLabel from "../../components/others/HeaderLabel";
@@ -10,7 +10,7 @@ import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 export default function ShopPage() {
   return (
     <>
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeroSection
         heading="The most powerful e-commerce kit"
@@ -18,16 +18,16 @@ export default function ShopPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_1.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         heading="FlutterShop is a premium E-commerce UI kit that you can use to build various e-commerce apps using Flutter that works on both Android & iOS."
@@ -36,16 +36,16 @@ export default function ShopPage() {
         description="This kit contains 70+ nicely crafted minimal screens that cover everything you need for your shop app."
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_2.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         heading="FlutterShop is designed in a beautiful light and dark theme and we have optimized each and every object according to the theme!"
@@ -54,16 +54,16 @@ export default function ShopPage() {
         description=""
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_3.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         heading="FlutterShop premium e-commerce UI kit is recommended for developers, managers, and owners. No need you worry about the frontend FlutterShop covers everything for you, just need to connect it with the backend. Also recommended for those who want to redesign their shop app or shift to flutter with premium design. All of the screens support both light & dark themes."
@@ -72,16 +72,16 @@ export default function ShopPage() {
         description=""
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_5.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         heading="We created a them for FlutterShop to help them make consistent and user-friendly designs. This them is useful for developers and other team members because it brings all design decisions into one organized place, making it easier to understand the reasons behind them."
@@ -90,16 +90,16 @@ export default function ShopPage() {
         description=""
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_6.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         heading="At FlutterShop, we follow to the best practices recommended by the Flutter team. Our code is designed in small, reusable components, allowing you to easily build and customize your screens with the exact features you need. This approach not only enhances flexibility but also ensures that your projects are maintainable and scalable."
@@ -108,16 +108,16 @@ export default function ShopPage() {
         description=""
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/shop/shop_4.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         subheading="The result"
@@ -126,7 +126,7 @@ export default function ShopPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <AppPreviewBottomCard
         title="Get the Hotel Booking App"
@@ -136,16 +136,16 @@ export default function ShopPage() {
 
       <CustomDivider/>
 
-      <Box pb={20} />
+      <Space h={20} />
 
 
-      <Box pb={20} />
+      <Space h={20} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Image } from "@mantine/core";
+import Link from "next/link";
 
 interface StoreButtonsProps {
   appleUrl: string;
@@ -17,7 +18,7 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({ appleUrl, googlePlayUrl }) 
       }}
     >
       {/* Apple Store */}
-      <a
+      <Link
         href={appleUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -33,10 +34,10 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({ appleUrl, googlePlayUrl }) 
           }}
           className="zoom-image"
         />
-      </a>
+      </Link>
 
       {/* Google Play Store */}
-      <a
+      <Link
         href={googlePlayUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -52,7 +53,7 @@ const StoreButtons: React.FC<StoreButtonsProps> = ({ appleUrl, googlePlayUrl }) 
           }}
           className="zoom-image"
         />
-      </a>
+      </Link>
     </Box>
   );
 };

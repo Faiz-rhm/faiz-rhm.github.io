@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { Footer } from "@/components/footer/Footer";
-import { Box, Container, Text } from "@mantine/core";
+import { Container, Space, Text } from "@mantine/core";
 import MarketData from "@/data/market.json";
 
 import MarketDetails from "../../../components/others/MarketDetails";
@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function MarketDetailsPage() {
   const params = useParams();
-  const id = params?.id;
+  const slug = params?.slug;
 
   const settings = {
     dots: true, // Enable navigation dots
@@ -25,7 +25,7 @@ export default function MarketDetailsPage() {
     autoplaySpeed: 3000, // Autoplay speed (in ms)
   };
 
-  const market = MarketData.market.find((market) => market.id === id);
+  const market = MarketData.market.find((market) => market.slug === slug);
 
   if (!market) {
     return (
@@ -37,7 +37,7 @@ export default function MarketDetailsPage() {
 
   return (
     <>
-      <Box pb={100} />
+      <Space h={100} />
 
       <MarketDetails
         settings={settings}
@@ -48,13 +48,13 @@ export default function MarketDetailsPage() {
         buttonUrl={market.repository}
       />
 
-      <Box pb={100} />
+      <Space h={100} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

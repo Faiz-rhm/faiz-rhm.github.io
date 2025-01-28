@@ -1,4 +1,4 @@
-import { Flex, Text, Button } from "@mantine/core";
+import { Flex, Text, Button, Image } from "@mantine/core";
 
 interface ButtonWithImage {
   label: string; // Button label text
@@ -63,7 +63,7 @@ const CenteredSection: React.FC<CenteredSectionProps> = ({ text, buttons }) => {
           >
             {/* Optional Image */}
             {image && (
-              <img
+              <Image
                 src={image}
                 alt={label}
                 style={{

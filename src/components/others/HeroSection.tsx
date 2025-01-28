@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Flex, Box, Text } from "@mantine/core";
+import { Container, Flex, Box, Text, Image } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 // Keyframe animation for rotation
@@ -92,7 +92,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               justifyContent: isMobile ? "center" : "flex-end", // Center on mobile
             }}
           >
-            <img
+            <Image
               src={imageSrc}
               alt={altText}
               style={{

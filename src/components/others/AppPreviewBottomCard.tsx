@@ -1,7 +1,18 @@
 import React from 'react';
-import { Box, Button, Container, Group, Text } from '@mantine/core'; // Assuming Mantine library
+import { Button, Container, Group, Space, Text } from '@mantine/core'; // Assuming Mantine library
 
-const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
+// Define the interface for the component props
+interface AppPreviewBottomCardProps {
+  title: string;
+  sourceCodeUrl?: string; // Optional property
+  previewUrl?: string;    // Optional property
+}
+
+const AppPreviewBottomCard: React.FC<AppPreviewBottomCardProps> = ({
+  title,
+  sourceCodeUrl,
+  previewUrl,
+}) => {
   return (
     <Container size="xl">
       <div
@@ -32,7 +43,7 @@ const AppPreviewBottomCard = ({ title, sourceCodeUrl, previewUrl }) => {
           {title}
         </Text>
 
-        <Box pb={20} />
+        <Space h={20} />
 
         {/* Buttons */}
         <Group style={{ gap: '16px', justifyContent: 'center' }}>

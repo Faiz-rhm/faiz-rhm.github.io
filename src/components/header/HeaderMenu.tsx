@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  Box,
   Burger,
   Button,
   Divider,
@@ -12,10 +11,12 @@ import {
   Image,
   Container,
   ActionIcon,
+  Space,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconDownload } from '@tabler/icons-react';
 import classes from './HeaderMegaMenu.module.css';
+import Link from 'next/link';
 
 export function HeaderMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -38,7 +39,7 @@ export function HeaderMenu() {
   }, []);
 
   return (
-    <Box pb={120}>
+    <Space h={120}>
       <header
         className={classes.header}
         style={{
@@ -70,7 +71,7 @@ export function HeaderMenu() {
                 alignItems: 'center',
               }}
             >
-              <a
+              <Link
                 href="/"
                 className={classes.link}
                 style={{
@@ -97,8 +98,8 @@ export function HeaderMenu() {
                     display: 'block',
                   }}
                 ></span> */}
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/market"
                 className={classes.link}
                 style={{
@@ -111,8 +112,8 @@ export function HeaderMenu() {
                 }}
               >
                 MARKET
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/projects"
                 className={classes.link}
                 style={{
@@ -125,7 +126,7 @@ export function HeaderMenu() {
                 }}
               >
                 PROJECTS
-              </a>
+              </Link>
             </Group>
 
             {/* Action Buttons */}
@@ -150,6 +151,9 @@ export function HeaderMenu() {
 
               <Button
                 variant="default"
+                onClick={() => {
+                  window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+                }}
                 style={{
                   background: '#171717',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -220,7 +224,7 @@ export function HeaderMenu() {
               padding: "16px", // Padding around the links
             }}
           >
-            <a
+            <Link
               href="/"
               className={classes.link}
               style={{
@@ -234,8 +238,8 @@ export function HeaderMenu() {
               }}
             >
               ABOUT ME
-            </a>
-            <a
+            </Link>
+            <Link
               href="/market"
               className={classes.link}
               style={{
@@ -249,8 +253,8 @@ export function HeaderMenu() {
               }}
             >
               MARKET
-            </a>
-            <a
+            </Link>
+            <Link
               href="/projects"
               className={classes.link}
               style={{
@@ -264,13 +268,13 @@ export function HeaderMenu() {
               }}
             >
               PROJECTS
-            </a>
+            </Link>
           </div>
 
 
           <Divider my="sm" />
 
-          <Box pb={10} />
+          <Space h={10} />
 
           <Group justify="center" grow pb="xl" px="md">
             <Button
@@ -318,6 +322,6 @@ export function HeaderMenu() {
         </ScrollArea>
       </Drawer>
 
-    </Box>
+    </Space>
   );
 }

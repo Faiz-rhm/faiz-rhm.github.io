@@ -1,13 +1,29 @@
 import React from "react";
 import Chip from "./Chip"; // Import your Chip component
 import Slider from "react-slick";
-import { ActionIcon, Container, Button, Box } from "@mantine/core";
+import { ActionIcon, Container, Button, Image, Space } from "@mantine/core";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const MarketDetails = ({ settings, imageList, title, description, chips, buttonUrl }) => {
+interface MarketDetailsProps {
+  settings: object; // Type this based on your settings structure (replace `object` with the correct type if available)
+  imageList: string[]; // Assuming imageList is an array of strings (URLs or image paths)
+  title: string;
+  description: string;
+  chips: string[]; // Assuming chips is an array of strings
+  buttonUrl?: string; // Optional button URL
+}
+
+const MarketDetails: React.FC<MarketDetailsProps> = ({
+  settings,
+  imageList,
+  title,
+  description,
+  chips,
+  buttonUrl,
+}) => {
   return (
     <Container
       size="xl"
@@ -43,7 +59,7 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
           <Slider {...settings}>
             {imageList.map((src, index) => (
               <div key={index} style={{ width: "550", height: "300" }}>
-                <img
+                <Image
                   src={src}
                   alt={`Carousel Image ${index + 1}`}
                   style={{
@@ -86,7 +102,7 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
             {title}
           </h1>
 
-          <Box pb={20} />
+          <Space h={20} />
 
           {/* Chips Row */}
           <div
@@ -114,7 +130,7 @@ const MarketDetails = ({ settings, imageList, title, description, chips, buttonU
             {description}
           </p>
 
-          <Box pb={50} />
+          <Space h={50} />
 
           {/* Source Code Button */}
           <Button

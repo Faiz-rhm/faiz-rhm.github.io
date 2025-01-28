@@ -6,14 +6,14 @@ import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
 import StoreButtons from '../../../components/others/StoreButton';
 import CustomDivider from '../../../components/others/CustomDivider';
-import { Text, Box, Container, Divider } from '@mantine/core';
+import { Text, Container, Divider, Image, Space } from '@mantine/core';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function ProjectsDetails() {
   const params = useParams();
-  const id = params?.id;
+  const slug = params?.slug;
 
   const settings = {
     dots: true, // Enable navigation dots
@@ -26,7 +26,7 @@ export default function ProjectsDetails() {
   };
 
   // Find the project using the ID
-  const project = ProjectData.projects.find((project) => project.id === id);
+  const project = ProjectData.projects.find((project) => project.slug === slug);
 
   if (!project) {
     return (
@@ -38,7 +38,7 @@ export default function ProjectsDetails() {
 
   return (
     <>
-      <Box pb={100} />
+      <Space h={100} />
 
       <Container size="xl">
         <div
@@ -69,7 +69,7 @@ export default function ProjectsDetails() {
             <Slider {...settings}>
               {project.images.map((src, index) => (
                 <div key={index} style={{ width: "550", height: "300" }}>
-                  <img
+                  <Image
                     src={src}
                     alt={`Carousel Image ${index + 1}`}
                     style={{
@@ -112,7 +112,7 @@ export default function ProjectsDetails() {
               {project.name}
             </Text>
 
-            <Box pb={15} />
+            <Space h={15} />
 
             {/* Description */}
             <p
@@ -126,7 +126,7 @@ export default function ProjectsDetails() {
               {project.description}
             </p>
 
-            <Box pb={25} />
+            <Space h={25} />
 
             {/* Completed Date */}
             <p
@@ -165,7 +165,7 @@ export default function ProjectsDetails() {
 
 
 
-            <Box pb={25} />
+            <Space h={25} />
 
             {/* What I Did */}
             <h2
@@ -205,7 +205,7 @@ export default function ProjectsDetails() {
             </ul>
 
 
-            <Box pb={50} />
+            <Space h={50} />
 
             {(project.appStore && project.appStore.trim() !== "") && (
               <StoreButtons
@@ -218,13 +218,13 @@ export default function ProjectsDetails() {
         </div>
       </Container>
 
-      <Box pb={100} />
+      <Space h={100} />
 
       <CustomDivider />
 
       <Footer />
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

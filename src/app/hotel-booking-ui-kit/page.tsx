@@ -1,7 +1,7 @@
 'use client'
 
 import { Footer } from "@/components/footer/Footer";
-import { Box, Container} from '@mantine/core';
+import { Space, Container, Image} from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import HeaderLabel from "../../components/others/HeaderLabel";
@@ -10,7 +10,7 @@ import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 export default function HotelPage() {
   return (
     <>
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeroSection
         heading="Hotel Booking App"
@@ -18,16 +18,16 @@ export default function HotelPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_1.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         subheading="Hotel Booking: Premium Flutter template"
@@ -36,16 +36,16 @@ export default function HotelPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_2.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         subheading="Effortless Integrations"
@@ -54,16 +54,16 @@ export default function HotelPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_3.png'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         subheading="Clean & reusable code"
@@ -72,16 +72,16 @@ export default function HotelPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <Container size="xl">
-        <img
+        <Image
           src={'/images/hotel/hotel_4.jpg'}
           alt={'Hotel Booking App'}
         />
       </Container>
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <HeaderLabel
         subheading="The result"
@@ -90,7 +90,7 @@ export default function HotelPage() {
         altText="Fluter Shop"
       />
 
-      <Box pb={50} />
+      <Space h={50} />
 
       <AppPreviewBottomCard
         title="Get the Hotel Booking App"
@@ -98,13 +98,13 @@ export default function HotelPage() {
         previewUrl={'https://faiz-rhm.github.io/hotel_complete/'}
       />
 
-      <Box pb={20} />
+      <Space h={20} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }

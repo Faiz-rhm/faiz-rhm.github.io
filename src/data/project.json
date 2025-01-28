@@ -3,6 +3,7 @@
     {
       "id": "1",
       "name": "Job.af - Job Board App",
+      "slug": "job-af-job-board-app",
       "description": "The Job Board App is a mobile application designed for job seekers, offering features to search and apply for jobs, view detailed job descriptions, and explore company profiles. Users can create and manage their personal profiles, showcasing their skills and experience. The app provides a seamless experience for browsing job opportunities, applying directly, and connecting with potential employers.",
       "cover": "/images/project/jobs_cover.png",
       "images": [
@@ -29,6 +30,7 @@
     {
       "id": "2",
       "name": "Baran - Reading App",
+      "slug": "baran-reading-app",
       "description": "The Baran App is a fun and interactive reading platform designed for children. It offers a wide range of books for young readers to explore, with options to read stories or listen to audiobooks. The app features engaging book details, making the reading experience both educational and enjoyable. With a subscription-based model, Baran provides a curated library of age-appropriate content to foster a love for reading in children.",
       "cover": "/images/project/baran_cover.png",
       "images": [
@@ -54,6 +56,7 @@
     {
       "id": "3",
       "name": "Weena.af - Blood Donation App",
+      "slug": "weena-af-blood-donation-app",
       "description": "The Weena.af App is a platform designed to connect blood donors and recipients in a seamless and efficient way. Users can donate blood, search for nearby blood donors, and access detailed information about blood types and availability. The app also features a donor map for easy location tracking, along with personalized donor profiles to facilitate quick connections and support those in need of blood.",
       "cover": "/images/project/weena_cover.png",
       "images": [
@@ -79,6 +82,7 @@
     {
       "id": "4",
       "name": "Wagey - Food Ordering App",
+      "slug": "wagey-food-ordering-app",
       "description": "The Weegy App is a restaurant-based mobile application that allows users to easily order food, explore detailed menus, and track their orders in real-time. It offers a seamless and interactive dining experience, helping customers discover new dishes, customize their orders, and stay updated on the status of their deliveries. The app is designed for convenience and efficiency, ensuring a smooth food ordering process from start to finish.",
       "cover": "/images/project/wagey_cover.png",
       "images": [
@@ -103,6 +107,7 @@
     {
       "id": "5",
       "name": "Daricha - Educational App",
+      "slug": "daricha-educational-app",
       "description": "The Daricha App is an educational platform sponsored by the European Union, designed to help users learn and explore a variety of courses. It provides access to detailed course information, focusing on spreading awareness about people's rights and promoting informed citizenship. The app aims to empower individuals with knowledge, offering educational resources that encourage active participation in society and foster a deeper understanding of democratic values.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
