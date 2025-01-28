@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default function ProjectsDetails() {
   const params = useParams();
-  const id = params?.id;
+  const slug = params?.slug;
 
   const settings = {
     dots: true, // Enable navigation dots
@@ -26,7 +26,7 @@ export default function ProjectsDetails() {
   };
 
   // Find the project using the ID
-  const project = ProjectData.projects.find((project) => project.id === id);
+  const project = ProjectData.projects.find((project) => project.slug === slug);
 
   if (!project) {
     return (
