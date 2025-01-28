@@ -2,7 +2,7 @@
 
 import MarketData from "@/data/market.json";
 import { useRouter } from "next/navigation";
-import { Box, Container, Space } from '@mantine/core';
+import { Box, Container } from '@mantine/core';
 import { Footer } from "@/components/footer/Footer";
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
