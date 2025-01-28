@@ -1,7 +1,7 @@
 'use client'
 
 import { Footer } from "@/components/footer/Footer";
-import { Space } from '@mantine/core';
+import { Box } from '@mantine/core';
 import CustomDivider from "../../components/others/CustomDivider";
 import HeroSection from "../../components/others/HeroSection";
 import ProjectCard from "../../components/others/ProjectCard";
@@ -11,7 +11,7 @@ import React from "react";
 export default function Projects() {
   return (
     <>
-      <Space h={50} />
+      <Box pb={50} />
 
       <HeroSection
         heading="Explore the projects I've worked on, from concept to completion"
@@ -19,7 +19,7 @@ export default function Projects() {
         altText="Faiz Rhm"
       />
 
-      <Space h={70} />
+      <Box pb={70} />
 
       {ProjectData.projects.map((product, index) => (
         <React.Fragment key={product.id}>
@@ -37,21 +37,21 @@ export default function Projects() {
             swapColumns={index % 2 !== 0}
           />
 
-          <Space h={20} />
+          <Box pb={20} />
 
           {index < ProjectData.projects.length - 1 && <CustomDivider />}
 
-          <Space h={20} />
+          <Box pb={20} />
         </React.Fragment>
       ))}
 
-      <Space h={20} />
+      <Box pb={20} />
 
       <CustomDivider/>
 
       <Footer/>
 
-      <Space h={50} />
+      <Box pb={50} />
     </>
   );
 }
