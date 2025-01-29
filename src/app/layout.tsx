@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { HeaderMenu } from "@/components/header/HeaderMenu";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-Manrope",
@@ -36,6 +37,7 @@ export default function RootLayout({
           {children}
         </MantineProvider>
       </body>
+      <GoogleAnalytics gaId="G-TLM95WV9VN" />
     </html>
   );
 }

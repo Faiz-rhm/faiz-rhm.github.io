@@ -13,6 +13,7 @@
     "@mantine/code-highlight": "^7.16.0",
     "@mantine/core": "^7.16.0",
     "@mantine/hooks": "^7.16.0",
+    "@next/third-parties": "^15.1.6",
     "@tabler/icons-react": "^3.28.1",
     "lodash": "^4.17.21",
     "next": "15.1.4",
