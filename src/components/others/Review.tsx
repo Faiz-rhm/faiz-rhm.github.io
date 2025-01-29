@@ -69,10 +69,16 @@ const Reviews = () => {
     // Initialize responsive styles on mount
     updateResponsiveStyles();
     // Listen for resize events
-    window.addEventListener("resize", updateResponsiveStyles);
+
+    if(typeof window !== 'undefined'){
+      window.addEventListener("resize", updateResponsiveStyles);
+    }
+
     return () => {
       // Cleanup event listener on unmount
-      window.removeEventListener("resize", updateResponsiveStyles);
+      if(typeof window !== 'undefined'){
+        window.removeEventListener("resize", updateResponsiveStyles);
+      }
     };
   }, []);
 

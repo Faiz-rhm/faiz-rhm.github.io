@@ -24,17 +24,23 @@ export function HeaderMenu() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if(typeof window !== 'undefined'){
+        if (window.scrollY > 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if(typeof window !== 'undefined'){
+      window.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if(typeof window !== 'undefined'){
+        window.removeEventListener('scroll', handleScroll);
+      }
     };
   }, []);
 
@@ -134,7 +140,9 @@ export function HeaderMenu() {
               <Button
                 variant="default"
                 onClick={() => {
-                  window.open('mailto:faiz199011@gmail.com', '_blank');
+                  if(typeof window !== 'undefined'){
+                    window.open('mailto:faiz199011@gmail.com', '_blank');
+                  }
                 }}
                 style={{
                   background: '#FFFFFF',
@@ -152,7 +160,9 @@ export function HeaderMenu() {
               <Button
                 variant="default"
                 onClick={() => {
-                  window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+                  if(typeof window !== 'undefined'){
+                    window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+                  }
                 }}
                 style={{
                   background: '#171717',
@@ -280,8 +290,9 @@ export function HeaderMenu() {
             <Button
               variant="default"
               onClick={() => {
-                window.location.href =
-                  "mailto:faiz199011@gmail.com?subject=Hello&body=Hi, I would like to connect with you.";
+                if(typeof window !== 'undefined'){
+                  window.open('mailto:faiz199011@gmail.com', '_blank');
+                }
               }}
               style={{
                 background: "#FFFFFF",

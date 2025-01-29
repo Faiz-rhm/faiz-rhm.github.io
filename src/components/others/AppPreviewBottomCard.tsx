@@ -50,7 +50,9 @@ const AppPreviewBottomCard: React.FC<AppPreviewBottomCardProps> = ({
           <Button
             variant="default"
             onClick={() => {
-              window.open(sourceCodeUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
+              if(typeof window !== 'undefined'){
+               window.open(sourceCodeUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
+              }
             }}
             style={{
               background: '#FFFFFF',
@@ -70,7 +72,9 @@ const AppPreviewBottomCard: React.FC<AppPreviewBottomCardProps> = ({
           <Button
             variant="default"
             onClick={() => {
-              window.open(previewUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
+              if(typeof window !== 'undefined'){
+                window.open(previewUrl, '_blank', 'noopener,noreferrer'); // Open in new tab with secure attributes
+              }
             }}
             style={{
               background: '#171717',

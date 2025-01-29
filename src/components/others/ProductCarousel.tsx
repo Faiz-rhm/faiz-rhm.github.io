@@ -140,7 +140,9 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
                 if (product.price === "FREE") {
                   handleNavigation(product.slug);
                 } else {
-                  window.location.href = product.repository;
+                  if(typeof window !== 'undefined'){
+                    window.location.href = product.repository;
+                  }
                 }
               }}
             />

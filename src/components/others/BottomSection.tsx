@@ -58,7 +58,9 @@ const BottomSection = () => {
           <Button
             variant="default"
             onClick={() => {
-              window.open('mailto:faiz199011@gmail.com', '_blank');
+              if(typeof window !== 'undefined'){
+                window.open('mailto:faiz199011@gmail.com', '_blank');
+              }
             }}
             style={{
               background: '#FFFFFF',
@@ -76,7 +78,9 @@ const BottomSection = () => {
           <Button
             variant="default"
             onClick={() => {
-              window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+              if(typeof window !== 'undefined'){
+                window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
+              }
             }}
             style={{
               background: '#171717',
