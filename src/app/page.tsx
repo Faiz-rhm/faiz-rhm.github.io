@@ -13,6 +13,7 @@ import ProjectData from "@/data/project.json";
 import Market from "@/data/market.json";
 import { Space } from '@mantine/core';
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -29,6 +30,14 @@ const sections = [
 
 
 export default function Home() {
+  const router = useRouter(); // Hook for navigation
+
+  const handleNavigation = (slug: string) => {
+    router.push(
+      `/projects/${slug}`
+    );
+  };
+
   return (
     <>
       <Space h={50} />
@@ -84,7 +93,8 @@ export default function Home() {
                 image: product.cover,
               },
             ]}
-            swapColumns={index % 2 !== 0} // Alternate columns for every other project
+            swapColumns={index % 2 !== 0}
+            onClick={() => handleNavigation(product.slug)}
           />
 
           <Space h={20} />
