@@ -21,7 +21,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
-  slug,
   chipText,
   description,
   buttonLabel,
