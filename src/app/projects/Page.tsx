@@ -7,8 +7,17 @@ import HeroSection from "../../components/others/HeroSection";
 import ProjectCard from "../../components/others/ProjectCard";
 import ProjectData from "@/data/project.json";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Projects() {
+  const router = useRouter(); // Hook for navigation
+
+  const handleNavigation = (slug: string) => {
+    router.push(
+      `/projects/${slug}`
+    );
+  };
+
   return (
     <>
       <Box pb={50} />
@@ -35,6 +44,9 @@ export default function Projects() {
               },
             ]}
             swapColumns={index % 2 !== 0}
+            onClick={() => {
+              handleNavigation(product.slug);
+            }}
           />
 
           <Box pb={20} />

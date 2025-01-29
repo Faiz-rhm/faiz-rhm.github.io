@@ -1,8 +1,5 @@
-'use client'
-
 import React from "react";
 import Chip from "@/components/others/Chip";
-import { useRouter } from "next/navigation";
 import { useMediaQuery } from "@mantine/hooks";
 import CustomCard from "@/components/card/CustomCard";
 import { Container, Flex, Box, Text, Button, Space } from "@mantine/core";
@@ -20,6 +17,7 @@ interface ProjectCardProps {
     borderColor?: string;
   }[];
   swapColumns?: boolean;
+  onClick?: () => void; // Optional onClick event for navigation
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -29,16 +27,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   buttonLabel,
   cards,
   swapColumns = false, // Default is no swapping
+  onClick,
 }) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-
-  const router = useRouter(); // Hook for navigation
-
-  const handleNavigation = () => {
-    router.push(
-      `/projects/${slug}`
-    );
-  };
 
   return (
     <Container size="xl">
@@ -93,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <Button
                   variant="default"
-                  onClick={handleNavigation} // Add navigation handler
+                  onClick={onClick} // Add navigation handler
 
                   style={{
                     background: "#FFFFFF",
@@ -202,7 +193,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
                 <Button
                   variant="default"
-                  onClick={handleNavigation} // Add navigation handler
+                  onClick={onClick} // Add navigation handler
                   style={{
                     background: "#FFFFFF",
                     height: "45px",
