@@ -8,9 +8,6 @@ import MarketData from "@/data/market.json";
 import MarketDetails from "../../../components/others/MarketDetails";
 import CustomDivider from "../../../components/others/CustomDivider";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 export default function MarketDetailsPage() {
   const params = useParams();
   const slug = params?.slug;

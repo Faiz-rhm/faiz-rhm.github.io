@@ -8,9 +8,6 @@ import StoreButtons from '../../../components/others/StoreButton';
 import CustomDivider from '../../../components/others/CustomDivider';
 import { Text, Container, Divider, Image, Space } from '@mantine/core';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 export default function ProjectsDetails() {
   const params = useParams();
   const slug = params?.slug;

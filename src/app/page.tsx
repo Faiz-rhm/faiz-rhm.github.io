@@ -72,8 +72,9 @@ export default function Home() {
       <Space h={20} />
 
       {ProjectData.projects.slice(0, 2).map((product, index) => (
-        <React.Fragment key={product.id}>
+        <React.Fragment key={product.slug}>
           <ProjectCard
+            key={product.slug}
             slug={product.slug}
             chipText={product.tag}
             description={product.description}

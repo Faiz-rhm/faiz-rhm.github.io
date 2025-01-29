@@ -22,9 +22,9 @@ export default function Projects() {
       <Box pb={70} />
 
       {ProjectData.projects.map((product, index) => (
-        <React.Fragment key={product.id}>
+        <React.Fragment key={product.slug}>
            <ProjectCard
-            key={product.id}
+            key={product.slug}
             slug={product.slug} // Esnsure `product.id` is passed
             chipText={product.tag}
             description={product.description}
