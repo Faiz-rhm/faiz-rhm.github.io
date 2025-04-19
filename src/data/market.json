@@ -37,7 +37,7 @@
       "name": "SportUp - Sport UI Kit 👑",
       "slug": "sportup-sport-ui-kit",
       "description": "SportUp is a premium Flutter UI kit designed for building modern and feature-rich sports apps, compatible with both Android and iOS platforms.",
-      "repository": "https://github.com/afgprogrammer/flutter-inspiration-app-ui",
+      "repository": "sport-up-ui-kit",
       "cover": "/images/market/sport_cover.png",
       "images": [
         "/images/market.png",
