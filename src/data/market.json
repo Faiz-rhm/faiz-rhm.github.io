@@ -45,8 +45,8 @@
         "/images/market.png"
       ],
       "tags": ["UI", "ListView"],
-      "price": "$69",
-      "isVisible": false
+      "price": "$79",
+      "isVisible": true
     },
     {
       "id": "4",
