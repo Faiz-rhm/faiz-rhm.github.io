@@ -50,7 +50,7 @@ const BottomSection = () => {
             lineHeight: "1.2", // Adjust line height for better readability
           }}
         >
-          Create an exceptional Flutter & React Native apps & webapps
+          Create an exceptional Flutter & React Native apps & web apps
         </Text>
 
         {/* Buttons */}
