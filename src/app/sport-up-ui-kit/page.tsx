@@ -93,7 +93,7 @@ export default function HotelPage() {
       <Space h={50} />
 
       <AppPreviewBottomCard
-        title="Get the Sportup"
+        title="Get the Sportup App"
         sourceCodeUrl={'https://faizrhm1.gumroad.com/l/vbnbv'}
         previewUrl={'https://faiz-rhm.github.io/sportup_complete/'}
       />
