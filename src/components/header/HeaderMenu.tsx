@@ -15,30 +15,30 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconDownload } from '@tabler/icons-react';
-import classes from './HeaderMegaMenu.module.css';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import classes from './HeaderMegaMenu.module.css';
 
 export function HeaderMenu() {
+  const pathname = usePathname();
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const isActive = (path: string) => pathname === path;
+
   useEffect(() => {
     const handleScroll = () => {
-      if(typeof window !== 'undefined'){
-        if (window.scrollY > 0) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
+      if (typeof window !== 'undefined') {
+        setIsScrolled(window.scrollY > 0);
       }
     };
 
-    if(typeof window !== 'undefined'){
+    if (typeof window !== 'undefined') {
       window.addEventListener('scroll', handleScroll);
     }
 
     return () => {
-      if(typeof window !== 'undefined'){
+      if (typeof window !== 'undefined') {
         window.removeEventListener('scroll', handleScroll);
       }
     };
@@ -52,98 +52,64 @@ export function HeaderMenu() {
           borderBottom: 'none',
           backgroundColor: isScrolled
             ? 'var(--mantine-color-dark-9)'
-            : 'var(--mantine-color-dark-10)', // Change background on scroll
-          transition: 'background-color 0.3s ease', // Smooth transition
+            : 'var(--mantine-color-dark-10)',
+          transition: 'background-color 0.3s ease',
         }}
       >
-        <Container size="xl" style={{ marginTop: '15px', marginBottom: '20px', position: 'relative' }}>
+        <Container size="xl" style={{ marginTop: '15px', marginBottom: '20px' }}>
           <Group justify="flex-start" h="100%" style={{ gap: '70px' }}>
-            {/* Logo */}
             <Image
               alt="logo"
               src="/images/logo.png"
-              style={{
-                width: 'clamp(60px, 5vw, 70px)', // Responsive scaling
-                height: 'auto',
-              }}
+              style={{ width: 'clamp(60px, 5vw, 70px)', height: 'auto' }}
             />
 
-            {/* Navigation Links */}
-            <Group
-              h="100%"
-              gap="28px"
-              visibleFrom="sm"
+            {/* Desktop Links */}
+            <Group h="100%" gap="28px" visibleFrom="sm">
+            {[
+            { href: '/', label: 'ABOUT ME' },
+            { href: '/market', label: 'MARKET' },
+            { href: '/projects', label: 'PROJECTS' },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={classes.link}
               style={{
-                alignItems: 'center',
+                color: '#FFFFFF',
+                fontSize: '16px',
+                fontWeight: '900',
+                fontFamily: 'Manrope',
+                position: 'relative',
+                paddingBottom: '12px',
+                textDecoration: 'none',
               }}
             >
-              <Link
-                href="/"
-                className={classes.link}
-                style={{
-                  color: '#FFFFFF',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                  fontFamily: 'Manrope',
-                  position: 'relative',
-                  paddingBottom: '5px',
-                }}
-              >
-                ABOUT ME
-                {/* <span
+              {label}
+              {isActive(href) && (
+                <span
                   style={{
                     position: 'absolute',
-                    bottom: '0',
                     left: '50%',
-                    top: '100%',
                     transform: 'translateX(-50%)',
-                    width: '4px',
-                    height: '4px',
-                    backgroundColor: 'red',
+                    bottom: '0px',
+                    width: '6px',
+                    height: '6px',
+                    backgroundColor: '#FF4C4C',
                     borderRadius: '50%',
-                    display: 'block',
                   }}
-                ></span> */}
-              </Link>
-              <Link
-                href="/market"
-                className={classes.link}
-                style={{
-                  color: '#FFFFFF',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                  fontFamily: 'Manrope',
-                  position: 'relative',
-                  paddingBottom: '5px',
-                }}
-              >
-                MARKET
-              </Link>
-              <Link
-                href="/projects"
-                className={classes.link}
-                style={{
-                  color: '#FFFFFF',
-                  fontSize: '16px',
-                  fontWeight: '500',
-                  fontFamily: 'Manrope',
-                  position: 'relative',
-                  paddingBottom: '5px',
-                }}
-              >
-                PROJECTS
-              </Link>
+                />
+              )}
+            </Link>
+          ))}
+
             </Group>
 
-            {/* Action Buttons */}
-            <Group visibleFrom="sm" style={{ marginLeft: 'auto', alignItems: 'center' }}>
+            {/* Desktop Buttons */}
+            <Group visibleFrom="sm" style={{ marginLeft: 'auto' }}>
               <Button
                 variant="default"
-                onClick={() => {
-                  if(typeof window !== 'undefined'){
-                    window.open('mailto:faiz199011@gmail.com', '_blank');
-                  }
-                }}
+                onClick={() => window?.open('mailto:faiz199011@gmail.com', '_blank')}
                 style={{
                   background: '#FFFFFF',
                   height: '45px',
@@ -159,11 +125,7 @@ export function HeaderMenu() {
 
               <Button
                 variant="default"
-                onClick={() => {
-                  if(typeof window !== 'undefined'){
-                    window.open('cv/cv.pdf', '_blank'); // Replace 'cv.pdf' with the actual file name in your public folder
-                  }
-                }}
+                onClick={() => window?.open('cv/cv.pdf', '_blank')}
                 style={{
                   background: '#171717',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -185,123 +147,83 @@ export function HeaderMenu() {
               </Button>
             </Group>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Button */}
             <Burger
               opened={drawerOpened}
               onClick={toggleDrawer}
               hiddenFrom="sm"
-              style={{
-                marginLeft: 'auto',
-              }}
+              style={{ marginLeft: 'auto' }}
             />
           </Group>
         </Container>
       </header>
 
+      {/* Drawer for Mobile */}
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}
-        size="40%" // Adjust the size
-        position="top" // Open from the top
+        size="40%"
+        position="top"
         padding="md"
         title="Faiz Rhm"
         hiddenFrom="sm"
         zIndex={1000000}
         styles={{
-          body: {
-            backgroundColor: '#171717', // Customize the background color
-            transition: 'background-color 0.3s ease', // Smooth transition
-          },
-          title: {
-            color: "#FFFFFF", // Customize the title color
-            fontSize: "20px", // Customize the title font size
-          },
-          header: {
-            backgroundColor: '#171717', // Customize the title background color
-            paddingTop: "30px", // Optional: Add padding for spacing
-          },
+          body: { backgroundColor: '#171717' },
+          title: { color: '#FFFFFF', fontSize: '20px' },
+          header: { backgroundColor: '#171717', paddingTop: '30px' },
         }}
       >
         <ScrollArea h="calc(50vh - 80px)" mx="-md">
           <Divider my="sm" />
           <div
             style={{
-              display: "flex", // Use flexbox
-              flexDirection: "column", // Arrange items in a column
-              justifyContent: "center", // Center items vertically
-              alignItems: "flex-start", // Align items to the left
-              gap: "16px", // Space between links
-              padding: "16px", // Padding around the links
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              gap: '16px',
+              padding: '16px',
             }}
           >
-            <Link
-              href="/"
-              className={classes.link}
-              style={{
-                color: "#FFFFFF",
-                fontSize: "32px",
-                fontWeight: "900",
-                fontFamily: "Manrope",
-                position: "relative",
-                paddingBottom: "5px",
-                textDecoration: "none", // Remove underline
-              }}
-            >
-              ABOUT ME
-            </Link>
-            <Link
-              href="/market"
-              className={classes.link}
-              style={{
-                color: "#FFFFFF",
-                fontSize: "32px",
-                fontWeight: "900",
-                fontFamily: "Manrope",
-                position: "relative",
-                paddingBottom: "5px",
-                textDecoration: "none", // Remove underline
-              }}
-            >
-              MARKET
-            </Link>
-            <Link
-              href="/projects"
-              className={classes.link}
-              style={{
-                color: "#FFFFFF",
-                fontSize: "32px",
-                fontWeight: "900",
-                fontFamily: "Manrope",
-                position: "relative",
-                paddingBottom: "5px",
-                textDecoration: "none", // Remove underline
-              }}
-            >
-              PROJECTS
-            </Link>
+            {[
+              { href: '/', label: 'ABOUT ME' },
+              { href: '/market', label: 'MARKET' },
+              { href: '/projects', label: 'PROJECTS' },
+            ].map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={classes.link}
+                style={{
+                  color: isActive(href) ? '#00FFB2' : '#FFFFFF',
+                  fontSize: '32px',
+                  fontWeight: '900',
+                  fontFamily: 'Manrope',
+                  paddingBottom: '5px',
+                  textDecoration: 'none',
+                }}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
-
           <Divider my="sm" />
-
           <Space h={10} />
 
           <Group justify="center" grow pb="xl" px="md">
             <Button
               variant="default"
-              onClick={() => {
-                if(typeof window !== 'undefined'){
-                  window.open('mailto:faiz199011@gmail.com', '_blank');
-                }
-              }}
+              onClick={() => window?.open('mailto:faiz199011@gmail.com', '_blank')}
               style={{
-                background: "#FFFFFF",
-                height: "45px",
-                borderRadius: "12px",
-                color: "#000000",
-                fontFamily: "Manrope",
-                fontSize: "16px",
-                fontWeight: "600",
+                background: '#FFFFFF',
+                height: '45px',
+                borderRadius: '12px',
+                color: '#000000',
+                fontFamily: 'Manrope',
+                fontSize: '16px',
+                fontWeight: '600',
               }}
             >
               SAY “HELLO!”
@@ -309,19 +231,20 @@ export function HeaderMenu() {
 
             <Button
               variant="default"
+              onClick={() => window?.open('cv/cv.pdf', '_blank')}
               style={{
-                background: "#171717",
-                border: "1px solid rgba(255, 255, 255, 0.2)",
-                height: "45px",
-                borderRadius: "12px",
-                color: "#FFFFFF",
-                fontFamily: "Manrope",
-                fontSize: "16px",
-                fontWeight: "600",
-                display: "flex",
-                alignItems: "center",
-                gap: "10px",
-                paddingInline: "70px",
+                background: '#171717',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                height: '45px',
+                borderRadius: '12px',
+                color: '#FFFFFF',
+                fontFamily: 'Manrope',
+                fontSize: '16px',
+                fontWeight: '600',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px',
+                paddingInline: '70px',
               }}
             >
               RESUME
@@ -332,7 +255,6 @@ export function HeaderMenu() {
           </Group>
         </ScrollArea>
       </Drawer>
-
     </Space>
   );
 }

@@ -1,29 +1,28 @@
 'use client';
 
-import Slider from "react-slick";
+import Head from 'next/head';
+import Slider from 'react-slick';
 import { useParams } from 'next/navigation';
 import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
-import StoreButtons from '../../../components/others/StoreButton';
-import CustomDivider from '../../../components/others/CustomDivider';
+import StoreButtons from '@/components/others/StoreButton';
+import CustomDivider from '@/components/others/CustomDivider';
 import { Text, Container, Divider, Image, Space } from '@mantine/core';
 
 export default function ProjectsDetails() {
   const params = useParams();
   const slug = params?.slug;
+  const project = ProjectData.projects.find((project) => project.slug === slug);
 
   const settings = {
-    dots: true, // Enable navigation dots
-    infinite: true, // Infinite loop
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Show one slide at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Autoplay speed (in ms)
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
-
-  // Find the project using the ID
-  const project = ProjectData.projects.find((project) => project.slug === slug);
 
   if (!project) {
     return (
@@ -33,10 +32,47 @@ export default function ProjectsDetails() {
     );
   }
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: project.name,
+    description: project.description,
+    image: project.images[0],
+    datePublished: project.completed,
+    url: `https://yourdomain.com/projects/${project.slug}`,
+    author: {
+      '@type': 'Person',
+      name: 'Your Name',
+    },
+    ...(project.appStore && {
+      isBasedOn: {
+        '@type': 'MobileApplication',
+        name: project.name,
+        operatingSystem: 'iOS & Android',
+        applicationCategory: 'BusinessApplication',
+        offers: {
+          '@type': 'Offer',
+          price: 'Free',
+        },
+      },
+    }),
+  };
+
   return (
     <>
-      <Space h={100} />
+      <Head>
+        <title>{`${project.name} – Project Details`}</title>
+        <meta name="description" content={project.description} />
+        <meta property="og:title" content={project.name} />
+        <meta property="og:description" content={project.description} />
+        <meta property="og:image" content={project.images[0]} />
+        <meta property="og:url" content={`https://yourdomain.com/projects/${project.slug}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={`https://yourdomain.com/projects/${project.slug}`} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      </Head>
 
+      <Space h={100} />
       <Container size="xl">
         <div
           style={{
@@ -47,36 +83,29 @@ export default function ProjectsDetails() {
             gap: '20px',
           }}
         >
-          {/* Left Image with Background */}
+          {/* Left image carousel */}
           <div
             style={{
-              flex: "1",
-              maxWidth: "500px",
-              minWidth: "470px",
-              height: "520px", // Consistent height for responsiveness
-              backgroundColor: "rgba(35, 35, 35, 0.5)",
-              borderRadius: "32px",
-              alignItems: "center",
-              justifyContent: "center",
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              paddingTop: "20px",
+              flex: '1',
+              maxWidth: '500px',
+              minWidth: '470px',
+              height: '520px',
+              backgroundColor: 'rgba(35, 35, 35, 0.5)',
+              borderRadius: '32px',
+              padding: '20px 50px',
             }}
           >
             <Slider {...settings}>
               {project.images.map((src, index) => (
-                <div key={index} style={{ width: "550", height: "300" }}>
+                <div key={index}>
                   <Image
                     src={src}
                     alt={`Carousel Image ${index + 1}`}
                     style={{
-                      height: "450px",
-                      width: "100%",
-                      objectFit: "contain", // Fill container without distortion
-                      display: "block", // Prevents inline spacing issues
-                      // display: "flex", // Use flexbox to align children
-                      justifyContent: "center", // Horizontally center the image
-                      alignItems: "center", // Vertically center the image
+                      height: '450px',
+                      width: '100%',
+                      objectFit: 'contain',
+                      display: 'block',
                     }}
                   />
                 </div>
@@ -84,16 +113,8 @@ export default function ProjectsDetails() {
             </Slider>
           </div>
 
-          {/* Right Text */}
-          <div
-            style={{
-              flex: '1',
-              maxWidth: '750px',
-              minWidth: '400px',
-              padding: '0 20px',
-            }}
-          >
-            {/* Title */}
+          {/* Right content */}
+          <div style={{ flex: '1', maxWidth: '750px', minWidth: '400px', padding: '0 20px' }}>
             <Text
               style={{
                 fontSize: '32px',
@@ -101,7 +122,6 @@ export default function ProjectsDetails() {
                 fontFamily: 'Manrope',
                 background: 'linear-gradient(#F5F5F5, #8F8F8F)',
                 WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 lineHeight: '1.2',
               }}
@@ -110,82 +130,37 @@ export default function ProjectsDetails() {
             </Text>
 
             <Space h={15} />
-
-            {/* Description */}
-            <p
-              style={{
-                fontSize: '1rem',
-                lineHeight: '1.6',
-                marginBottom: '30px',
-                color: '#E0E0E0',
-              }}
-            >
+            <p style={{ fontSize: '1rem', lineHeight: '1.6', marginBottom: '30px', color: '#E0E0E0' }}>
               {project.description}
             </p>
 
             <Space h={25} />
-
-            {/* Completed Date */}
-            <p
-              style={{
-                color: '#818181',
-                fontSize: '16px',
-                fontWeight: '500',
-                marginBottom: '5px', // Reduced margin to bring Divider closer
-                lineHeight: '1', // Adjust lineHeight for proper spacing
-              }}
-            >
+            <p style={{ color: '#818181', fontSize: '16px', fontWeight: '500', marginBottom: '5px' }}>
               {project.completed}
             </p>
 
             <Divider
-              my="sm" // Reduce the vertical margin of the Divider
+              my="sm"
               style={{
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-                marginTop: '0', // Ensure no extra margin above
+                marginTop: 0,
               }}
             />
 
-            {/* NDA Note */}
-            {project.project_restriction && project.project_restriction.trim() !== "" && (
-              <p
-                style={{
-                  fontSize: '16px',
-                  color: '#E0E0E0',
-                  marginBottom: '30px',
-                  lineHeight: '1.5', // Adjust lineHeight for better readability
-                }}
-              >
+            {project.project_restriction && (
+              <p style={{ fontSize: '16px', color: '#E0E0E0', marginBottom: '30px' }}>
                 {project.project_restriction}
               </p>
             )}
 
-
-
             <Space h={25} />
-
-            {/* What I Did */}
-            <h2
-              style={{
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                marginBottom: '10px',
-                color: '#FFFFFF',
-              }}
-            >
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: '10px', color: '#FFFFFF' }}>
               What I did
             </h2>
 
             <ul style={{ paddingLeft: '20px', listStyle: 'none' }}>
               {project.points.map((point, index) => (
-                <li
-                  key={index}
-                  style={{
-                    position: 'relative',
-                    color: '#E0E0E0',
-                    marginBottom: '10px' // Add space between list items
-                  }}
-                >
+                <li key={index} style={{ position: 'relative', color: '#E0E0E0', marginBottom: '10px' }}>
                   <span
                     style={{
                       position: 'absolute',
@@ -201,26 +176,17 @@ export default function ProjectsDetails() {
               ))}
             </ul>
 
-
             <Space h={50} />
-
-            {(project.appStore && project.appStore.trim() !== "") && (
-              <StoreButtons
-                appleUrl={project.appStore}
-                googlePlayUrl={project.appStore}
-              />
+            {project.appStore && (
+              <StoreButtons appleUrl={project.appStore} googlePlayUrl={project.appStore} />
             )}
-
           </div>
         </div>
       </Container>
 
       <Space h={100} />
-
       <CustomDivider />
-
       <Footer />
-
       <Space h={50} />
     </>
   );
