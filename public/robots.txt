@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://faizrhm.dev/
+
+# Sitemaps
+Sitemap: https://faizrhm.dev/sitemap.xml
