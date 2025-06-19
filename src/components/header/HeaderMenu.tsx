@@ -182,7 +182,7 @@ export function HeaderMenu() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'flex-start',
-              gap: '16px',
+              gap: '24px',
               padding: '16px',
             }}
           >
@@ -196,15 +196,30 @@ export function HeaderMenu() {
                 href={href}
                 className={classes.link}
                 style={{
-                  color: isActive(href) ? '#00FFB2' : '#FFFFFF',
-                  fontSize: '32px',
+                  color: '#FFFFFF',
+                  fontSize: '16px',
                   fontWeight: '900',
                   fontFamily: 'Manrope',
-                  paddingBottom: '5px',
+                  position: 'relative',
+                  paddingBottom: '18px',
                   textDecoration: 'none',
                 }}
               >
                 {label}
+                {isActive(href) && (
+                  <span
+                    style={{
+                      position: 'absolute',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      bottom: '0px',
+                      width: '8px',
+                      height: '8px',
+                      backgroundColor: '#FF4C4C', // Red dot
+                      borderRadius: '50%',
+                    }}
+                  />
+                )}
               </Link>
             ))}
           </div>
@@ -255,6 +270,7 @@ export function HeaderMenu() {
           </Group>
         </ScrollArea>
       </Drawer>
+
     </Space>
   );
 }
