@@ -117,7 +117,7 @@ export default function HotelPage() {
 
       <AppPreviewBottomCard
         title="Get the Hotel Booking App"
-        sourceCodeUrl="https://faizrhm.lemonsqueezy.com/buy/a908cf50-826b-4f07-ae30-f7bcbd4fafa7"
+        sourceCodeUrl="https://faizrhm1.gumroad.com/l/rbwog"
         previewUrl="https://faiz-rhm.github.io/hotel_complete/"
       />
 
