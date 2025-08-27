@@ -42,6 +42,7 @@ const images = [
   { id: "10", image: "/images/review/weena.png" },
   { id: "11", image: "/images/review/jobs.png" },
   { id: "12", image: "/images/review/wagi.png" },
+  { id: "13", image: "/images/review/taxi.png" },
 ];
 
 const Reviews = () => {

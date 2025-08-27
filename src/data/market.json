@@ -50,6 +50,22 @@
     },
     {
       "id": "4",
+      "name": "Taxi Booking - Passenger UI Kit 👑",
+      "slug": "taxi-booking-ui-kit",
+      "description": "Taxi Booking is a premium Flutter UI kit designed for building modern and feature-rich taxi apps, compatible with both Android and iOS platforms.",
+      "repository": "taxi-booking-ui-kit",
+      "cover": "/images/market/taxi.jpg",
+      "images": [
+        "/images/market.png",
+        "/images/market.png",
+        "/images/market.png"
+      ],
+      "tags": ["UI", "ListView"],
+      "price": "$149",
+      "isVisible": true
+    },
+    {
+      "id": "5",
       "name": "Crypto Wallet",
       "slug": "crypto-wallet",
       "description": "The Crypto Wallet App UI Concept is built with Flutter and dynamic animations for an engaging user experience. It features smooth transitions and interactive elements for managing digital assets. The intuitive design makes cryptocurrency management easy and visually appealing.",
@@ -64,7 +80,7 @@
       "isVisible": true
     },
     {
-      "id": "5",
+      "id": "6",
       "name": "Onboarding Screen",
       "slug": "onboarding-screen",
       "description": "The Onboarding Screen for the cooking app, built with Flutter, introduces users to the app's core features with smooth animations. It guides users through key functions like browsing recipes, saving favorites, and creating shopping lists. The simple, engaging design ensures a seamless and enjoyable setup experience for new users.",
@@ -80,7 +96,7 @@
       "isVisible": true
     },
     {
-      "id": "6",
+      "id": "7",
       "name": "Movie App",
       "slug": "movie-app",
       "description": "The Movie App is built using Riverpod for state management, Dio for API integration, and Freezed for immutable data modeling. It fetches movie data from TheMovieDB API, providing users with a seamless experience to browse movie details, watch trailers, and explore ratings. The app offers smooth navigation and real-time updates, ensuring an engaging and dynamic movie discovery experience.",
@@ -95,7 +111,7 @@
       "isVisible": true
     },
     {
-      "id": "7",
+      "id": "8",
       "name": "School App",
       "slug": "school-app",
       "description": "The School App UI Concept is designed to help students manage assignments and tasks efficiently. The app features an intuitive interface for tracking deadlines, submitting assignments, and viewing grades. With a clean layout and easy navigation, it ensures students stay organized and on top of their academic responsibilities.",
@@ -110,7 +126,7 @@
       "isVisible": true
     },
     {
-      "id": "8",
+      "id": "9",
       "name": "Spotify Clone",
       "slug": "spotify-clone",
       "description": "The Apotify UI Concept is a sleek and modern music streaming app design that offers an intuitive user interface. It features seamless navigation for discovering playlists, albums, and artists, along with easy controls for music playback. The design emphasizes a smooth, engaging experience with vibrant visuals and dynamic transitions.",
@@ -128,7 +144,7 @@
       "isVisible": true
     },
     {
-      "id": "9",
+      "id": "10",
       "name": "Restaurant App",
       "slug": "restaurant-app",
       "description": "The Restaurant Food App offers a user-friendly interface for browsing menus, placing orders, and discovering new dishes. With intuitive navigation, users can easily customize their orders, view restaurant details, and track delivery. The app is designed to provide a seamless and enjoyable food ordering experience.",
