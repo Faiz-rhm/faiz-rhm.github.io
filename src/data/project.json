@@ -106,9 +106,9 @@
     },
     {
       "id": "5",
-      "name": "Daricha - Educational App",
+      "name": "Daricha - Educational Platform (EU-Sponsored)",
       "slug": "daricha-educational-app",
-      "description": "The Daricha App is an educational platform sponsored by the European Union, designed to help users learn and explore a variety of courses. It provides access to detailed course information, focusing on spreading awareness about people's rights and promoting informed citizenship. The app aims to empower individuals with knowledge, offering educational resources that encourage active participation in society and foster a deeper understanding of democratic values.",
+      "description": "Developed an educational platform sponsored by the European Union, focused on civic education and human rights awareness. The Flutter application delivers course content, assessments, and progress tracking to promote informed citizenship. Successfully launched on both App Store and Google Play, reaching thousands of learners across the region.",
       "cover": "/images/project/daricha_cover.png",
       "images": [
         "/images/project/daricha_1.png",
