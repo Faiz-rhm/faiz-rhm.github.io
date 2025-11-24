@@ -18,9 +18,9 @@
     },
     {
       "id": "2",
-      "name": "Hotel Booking - UI Kit 👑",
+      "name": "Hotel Booking - Flutter UI Kit",
       "slug": "hotel-booking-ui-kit",
-      "description": "Flutter Hotel Booking is a premium UI kit that you can use to build various hotel booking apps using Flutter that works on both Android & iOS.",
+      "description": "Professional Flutter UI kit for hotel booking applications. Includes 40+ screens for hotel search, room selection, booking management, and user profiles. Ready-made Flutter components for iOS and Android that accelerate hospitality app development. Features include maps integration, date pickers, and payment flows.",
       "repository": "/hotel-booking-ui-kit",
       "cover": "/images/market/hotel_cover.png",
       "images": [
