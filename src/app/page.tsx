@@ -71,8 +71,8 @@ export default function Home() {
       <Space h={50} />
 
       <HeroSection
-        heading="Enterprise Flutter Development Services"
-        subheading="Delivering Scalable Cross-Platform Mobile Solutions for Global Businesses"
+        heading="Empowering digital founders to create thoughtful, impactful applications."
+        subheading="🤟 Hello, I am Faiz Rhm, "
         imageSrc="/images/fr.png"
         altText="Faiz Rhm - Professional Flutter Developer"
       />
@@ -89,7 +89,7 @@ export default function Home() {
 
       <AboutSection
         heading="[ ABOUT ME ]"
-        description="Experienced Flutter developer specializing in enterprise-grade cross-platform mobile applications. Proven track record of delivering high-performance iOS and Android applications for clients across finance, healthcare, e-commerce, and education sectors. Leveraging Flutter and React Native to create scalable, maintainable solutions that drive business growth."
+        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient in using Flutter & React Native to create scalable, maintainable solutions that drive business growth."
         buttons={buttons}
       />
 
