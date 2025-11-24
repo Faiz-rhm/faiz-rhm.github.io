@@ -34,9 +34,9 @@
     },
     {
       "id": "3",
-      "name": "SportUp - Sport UI Kit 👑",
+      "name": "SportUp - Sport & Fitness Flutter UI Kit",
       "slug": "sportup-sport-ui-kit",
-      "description": "SportUp is a premium Flutter UI kit designed for building modern and feature-rich sports apps, compatible with both Android and iOS platforms.",
+      "description": "Modern Flutter UI kit designed for sports and fitness applications. Build engaging workout tracking, sports news, and fitness community apps for iOS and Android. Includes 45+ screens with activity tracking, social features, and statistics dashboards. Premium Flutter templates for the sports industry.",
       "repository": "sport-up-ui-kit",
       "cover": "/images/market/sport_cover.png",
       "images": [
