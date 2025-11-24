@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import Slider from 'react-slick';
 import { useParams } from 'next/navigation';
 import ProjectData from '@/data/project.json';
@@ -8,6 +7,36 @@ import { Footer } from '@/components/footer/Footer';
 import StoreButtons from '@/components/others/StoreButton';
 import CustomDivider from '@/components/others/CustomDivider';
 import { Text, Container, Divider, Image, Space } from '@mantine/core';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = ProjectData.projects.find((project) => project.slug === params.slug);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found - Faiz Rhm',
+      description: 'The requested project could not be found.',
+    };
+  }
+
+  return {
+    title: `${project.name} - Flutter App Development Case Study | Faiz Rhm`,
+    description: project.description.substring(0, 160),
+    keywords: `Flutter development, ${project.tag}, mobile app development, ${project.name}, case study`,
+    openGraph: {
+      title: project.name,
+      description: project.description,
+      images: [project.images[0]],
+      url: `https://faizrhm.dev/projects/${project.slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.name,
+      description: project.description.substring(0, 160),
+      images: [project.images[0]],
+    },
+  };
+}
 
 export default function ProjectsDetails() {
   const params = useParams();
@@ -62,17 +91,7 @@ export default function ProjectsDetails() {
 
   return (
     <>
-      <Head>
-        <title>{`${project.name} – Project Details`}</title>
-        <meta name="description" content={project.description} />
-        <meta property="og:title" content={project.name} />
-        <meta property="og:description" content={project.description} />
-        <meta property="og:image" content={project.images[0]} />
-        <meta property="og:url" content={`https://faizrhm.dev/projects/${project.slug}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://faizrhm.dev/projects/${project.slug}`} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      </Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <Space h={100} />
       <Container size="xl">
