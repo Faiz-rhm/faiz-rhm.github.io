@@ -34,7 +34,6 @@ export default function RootLayout({
 
         {/* Basic Meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="Flutter UI Kit, UI Components, Mobile UI, Developer Templates, Open Source, Faiz Rhm, Flutter Templates" />
         <link rel="canonical" href="https://faizrhm.dev/" />
 
         {/* Open Graph / Facebook */}
