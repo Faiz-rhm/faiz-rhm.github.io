@@ -50,9 +50,9 @@
     },
     {
       "id": "4",
-      "name": "Taxi Booking - Passenger UI Kit 👑",
+      "name": "Taxi Booking - Passenger Flutter UI Kit",
       "slug": "taxi-booking-ui-kit",
-      "description": "Taxi Booking is a premium Flutter UI kit designed for building modern and feature-rich taxi apps, compatible with both Android and iOS platforms.",
+      "description": "Complete Flutter UI kit for taxi and ride-sharing applications. Build Uber-like apps for iOS and Android with 50+ screens including real-time tracking, fare calculation, driver matching, and payment integration. Production-ready Flutter components that reduce development time by 70%.",
       "repository": "taxi-booking-ui-kit",
       "cover": "/images/market/taxi.jpg",
       "images": [
