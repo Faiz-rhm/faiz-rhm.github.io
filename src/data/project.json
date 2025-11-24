@@ -2,9 +2,9 @@
   "projects": [
     {
       "id": "1",
-      "name": "Job.af - Job Board App",
+      "name": "Job.af - Enterprise Job Board Platform",
       "slug": "job-af-job-board-app",
-      "description": "The Job Board App is a mobile application designed for job seekers, offering features to search and apply for jobs, view detailed job descriptions, and explore company profiles. Users can create and manage their personal profiles, showcasing their skills and experience. The app provides a seamless experience for browsing job opportunities, applying directly, and connecting with potential employers.",
+      "description": "Developed a comprehensive job board platform for the Afghan market, connecting job seekers with employers across multiple industries. The Flutter-based mobile application provides seamless job search, application tracking, and profile management functionality for both iOS and Android platforms. Successfully deployed to over 10,000 active users.",
       "cover": "/images/project/jobs_cover.png",
       "images": [
         "/images/project/job_1.png",
