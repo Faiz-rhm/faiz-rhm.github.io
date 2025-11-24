@@ -39,10 +39,12 @@ export default function ProjectsDetails() {
     description: project.description,
     image: project.images[0],
     datePublished: project.completed,
-    url: `https://yourdomain.com/projects/${project.slug}`,
+    url: `https://faizrhm.dev/projects/${project.slug}`,
     author: {
       '@type': 'Person',
-      name: 'Your Name',
+      name: 'Faiz Rhm',
+      jobTitle: 'Flutter Developer & Mobile App Consultant',
+      url: 'https://faizrhm.dev',
     },
     ...(project.appStore && {
       isBasedOn: {
@@ -66,9 +68,9 @@ export default function ProjectsDetails() {
         <meta property="og:title" content={project.name} />
         <meta property="og:description" content={project.description} />
         <meta property="og:image" content={project.images[0]} />
-        <meta property="og:url" content={`https://yourdomain.com/projects/${project.slug}`} />
+        <meta property="og:url" content={`https://faizrhm.dev/projects/${project.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://yourdomain.com/projects/${project.slug}`} />
+        <link rel="canonical" href={`https://faizrhm.dev/projects/${project.slug}`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
 
