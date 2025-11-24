@@ -59,7 +59,7 @@ export default function Home() {
 
       <AboutSection
         heading="[ ABOUT ME ]"
-        description="Enthusiastic about mobile development with a focus on delivering excellent user experiences. Proficient in using Flutter & React Native to create & deploy high-quality cross-platform applications."
+        description="Experienced Flutter developer specializing in enterprise-grade cross-platform mobile applications. Proven track record of delivering high-performance iOS and Android applications for clients across finance, healthcare, e-commerce, and education sectors. Leveraging Flutter and React Native to create scalable, maintainable solutions that drive business growth."
         buttons={buttons}
       />
 
