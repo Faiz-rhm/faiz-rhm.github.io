@@ -27,13 +27,38 @@ export default function MarketDetailsPage() {
   if (!market) {
     return (
       <Container size="xl">
-        <Text style={{ color: '#E0E0E0', textAlign: 'center' }}>Project not found</Text>
+        <Text style={{ color: '#E0E0E0', textAlign: 'center' }}>Product not found</Text>
       </Container>
     );
   }
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: market.name,
+    description: market.description,
+    image: market.cover,
+    brand: {
+      '@type': 'Brand',
+      name: 'Faiz Rhm',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: market.price === 'FREE' ? '0' : market.price.replace('$', ''),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: `https://faizrhm.dev/market/${market.slug}`,
+    },
+    category: 'Software > Mobile Apps > UI Kits',
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+
       <Space h={100} />
 
       <MarketDetails
