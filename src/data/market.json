@@ -2,9 +2,9 @@
   "market": [
     {
       "id": "1",
-      "name": "FlutterSale - E-commerce UI Kit 👑",
+      "name": "FlutterSale - E-commerce UI Kit",
       "slug": "flutter-sale-ecommerce-ui-kit",
-      "description": "Flutter Grocery is a premium E-commerce UI kit that you can use to build various e-commerce apps using Flutter that works on both Android & iOS.",
+      "description": "Premium Flutter UI kit for e-commerce applications. Build beautiful shopping apps for iOS and Android with 50+ pre-built screens, cart functionality, product listings, and checkout flows. Production-ready Flutter templates that save months of development time. Perfect for grocery stores, retail, and online marketplace apps.",
       "repository": "/flutter-sale-ecommerce-ui-kit",
       "cover": "/images/market/sale_cover.png",
       "images": [
