@@ -1,5 +1,4 @@
-'use client'
-
+import { Suspense } from 'react';
 import ProductCarousel from "../components/others/ProductCarousel";
 import CenteredSection from "../components/others/CenterSection";
 import CustomDivider from "../components/others/CustomDivider";
@@ -13,7 +12,9 @@ import ProjectData from "@/data/project.json";
 import Market from "@/data/market.json";
 import { Space } from '@mantine/core';
 import React from "react";
-import { useRouter } from "next/navigation";
+import { ReviewsSkeleton } from "@/components/skeletons/ReviewsSkeleton";
+import { CarouselSkeleton } from "@/components/skeletons/CarouselSkeleton";
+import { ProjectsSkeleton } from "@/components/skeletons/ProjectsSkeleton";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -28,16 +29,7 @@ const sections = [
   { label: "ALL PROJECTS", href: "/projects" },
 ];
 
-
 export default function Home() {
-  const router = useRouter(); // Hook for navigation
-
-  const handleNavigation = (slug: string) => {
-    router.push(
-      `/projects/${slug}`
-    );
-  };
-
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -76,7 +68,6 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-
       <Space h={50} />
 
       <HeroSection
@@ -88,7 +79,9 @@ export default function Home() {
 
       <Space h={80} />
 
-      <Reviews />
+      <Suspense fallback={<ReviewsSkeleton />}>
+        <Reviews />
+      </Suspense>
 
       <CustomDivider/>
 
@@ -107,7 +100,7 @@ export default function Home() {
       <Space h={30} />
 
       <CenteredSection
-        text="Here you can find a list of selected projects that I’ve recently worked on"
+        text="Here you can find a list of selected projects that I've recently worked on"
         buttons={sections}
       />
 
@@ -117,34 +110,37 @@ export default function Home() {
 
       <Space h={20} />
 
-      {ProjectData.projects.slice(0, 2).map((product, index) => (
-        <React.Fragment key={product.slug}>
-          <ProjectCard
-            key={product.slug}
-            slug={product.slug}
-            chipText={product.tag}
-            description={product.description}
-            buttonLabel="FULL CASE STUDY"
-            cards={[
-              {
-                image: product.cover,
-              },
-            ]}
-            swapColumns={index % 2 !== 0}
-            onClick={() => handleNavigation(product.slug)}
-          />
+      <Suspense fallback={<ProjectsSkeleton />}>
+        {ProjectData.projects.slice(0, 2).map((product, index) => (
+          <React.Fragment key={product.slug}>
+            <ProjectCard
+              key={product.slug}
+              slug={product.slug}
+              chipText={product.tag}
+              description={product.description}
+              buttonLabel="FULL CASE STUDY"
+              cards={[
+                {
+                  image: product.cover,
+                },
+              ]}
+              swapColumns={index % 2 !== 0}
+            />
 
-          <Space h={20} />
+            <Space h={20} />
 
-          {index < 1 && <CustomDivider />}
+            {index < 1 && <CustomDivider />}
 
-          <Space h={20} />
-        </React.Fragment>
-      ))}
+            <Space h={20} />
+          </React.Fragment>
+        ))}
+      </Suspense>
 
       <Space h={100} />
 
-      <ProductCarousel products={Market.market} />
+      <Suspense fallback={<CarouselSkeleton />}>
+        <ProductCarousel products={Market.market} />
+      </Suspense>
 
       <Space h={70} />
 

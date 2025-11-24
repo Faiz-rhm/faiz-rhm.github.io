@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { Container, Flex, Text, Button, Group, ActionIcon } from "@mantine/core";
 import { IconDownload } from "@tabler/icons-react";

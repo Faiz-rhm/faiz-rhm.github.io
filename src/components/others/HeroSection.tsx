@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { Container, Flex, Box, Text, Image } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";

@@ -2,7 +2,7 @@
   "market": [
     {
       "id": "1",
-      "name": "FlutterSale - E-commerce UI Kit",
+      "name": "E-commerce - UI Kit",
       "slug": "flutter-sale-ecommerce-ui-kit",
       "description": "Premium Flutter UI kit for e-commerce applications. Build beautiful shopping apps for iOS and Android with 50+ pre-built screens, cart functionality, product listings, and checkout flows. Production-ready Flutter templates that save months of development time. Perfect for grocery stores, retail, and online marketplace apps.",
       "repository": "/flutter-sale-ecommerce-ui-kit",
@@ -18,7 +18,7 @@
     },
     {
       "id": "2",
-      "name": "Hotel Booking - Flutter UI Kit",
+      "name": "Hotel Booking - UI Kit",
       "slug": "hotel-booking-ui-kit",
       "description": "Professional Flutter UI kit for hotel booking applications. Includes 40+ screens for hotel search, room selection, booking management, and user profiles. Ready-made Flutter components for iOS and Android that accelerate hospitality app development. Features include maps integration, date pickers, and payment flows.",
       "repository": "/hotel-booking-ui-kit",
@@ -34,7 +34,7 @@
     },
     {
       "id": "3",
-      "name": "SportUp - Sport & Fitness Flutter UI Kit",
+      "name": "SportUp & Fitness - UI Kit",
       "slug": "sportup-sport-ui-kit",
       "description": "Modern Flutter UI kit designed for sports and fitness applications. Build engaging workout tracking, sports news, and fitness community apps for iOS and Android. Includes 45+ screens with activity tracking, social features, and statistics dashboards. Premium Flutter templates for the sports industry.",
       "repository": "sport-up-ui-kit",
@@ -50,7 +50,7 @@
     },
     {
       "id": "4",
-      "name": "Taxi Booking - Passenger Flutter UI Kit",
+      "name": "Taxi Booking Passenger - UI Kit",
       "slug": "taxi-booking-ui-kit",
       "description": "Complete Flutter UI kit for taxi and ride-sharing applications. Build Uber-like apps for iOS and Android with 50+ screens including real-time tracking, fare calculation, driver matching, and payment integration. Production-ready Flutter components that reduce development time by 70%.",
       "repository": "taxi-booking-ui-kit",

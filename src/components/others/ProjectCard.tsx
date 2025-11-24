@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Chip from "@/components/others/Chip";
 import { useMediaQuery } from "@mantine/hooks";

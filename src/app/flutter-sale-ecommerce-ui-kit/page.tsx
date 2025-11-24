@@ -135,7 +135,7 @@ export default function ShopPage() {
 
       <Space h={50} />
       <AppPreviewBottomCard
-        title="Get the Flutter Shop App Now"
+        title="Get the E-Commerce App Now"
         sourceCodeUrl={'https://faizrhm1.gumroad.com/l/wgqcy'}
         previewUrl={'https://faiz-rhm.github.io/shop_complete/'}
       />
