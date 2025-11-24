@@ -43,10 +43,10 @@ export default function Home() {
       <Space h={50} />
 
       <HeroSection
-        heading="Helping Digital founders Craft unique, Empathic Applications"
-        subheading="🤟 Hello, I am Faiz Rhm, "
+        heading="Enterprise Flutter Development Services"
+        subheading="Delivering Scalable Cross-Platform Mobile Solutions for Global Businesses"
         imageSrc="/images/fr.png"
-        altText="Faiz Rhm"
+        altText="Faiz Rhm - Professional Flutter Developer"
       />
 
       <Space h={80} />
