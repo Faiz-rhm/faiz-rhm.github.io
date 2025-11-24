@@ -38,8 +38,45 @@ export default function Home() {
     );
   };
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Faiz Rhm',
+    jobTitle: 'Flutter Developer & Mobile App Consultant',
+    url: 'https://faizrhm.dev',
+    sameAs: [
+      'https://www.linkedin.com/in/faiz-rhm/',
+      'https://github.com/Faiz-rhm',
+      'https://twitter.com/faiz_rhm',
+      'https://www.instagram.com/faiz.rhm/',
+      'https://medium.com/@Faiz_Rhm',
+    ],
+    knowsAbout: ['Flutter', 'React Native', 'Mobile Development', 'iOS Development', 'Android Development', 'Cross-Platform Development'],
+  };
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Flutter Development Services',
+    provider: {
+      '@type': 'Person',
+      name: 'Faiz Rhm',
+    },
+    areaServed: 'Worldwide',
+    serviceType: ['Mobile App Development', 'Flutter Development', 'Cross-Platform Development', 'UI/UX Design', 'App Modernization'],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       <Space h={50} />
 
       <HeroSection
