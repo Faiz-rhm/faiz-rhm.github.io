@@ -1,110 +1,112 @@
 'use client';
 
-import Head from 'next/head';
-import MarketData from "@/data/market.json";
-import { useRouter } from "next/navigation";
-import { Box, Container } from '@mantine/core';
-import { Footer } from "@/components/footer/Footer";
-import CustomDivider from "../../components/others/CustomDivider";
-import HeroSection from "../../components/others/HeroSection";
-import MarketCard from "../../components/others/MarketCard";
+import { Space, Container, Title, Text } from '@mantine/core';
+import Market from '@/data/market.json';
+import MarketCard from '@/components/others/MarketCard';
+import { Footer } from '@/components/footer/Footer';
+import CustomDivider from '@/components/others/CustomDivider';
+import { useRouter } from 'next/navigation';
 
-export default function Market() {
+export default function MarketPage() {
   const router = useRouter();
 
-  const handleNavigation = (slug: string) => {
-    router.push(`/market/${slug}`);
-  };
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Market Resources",
-    description: "A curated collection of premium and free resources for developers, designed to elevate your projects.",
-    itemListElement: MarketData.market
-      .filter((product) => product.isVisible)
-      .map((product, index) => ({
-        "@type": "Product",
-        position: index + 1,
-        name: product.name,
-        description: product.description,
-        image: product.cover,
-        ...(product.repository && {
-          url: product.repository
-        }),
-        ...(product.price && {
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "USD",
-            price: product.price === "FREE" ? 0 : product.price,
-            availability: "https://schema.org/InStock"
-          }
-        })
-      }))
+  const handleNavigation = (slug: string, repository: string, price: string) => {
+    if (price === "FREE") {
+      router.push(`/market/${slug}`);
+    } else if (typeof window !== 'undefined') {
+      window.location.href = repository;
+    }
   };
 
   return (
     <>
-      <Head>
-        <title>Marketplace – Premium & Free Dev Resources</title>
-        <meta name="description" content="Discover premium and free UI kits, components, and templates to speed up your development." />
-        <meta property="og:title" content="Marketplace – Premium & Free Dev Resources" />
-        <meta property="og:description" content="Explore beautifully crafted Flutter templates and design systems to elevate your project." />
-        <meta property="og:image" content="/images/cover/market-cover.jpg" />
-        <meta property="og:url" content="https://yourdomain.com/market" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://yourdomain.com/market" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      </Head>
-
-      <Box pb={50} />
-
-      <HeroSection
-        heading="Explore premium and free resources crafted to elevate your projects"
-        subheading="🎁 Some of paid & freebies of my resources"
-        altText="Market"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Premium Flutter UI Kits & Templates',
+            description: 'Professional, production-ready Flutter UI kits for iOS and Android applications.',
+            itemListElement: Market.market
+              .filter((item) => item.isVisible)
+              .map((item, index) => ({
+                '@type': 'Product',
+                position: index + 1,
+                name: item.name,
+                description: item.description,
+                image: item.cover,
+                brand: {
+                  '@type': 'Brand',
+                  name: 'Faiz Rhm',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  price: item.price === 'FREE' ? '0' : item.price.replace('$', ''),
+                  priceCurrency: 'USD',
+                  availability: 'https://schema.org/InStock',
+                  url: `https://faizrhm.dev/market/${item.slug}`,
+                },
+              })),
+          }),
+        }}
       />
 
-      <Box pb={70} />
+      <Space h={100} />
 
       <Container size="xl">
-        <Box
-          p={16}
+        <Title
+          order={1}
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "24px",
-            justifyContent: "center",
-            margin: "0 auto",
-            padding: "16px",
+            fontSize: '48px',
+            fontWeight: '600',
+            fontFamily: 'Manrope',
+            background: 'linear-gradient(#F5F5F5, #8F8F8F)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textAlign: 'center',
+            marginBottom: '20px',
           }}
         >
-          {MarketData.market.map((product) =>
-            product.isVisible && (
-              <MarketCard
-                key={product.id}
-                image={product.cover}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-                width="100%"
-                onClick={() => {
-                  if (product.price === "FREE") {
-                    handleNavigation(product.slug);
-                  } else if (typeof window !== 'undefined') {
-                    window.location.href = product.repository;
-                  }
-                }}
-              />
-            )
-          )}
-        </Box>
+          Premium Flutter UI Kits & Templates
+        </Title>
+
+        <Text
+          style={{
+            fontSize: '18px',
+            color: '#E0E0E0',
+            textAlign: 'center',
+            maxWidth: '800px',
+            margin: '0 auto 50px',
+            lineHeight: '1.6',
+          }}
+        >
+          Professional, production-ready Flutter UI kits for iOS and Android applications.
+          Save months of development time with high-quality templates for e-commerce,
+          hospitality, sports, transportation, and more. Each UI kit includes dozens of
+          pre-built screens, reusable components, and clean code architecture.
+        </Text>
+
+        <Space h={50} />
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '30px' }}>
+          {Market.market.filter(item => item.isVisible).map((item) => (
+            <MarketCard
+              key={item.id}
+              image={item.cover}
+              name={item.name}
+              description={item.description}
+              price={item.price}
+              onClick={() => handleNavigation(item.slug, item.repository, item.price)}
+            />
+          ))}
+        </div>
       </Container>
 
-      <Box pb={50} />
+      <Space h={100} />
       <CustomDivider />
       <Footer />
-      <Box pb={50} />
+      <Space h={50} />
     </>
   );
 }
