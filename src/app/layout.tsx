@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Faiz Rhm – Flutter UI Kits & Developer Tools",
-  description: "Explore premium Flutter UI kits, open-source components, and developer tools by Faiz Rhm.",
+  title: "Flutter Development Services | Enterprise Mobile App Development - Faiz Rhm",
+  description: "Professional Flutter developer delivering scalable cross-platform mobile applications. Specializing in iOS/Android app development for enterprise clients worldwide. View portfolio & case studies.",
+  keywords: "Flutter developer, mobile app development, cross-platform development, Flutter development services, iOS development, Android development, enterprise mobile apps",
 };
 
 export default function RootLayout({
@@ -34,18 +35,19 @@ export default function RootLayout({
         {/* Basic Meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Flutter UI Kit, UI Components, Mobile UI, Developer Templates, Open Source, Faiz Rhm, Flutter Templates" />
+        <link rel="canonical" href="https://faizrhm.dev/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Faiz Rhm – Flutter UI Kits & Developer Tools" />
-        <meta property="og:description" content="Explore premium Flutter UI kits, open-source components, and developer tools by Faiz Rhm." />
+        <meta property="og:title" content="Flutter Development Services | Enterprise Mobile App Development - Faiz Rhm" />
+        <meta property="og:description" content="Professional Flutter developer delivering scalable cross-platform mobile applications. Specializing in iOS/Android app development for enterprise clients worldwide." />
         <meta property="og:image" content="https://faizrhm.dev/preview.png" />
         <meta property="og:url" content="https://faizrhm.dev/" />
 
         {/* Twitter Meta */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Faiz Rhm – Flutter UI Kits" />
-        <meta name="twitter:description" content="Discover reusable Flutter UI components, templates and tools." />
+        <meta name="twitter:title" content="Flutter Development Services - Faiz Rhm" />
+        <meta name="twitter:description" content="Professional Flutter developer specializing in enterprise-grade cross-platform mobile applications for iOS and Android." />
         <meta name="twitter:image" content="https://faizrhm.dev/preview.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
