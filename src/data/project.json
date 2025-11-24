@@ -81,9 +81,9 @@
     },
     {
       "id": "4",
-      "name": "Wagey - Food Ordering App",
+      "name": "Wagey - Restaurant Food Ordering Platform",
       "slug": "wagey-food-ordering-app",
-      "description": "The Weegy App is a restaurant-based mobile application that allows users to easily order food, explore detailed menus, and track their orders in real-time. It offers a seamless and interactive dining experience, helping customers discover new dishes, customize their orders, and stay updated on the status of their deliveries. The app is designed for convenience and efficiency, ensuring a smooth food ordering process from start to finish.",
+      "description": "Developed a comprehensive food ordering platform enabling customers to browse menus, customize orders, and track deliveries in real-time. Built with Flutter for seamless performance across iOS and Android. Features include payment gateway integration, order management, and restaurant analytics dashboard. Currently in active development with pilot restaurant partners.",
       "cover": "/images/project/wagey_cover.png",
       "images": [
         "/images/project/wagey_1.png",
