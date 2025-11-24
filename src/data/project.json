@@ -29,9 +29,9 @@
     },
     {
       "id": "2",
-      "name": "Baran - Reading App",
+      "name": "Baran - Children's Reading Platform",
       "slug": "baran-reading-app",
-      "description": "The Baran App is a fun and interactive reading platform designed for children. It offers a wide range of books for young readers to explore, with options to read stories or listen to audiobooks. The app features engaging book details, making the reading experience both educational and enjoyable. With a subscription-based model, Baran provides a curated library of age-appropriate content to foster a love for reading in children.",
+      "description": "Developed an interactive reading application for children, offering a curated library of books and audiobooks. Built with Flutter to deliver an engaging, educational experience on both iOS and Android. Features include offline reading, parental controls, and progress tracking. Implemented subscription-based monetization model with seamless payment integration.",
       "cover": "/images/project/baran_cover.png",
       "images": [
         "/images/project/baran_1.png",
