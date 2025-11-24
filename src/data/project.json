@@ -55,9 +55,9 @@
     },
     {
       "id": "3",
-      "name": "Weena.af - Blood Donation App",
+      "name": "Weena.af - Blood Donation Platform",
       "slug": "weena-af-blood-donation-app",
-      "description": "The Weena.af App is a platform designed to connect blood donors and recipients in a seamless and efficient way. Users can donate blood, search for nearby blood donors, and access detailed information about blood types and availability. The app also features a donor map for easy location tracking, along with personalized donor profiles to facilitate quick connections and support those in need of blood.",
+      "description": "Developed a life-saving blood donation platform connecting donors with recipients across Afghanistan. The Flutter application features real-time donor search, geolocation mapping, and user profiles with blood type information. Successfully facilitated hundreds of blood donations through intuitive mobile interface available on iOS and Android.",
       "cover": "/images/project/weena_cover.png",
       "images": [
         "/images/project/weena_1.png",
