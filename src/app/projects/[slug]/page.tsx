@@ -1,16 +1,14 @@
-'use client';
-
-import Slider from 'react-slick';
-import { useParams } from 'next/navigation';
 import ProjectData from '@/data/project.json';
 import { Footer } from '@/components/footer/Footer';
 import StoreButtons from '@/components/others/StoreButton';
 import CustomDivider from '@/components/others/CustomDivider';
-import { Text, Container, Divider, Image, Space } from '@mantine/core';
+import ProjectSlider from '@/components/projects/ProjectSlider';
+import { Text, Container, Divider, Space } from '@mantine/core';
 import type { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const project = ProjectData.projects.find((project) => project.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = ProjectData.projects.find((project) => project.slug === slug);
 
   if (!project) {
     return {
@@ -38,20 +36,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ProjectsDetails() {
-  const params = useParams();
-  const slug = params?.slug;
+export default async function ProjectsDetails({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const project = ProjectData.projects.find((project) => project.slug === slug);
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
 
   if (!project) {
     return (
@@ -105,34 +92,7 @@ export default function ProjectsDetails() {
           }}
         >
           {/* Left image carousel */}
-          <div
-            style={{
-              flex: '1',
-              maxWidth: '500px',
-              minWidth: '470px',
-              height: '520px',
-              backgroundColor: 'rgba(35, 35, 35, 0.5)',
-              borderRadius: '32px',
-              padding: '20px 50px',
-            }}
-          >
-            <Slider {...settings}>
-              {project.images.map((src, index) => (
-                <div key={index}>
-                  <Image
-                    src={src}
-                    alt={`Carousel Image ${index + 1}`}
-                    style={{
-                      height: '450px',
-                      width: '100%',
-                      objectFit: 'contain',
-                      display: 'block',
-                    }}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
+          <ProjectSlider images={project.images} projectName={project.name} />
 
           {/* Right content */}
           <div style={{ flex: '1', maxWidth: '750px', minWidth: '400px', padding: '0 20px' }}>
