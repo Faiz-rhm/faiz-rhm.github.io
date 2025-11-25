@@ -1,10 +1,6 @@
-import { Title, Text, Container, Button, Box } from '@mantine/core';
+import { Title, Text, Container } from '@mantine/core';
 
-interface ServicesHeroProps {
-  onScheduleClick: () => void;
-}
-
-export default function ServicesHero({ onScheduleClick }: ServicesHeroProps) {
+export default function ServicesHero() {
   return (
     <Container size="xl" style={{ textAlign: 'center', padding: '80px 20px 60px' }}>
       <Title
@@ -19,7 +15,7 @@ export default function ServicesHero({ onScheduleClick }: ServicesHeroProps) {
           marginBottom: '20px',
         }}
       >
-        Professional Flutter Development Services
+        What We Do Best
       </Title>
 
       <Text
@@ -27,27 +23,12 @@ export default function ServicesHero({ onScheduleClick }: ServicesHeroProps) {
         style={{
           color: '#E0E0E0',
           maxWidth: '700px',
-          margin: '0 auto 40px',
+          margin: '0 auto',
           lineHeight: 1.6,
         }}
       >
-        Transforming ideas into exceptional mobile experiences
+        From concept to launch, we build digital products that drive results
       </Text>
-
-      <Box>
-        <Button
-          size="lg"
-          onClick={onScheduleClick}
-          style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            border: 'none',
-            padding: '12px 40px',
-            fontSize: '16px',
-          }}
-        >
-          Schedule Free Consultation
-        </Button>
-      </Box>
     </Container>
   );
 }

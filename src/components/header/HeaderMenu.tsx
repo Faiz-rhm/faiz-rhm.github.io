@@ -17,6 +17,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconDownload } from '@tabler/icons-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { trackScheduleConsultation, trackCTAClick } from '@/lib/analytics';
 import classes from './HeaderMegaMenu.module.css';
 
 export function HeaderMenu() {
@@ -68,6 +69,7 @@ export function HeaderMenu() {
             <Group h="100%" gap="28px" visibleFrom="sm">
             {[
             { href: '/', label: 'ABOUT ME' },
+            { href: '/services', label: 'SERVICES' },
             { href: '/market', label: 'MARKET' },
             { href: '/projects', label: 'PROJECTS' },
           ].map(({ href, label }) => (
@@ -109,7 +111,11 @@ export function HeaderMenu() {
             <Group visibleFrom="sm" style={{ marginLeft: 'auto' }}>
               <Button
                 variant="default"
-                onClick={() => window?.open('mailto:faiz199011@gmail.com', '_blank')}
+                onClick={() => {
+                  window?.open(process.env.NEXT_PUBLIC_CAL_URL || 'https://cal.com/faizal-rahman-mohammadi-8hg4s1/30min', '_blank');
+                  trackScheduleConsultation('header');
+                  trackCTAClick('LET\'s TALK', 'header');
+                }}
                 style={{
                   background: '#FFFFFF',
                   height: '45px',
@@ -120,7 +126,7 @@ export function HeaderMenu() {
                   fontWeight: '600',
                 }}
               >
-                SAY “HELLO!”
+                LET&apos;s TALK
               </Button>
 
               <Button
@@ -188,6 +194,7 @@ export function HeaderMenu() {
           >
             {[
               { href: '/', label: 'ABOUT ME' },
+              { href: '/services', label: 'SERVICES' },
               { href: '/market', label: 'MARKET' },
               { href: '/projects', label: 'PROJECTS' },
             ].map(({ href, label }) => (
@@ -230,7 +237,12 @@ export function HeaderMenu() {
           <Group justify="center" grow pb="xl" px="md">
             <Button
               variant="default"
-              onClick={() => window?.open('mailto:faiz199011@gmail.com', '_blank')}
+              onClick={() => {
+                window?.open(process.env.NEXT_PUBLIC_CAL_URL || 'https://cal.com/faizal-rahman-mohammadi-8hg4s1/30min', '_blank');
+                closeDrawer();
+                trackScheduleConsultation('header_mobile');
+                trackCTAClick('LET\'s TALK', 'header_mobile');
+              }}
               style={{
                 background: '#FFFFFF',
                 height: '45px',
@@ -241,7 +253,7 @@ export function HeaderMenu() {
                 fontWeight: '600',
               }}
             >
-              SAY “HELLO!”
+              LET&apos;s TALK
             </Button>
 
             <Button

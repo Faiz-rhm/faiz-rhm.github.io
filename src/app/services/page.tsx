@@ -1,16 +1,13 @@
 'use client';
 
-import { useState } from 'react';
 import { Container, SimpleGrid, Space } from '@mantine/core';
 import ServicesHero from '@/components/services/ServicesHero';
 import ServiceCard from '@/components/services/ServiceCard';
-import CalendarModal from '@/components/calendar/CalendarModal';
 import { Footer } from '@/components/footer/Footer';
 import CustomDivider from '@/components/others/CustomDivider';
 import ServicesData from '@/data/services.json';
 
 export default function ServicesPage() {
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -40,7 +37,7 @@ export default function ServicesPage() {
 
       <Space h={50} />
 
-      <ServicesHero onScheduleClick={() => setIsCalendarOpen(true)} />
+      <ServicesHero />
 
       <Space h={60} />
 
@@ -56,10 +53,7 @@ export default function ServicesPage() {
               name={service.name}
               description={service.description}
               keyPoints={service.keyPoints}
-              ctaText={service.ctaText}
-              ctaAction={service.ctaAction as 'modal' | 'projects' | 'market'}
               icon={service.icon}
-              onScheduleClick={() => setIsCalendarOpen(true)}
             />
           ))}
         </SimpleGrid>
@@ -68,11 +62,6 @@ export default function ServicesPage() {
       <CustomDivider />
       <Footer />
       <Space h={50} />
-
-      <CalendarModal
-        isOpen={isCalendarOpen}
-        onClose={() => setIsCalendarOpen(false)}
-      />
     </>
   );
 }

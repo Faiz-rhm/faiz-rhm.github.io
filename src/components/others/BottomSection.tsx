@@ -61,7 +61,7 @@ const BottomSection = () => {
             variant="default"
             onClick={() => {
               if(typeof window !== 'undefined'){
-                window.open('mailto:faiz199011@gmail.com', '_blank');
+                window.open(process.env.NEXT_PUBLIC_CAL_URL || 'https://cal.com/faizal-rahman-mohammadi-8hg4s1/30min', '_blank');
               }
             }}
             style={{
@@ -74,7 +74,7 @@ const BottomSection = () => {
               fontWeight: '600',
             }}
           >
-            SAY “HELLO!”
+            LET&apos;s TALK
           </Button>
 
           <Button

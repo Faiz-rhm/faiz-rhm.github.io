@@ -1,17 +1,13 @@
 'use client';
 
-import { Card, Text, Button, Box } from '@mantine/core';
-import { useRouter } from 'next/navigation';
+import { Card, Text, Box } from '@mantine/core';
 import { IconCode, IconPalette, IconUsers, IconComponents } from '@tabler/icons-react';
 
 interface ServiceCardProps {
   name: string;
   description: string;
   keyPoints: string[];
-  ctaText: string;
-  ctaAction: 'modal' | 'projects' | 'market';
   icon: string;
-  onScheduleClick?: () => void;
 }
 
 const iconMap = {
@@ -25,23 +21,9 @@ export default function ServiceCard({
   name,
   description,
   keyPoints,
-  ctaText,
-  ctaAction,
   icon,
-  onScheduleClick,
 }: ServiceCardProps) {
-  const router = useRouter();
   const IconComponent = iconMap[icon as keyof typeof iconMap] || IconCode;
-
-  const handleClick = () => {
-    if (ctaAction === 'modal' && onScheduleClick) {
-      onScheduleClick();
-    } else if (ctaAction === 'projects') {
-      router.push('/projects');
-    } else if (ctaAction === 'market') {
-      router.push('/market');
-    }
-  };
 
   return (
     <Card
@@ -97,20 +79,6 @@ export default function ServiceCard({
             {point}
           </Text>
         ))}
-      </Box>
-
-      <Box style={{ marginTop: 'auto' }}>
-        <Button
-          fullWidth
-          size="md"
-          onClick={handleClick}
-          style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            border: 'none',
-          }}
-        >
-          {ctaText}
-        </Button>
       </Box>
     </Card>
   );

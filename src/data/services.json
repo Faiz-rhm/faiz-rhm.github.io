@@ -2,59 +2,59 @@
   "services": [
     {
       "id": "1",
-      "name": "Custom Flutter Development",
-      "slug": "flutter-development",
-      "icon": "mobile-code",
-      "description": "End-to-end mobile app development for iOS and Android. From MVP to enterprise-scale applications with scalable architecture.",
+      "name": "For Startups (MVP)",
+      "slug": "mvp-development",
+      "icon": "rocket",
+      "description": "Get a MVP version to test your business idea",
       "keyPoints": [
-        "Cross-platform development",
-        "Native performance",
-        "Fast delivery timelines"
+        "Fast time-to-market",
+        "Cost-effective solutions",
+        "Iterative development"
       ],
-      "ctaText": "Discuss Your Project",
+      "ctaText": "Discuss Your MVP",
       "ctaAction": "modal"
     },
     {
       "id": "2",
-      "name": "UI/UX Design",
-      "slug": "ui-ux-design",
-      "icon": "design-palette",
-      "description": "Beautiful, intuitive interfaces that users love. Design systems, prototypes, and user testing for optimal experiences.",
+      "name": "Mobile App Development",
+      "slug": "mobile-development",
+      "icon": "mobile-code",
+      "description": "Go mobile and make most out of what mobile apps can offer",
       "keyPoints": [
-        "User research",
-        "Interactive prototyping",
-        "Design systems"
+        "iOS & Android apps",
+        "Native performance",
+        "Cross-platform solutions"
       ],
-      "ctaText": "View Design Work",
-      "ctaAction": "projects"
+      "ctaText": "Start Your App",
+      "ctaAction": "modal"
     },
     {
       "id": "3",
-      "name": "Technical Consulting",
-      "slug": "technical-consulting",
-      "icon": "consultant",
-      "description": "Expert guidance on architecture, performance, and best practices. Code reviews, technical audits, and team mentoring.",
+      "name": "Web App Development",
+      "slug": "web-development",
+      "icon": "code",
+      "description": "Get your business online and thriving with a custom web app built for success",
       "keyPoints": [
-        "Architecture review",
-        "Performance optimization",
-        "Team training"
+        "Responsive design",
+        "Scalable architecture",
+        "Modern technologies"
       ],
-      "ctaText": "Book Consultation",
+      "ctaText": "Build Your Web App",
       "ctaAction": "modal"
     },
     {
       "id": "4",
-      "name": "Premium UI Kits",
-      "slug": "premium-ui-kits",
-      "icon": "components",
-      "description": "Production-ready Flutter templates that save months of development. 40-50 screens per kit, clean code, documentation included.",
+      "name": "UI/UX Design",
+      "slug": "ui-ux-design",
+      "icon": "design-palette",
+      "description": "Unique designs for your product, guaranteed to be user-centric and a visual treat!",
       "keyPoints": [
-        "Time-saving templates",
-        "Production-ready code",
-        "Regular updates"
+        "User research",
+        "Interactive prototypes",
+        "Design systems"
       ],
-      "ctaText": "Browse UI Kits",
-      "ctaAction": "market"
+      "ctaText": "View Design Work",
+      "ctaAction": "projects"
     }
   ]
 }

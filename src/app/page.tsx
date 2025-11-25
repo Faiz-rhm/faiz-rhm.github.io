@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import ProductCarousel from "../components/others/ProductCarousel";
 import CenteredSection from "../components/others/CenterSection";
 import CustomDivider from "../components/others/CustomDivider";
@@ -10,12 +10,10 @@ import HeroSection from "../components/others/HeroSection";
 import ProjectCard from "../components/others/ProjectCard";
 import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
-import CalendarModal from "@/components/calendar/CalendarModal";
 import ProjectData from "@/data/project.json";
 import Market from "@/data/market.json";
-import { Space, Button, Box, Container } from '@mantine/core';
+import { Space } from '@mantine/core';
 import React from "react";
-import { trackScheduleConsultation, trackCTAClick } from "@/lib/analytics";
 import { ReviewsSkeleton } from "@/components/skeletons/ReviewsSkeleton";
 import { CarouselSkeleton } from "@/components/skeletons/CarouselSkeleton";
 import { ProjectsSkeleton } from "@/components/skeletons/ProjectsSkeleton";
@@ -34,7 +32,6 @@ const sections = [
 ];
 
 export default function Home() {
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -81,38 +78,6 @@ export default function Home() {
         imageSrc="/images/fr.png"
         altText="Faiz Rhm - Professional Flutter Developer"
       />
-
-      <Container size="md" style={{ textAlign: 'center', marginTop: '40px' }}>
-        <Box style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Button
-            size="lg"
-            onClick={() => {
-              setIsCalendarOpen(true);
-              trackScheduleConsultation('hero');
-              trackCTAClick('Schedule Consultation', 'hero');
-            }}
-            style={{
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              border: 'none',
-            }}
-          >
-            Schedule Consultation
-          </Button>
-          <Button
-            size="lg"
-            component="a"
-            href="/services"
-            variant="outline"
-            onClick={() => trackCTAClick('View Services', 'hero')}
-            style={{
-              borderColor: '#667eea',
-              color: '#667eea',
-            }}
-          >
-            View Services
-          </Button>
-        </Box>
-      </Container>
 
       <Space h={80} />
 
@@ -190,11 +155,6 @@ export default function Home() {
       <Footer/>
 
       <Space h={50} />
-
-      <CalendarModal
-        isOpen={isCalendarOpen}
-        onClose={() => setIsCalendarOpen(false)}
-      />
     </>
   );
 }
