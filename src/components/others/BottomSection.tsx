@@ -74,7 +74,7 @@ const BottomSection = () => {
               fontWeight: '600',
             }}
           >
-            LET&apos;s TALK
+            LET&apos;S TALK
           </Button>
 
           <Button

@@ -114,7 +114,7 @@ export function HeaderMenu() {
                 onClick={() => {
                   window?.open(process.env.NEXT_PUBLIC_CAL_URL || 'https://cal.com/faizal-rahman-mohammadi-8hg4s1/30min', '_blank');
                   trackScheduleConsultation('header');
-                  trackCTAClick('LET\'s TALK', 'header');
+                  trackCTAClick('LET\'S TALK', 'header');
                 }}
                 style={{
                   background: '#FFFFFF',
@@ -126,7 +126,7 @@ export function HeaderMenu() {
                   fontWeight: '600',
                 }}
               >
-                LET&apos;s TALK
+                LET&apos;S TALK
               </Button>
 
               <Button
@@ -241,7 +241,7 @@ export function HeaderMenu() {
                 window?.open(process.env.NEXT_PUBLIC_CAL_URL || 'https://cal.com/faizal-rahman-mohammadi-8hg4s1/30min', '_blank');
                 closeDrawer();
                 trackScheduleConsultation('header_mobile');
-                trackCTAClick('LET\'s TALK', 'header_mobile');
+                trackCTAClick('LET\'S TALK', 'header_mobile');
               }}
               style={{
                 background: '#FFFFFF',
@@ -253,7 +253,7 @@ export function HeaderMenu() {
                 fontWeight: '600',
               }}
             >
-              LET&apos;s TALK
+              LET&apos;S TALK
             </Button>
 
             <Button
