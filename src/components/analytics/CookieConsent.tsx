@@ -16,20 +16,28 @@ export default function CookieConsent() {
         alignItems: 'center',
       }}
       buttonStyle={{
-        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        color: 'white',
-        fontSize: '14px',
-        padding: '10px 30px',
-        borderRadius: '8px',
+        background: '#FFFFFF',
+        color: '#000000',
+        fontFamily: 'Manrope',
+        fontSize: '16px',
+        fontWeight: '600',
+        height: '45px',
+        padding: '0 30px',
+        borderRadius: '12px',
         border: 'none',
+        cursor: 'pointer',
       }}
       declineButtonStyle={{
-        background: 'transparent',
-        border: '1px solid #667eea',
-        color: '#667eea',
-        fontSize: '14px',
-        padding: '10px 30px',
-        borderRadius: '8px',
+        background: '#171717',
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        color: '#FFFFFF',
+        fontFamily: 'Manrope',
+        fontSize: '16px',
+        fontWeight: '600',
+        height: '45px',
+        padding: '0 30px',
+        borderRadius: '12px',
+        cursor: 'pointer',
       }}
     >
       This website uses cookies to enhance the user experience and analyze site traffic.
