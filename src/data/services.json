@@ -1,0 +1,60 @@
+{
+  "services": [
+    {
+      "id": "1",
+      "name": "Custom Flutter Development",
+      "slug": "flutter-development",
+      "icon": "mobile-code",
+      "description": "End-to-end mobile app development for iOS and Android. From MVP to enterprise-scale applications with scalable architecture.",
+      "keyPoints": [
+        "Cross-platform development",
+        "Native performance",
+        "Fast delivery timelines"
+      ],
+      "ctaText": "Discuss Your Project",
+      "ctaAction": "modal"
+    },
+    {
+      "id": "2",
+      "name": "UI/UX Design",
+      "slug": "ui-ux-design",
+      "icon": "design-palette",
+      "description": "Beautiful, intuitive interfaces that users love. Design systems, prototypes, and user testing for optimal experiences.",
+      "keyPoints": [
+        "User research",
+        "Interactive prototyping",
+        "Design systems"
+      ],
+      "ctaText": "View Design Work",
+      "ctaAction": "projects"
+    },
+    {
+      "id": "3",
+      "name": "Technical Consulting",
+      "slug": "technical-consulting",
+      "icon": "consultant",
+      "description": "Expert guidance on architecture, performance, and best practices. Code reviews, technical audits, and team mentoring.",
+      "keyPoints": [
+        "Architecture review",
+        "Performance optimization",
+        "Team training"
+      ],
+      "ctaText": "Book Consultation",
+      "ctaAction": "modal"
+    },
+    {
+      "id": "4",
+      "name": "Premium UI Kits",
+      "slug": "premium-ui-kits",
+      "icon": "components",
+      "description": "Production-ready Flutter templates that save months of development. 40-50 screens per kit, clean code, documentation included.",
+      "keyPoints": [
+        "Time-saving templates",
+        "Production-ready code",
+        "Regular updates"
+      ],
+      "ctaText": "Browse UI Kits",
+      "ctaAction": "market"
+    }
+  ]
+}
