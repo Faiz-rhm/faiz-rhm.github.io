@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "Flutter Development Services | Enterprise Mobile App Development - Faiz Rhm",
   description: "Professional Flutter developer delivering scalable cross-platform mobile applications. Specializing in iOS/Android app development for enterprise clients worldwide. View portfolio & case studies.",
   keywords: "Flutter developer, mobile app development, cross-platform development, Flutter development services, iOS development, Android development, enterprise mobile apps",
+  icons: {
+    icon: '/images/icon.png',
+    apple: '/images/icon.png',
+    shortcut: '/images/icon.png',
+  },
 };
 
 export default function RootLayout({
