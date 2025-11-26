@@ -69,7 +69,6 @@ export function HeaderMenu() {
             <Group h="100%" gap="28px" visibleFrom="sm">
             {[
             { href: '/', label: 'ABOUT ME' },
-            { href: '/services', label: 'SERVICES' },
             { href: '/market', label: 'MARKET' },
             { href: '/projects', label: 'PROJECTS' },
           ].map(({ href, label }) => (
@@ -194,7 +193,6 @@ export function HeaderMenu() {
           >
             {[
               { href: '/', label: 'ABOUT ME' },
-              { href: '/services', label: 'SERVICES' },
               { href: '/market', label: 'MARKET' },
               { href: '/projects', label: 'PROJECTS' },
             ].map(({ href, label }) => (

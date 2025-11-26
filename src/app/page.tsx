@@ -12,11 +12,13 @@ import { Footer } from "../components/footer/Footer";
 import Reviews from "../components/others/Review";
 import ProjectData from "@/data/project.json";
 import Market from "@/data/market.json";
-import { Space } from '@mantine/core';
+import ServicesData from "@/data/services.json";
+import { Space, Container, SimpleGrid, Title, Text } from '@mantine/core';
 import React from "react";
 import { ReviewsSkeleton } from "@/components/skeletons/ReviewsSkeleton";
 import { CarouselSkeleton } from "@/components/skeletons/CarouselSkeleton";
 import { ProjectsSkeleton } from "@/components/skeletons/ProjectsSkeleton";
+import ServiceCard from "@/components/services/ServiceCard";
 
 const buttons = [
   { label: "YOUTUBE", href: "https://www.youtube.com/@FaizRhm" },
@@ -143,6 +145,49 @@ export default function Home() {
       <Suspense fallback={<CarouselSkeleton />}>
         <ProductCarousel products={Market.market} />
       </Suspense>
+
+      <Space h={70} />
+
+      {/* Services Section */}
+      <Container size="xl" style={{ textAlign: 'center', padding: '60px 20px' }}>
+        <Title
+          order={2}
+          style={{
+            fontSize: '48px',
+            fontWeight: '600',
+            fontFamily: 'Manrope',
+            background: 'linear-gradient(#F5F5F5, #8F8F8F)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            marginBottom: '20px',
+          }}
+        >
+          What We Do Best
+        </Title>
+        <Text
+          size="xl"
+          style={{
+            color: '#E0E0E0',
+            maxWidth: '700px',
+            margin: '0 auto 60px',
+            lineHeight: 1.6,
+          }}
+        >
+          From concept to launch, we build digital products that drive results
+        </Text>
+
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }} spacing="lg">
+          {ServicesData.services.map(service => (
+            <ServiceCard
+              key={service.id}
+              name={service.name}
+              description={service.description}
+              keyPoints={service.keyPoints}
+              icon={service.icon}
+            />
+          ))}
+        </SimpleGrid>
+      </Container>
 
       <Space h={70} />
 
