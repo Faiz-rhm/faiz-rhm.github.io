@@ -8,121 +8,153 @@ import HeroSection from "../../components/others/HeroSection";
 import HeaderLabel from "../../components/others/HeaderLabel";
 import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 
-export default function HotelPage() {
+export default function TaxiBookingPage() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    name: "Taxi Booking App",
-    description: "A premium Flutter template for Taxi booking - passenger App, reusable components, and seamless integration.",
+    "@type": "SoftwareApplication",
+    name: "Taxi Booking Passenger - Premium Flutter UI Kit",
+    description: "Complete Flutter UI kit for taxi and ride-sharing applications with 50+ screens for iOS and Android. Build Uber-like apps with real-time tracking, fare calculation, driver matching, and payment integration. Production-ready Flutter components that reduce development time by 70%. Premium taxi booking template for modern ride-hailing apps.",
+    applicationCategory: "DeveloperApplication",
     operatingSystem: "Android, iOS",
-    applicationCategory: "TravelApplication",
     offers: {
       "@type": "Offer",
-      price: "49.99",
+      price: "149",
       priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
       url: "https://faizrhm1.gumroad.com/l/mhsymb"
     },
-    image: "https://yourdomain.com/images/hotel/hotel_1.png"
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "1"
+    },
+    creator: {
+      "@type": "Person",
+      name: "Faiz Rhm",
+      url: "https://faizrhm.dev"
+    },
+    image: "https://faizrhm.dev/images/taxi/taxi_1.png",
+    featureList: "50+ screens, Real-time tracking, Fare calculation, Driver matching, Payment integration, Ride history, User profiles, Maps integration, Push notifications, Light & Dark mode, iOS & Android support, Clean reusable code"
   };
 
   return (
     <>
       <Head>
-        <title>Hotel Booking App – Premium Flutter UI Kit</title>
+        <title>Taxi Booking Flutter UI Kit | 50+ Screens | Real-Time Tracking | iOS & Android | $149</title>
         <meta
           name="description"
-          content="Explore our taxi booking Flutter app template – beautifully designed, highly customizable, and ready to integrate."
+          content="Complete Flutter taxi booking UI kit with 50+ screens for iOS & Android. Build Uber-like ride-sharing apps with real-time tracking, fare calculation, driver matching, and payment integration. Production-ready Flutter components reduce development time by 70%. Premium template at $149."
         />
-        <meta property="og:title" content="Taxi Booking App – Premium Flutter UI Kit" />
+        <meta name="keywords" content="Flutter taxi app, ride sharing UI kit, Flutter Uber clone, taxi booking template, Flutter UI components, iOS Android taxi app, Flutter ride hailing, real-time tracking UI, Flutter driver app, taxi passenger app template" />
+        <meta property="og:title" content="Taxi Booking Flutter UI Kit | 50+ Screens | Real-Time Tracking | iOS & Android" />
         <meta
           property="og:description"
-          content="40+ minimal screens, built for modern mobile booking experiences. Get the source today."
+          content="Build Uber-like ride-sharing apps faster with 50+ premium Flutter screens. Includes real-time tracking, fare calculation, driver matching, and payment integration for iOS & Android."
         />
-        <meta property="og:image" content="https://yourdomain.com/images/hotel/hotel_1.png" />
-        <meta property="og:url" content="https://yourdomain.com/hotel" />
+        <meta property="og:image" content="https://faizrhm.dev/images/taxi/taxi_1.png" />
+        <meta property="og:url" content="https://faizrhm.dev/taxi-booking-ui-kit" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://yourdomain.com/hotel" />
+        <link rel="canonical" href="https://faizrhm.dev/taxi-booking-ui-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
 
       <Space h={50} />
 
       <HeroSection
-        heading="Taxi Booking App"
+        heading="Taxi Booking Passenger App"
         subheading="App Development"
-        altText="Flutter Taxi Booking Template"
+        altText="Taxi Booking UI Kit"
       />
 
       <Space h={50} />
 
       <Container size="xl">
-        <Image src={'/images/taxi/taxi_1.png'} alt={'Hotel Booking App'} />
+        <Image src={'/images/taxi/taxi_1.png'} alt={'Taxi Booking Passenger App UI'} />
       </Container>
 
       <Space h={50} />
 
       <HeaderLabel
-        subheading="Taxi Booking: Premium Flutter template"
-        heading="Welcome, the ultimate taxi booking app with stunning light theme."
-        description="Every detail is optimized for a seamless and stylish experience, making your bookings effortless and enjoyable."
-        altText="Flutter Taxi UI"
+        heading="A premium Flutter template for taxi and ride-sharing apps with a stunning light theme, reusable components, and seamless integration."
+        subheading="Taxi Booking: Premium Flutter Template"
+        altText="Taxi Booking UI"
+        description="This kit includes 50+ beautifully designed screens for real-time tracking, fare calculation, driver matching, ride history, and user profiles—everything you need for a complete ride-hailing experience."
       />
 
       <Space h={50} />
-
       <Container size="xl">
-        <Image src={'/images/taxi/taxi_2.png'} alt={'Taxi Booking App'} />
+        <Image src={'/images/taxi/taxi_2.png'} alt={'Taxi App Real-Time Tracking'} />
       </Container>
 
       <Space h={50} />
-
       <HeaderLabel
-        subheading="Effortless Integrations"
-        heading="Seamless solution for developers and business owners."
-        description="Connect to your backend with ease. Ideal for redesigns or Flutter transitions—supports both light and dark themes."
-        altText="Flutter Taxi Integration"
+        heading="Taxi Booking is designed with both light and dark themes, optimized for a modern and polished user experience."
+        subheading="Light & Dark Theme"
+        altText="Taxi Booking Theme"
+        description=""
       />
 
       <Space h={50} />
-
       <Container size="xl">
-        <Image src={'/images/taxi/taxi_3.png'} alt={'Taxi Booking App'} />
+        <Image src={'/images/taxi/taxi_3.png'} alt={'Taxi Booking Screens'} />
       </Container>
 
       <Space h={50} />
-
       <HeaderLabel
+        heading="This premium Flutter taxi booking UI kit is ideal for developers, managers, and business owners. Simply connect to your backend and launch quickly—perfect for building Uber-like apps or transitioning to Flutter."
+        subheading="Effortless Integration"
+        altText="Taxi Booking Integration"
+        description=""
+      />
+
+      <Space h={50} />
+      <Container size="xl">
+        <Image src={'/images/taxi/taxi_4.png'} alt={'Taxi Booking Features'} />
+      </Container>
+
+      <Space h={50} />
+      <HeaderLabel
+        heading="The Taxi Booking kit features a consistent, user-friendly design system. All design decisions are centralized for easy customization and scalability."
+        subheading="Fully Customizable"
+        altText="Taxi Booking Custom Theme"
+        description=""
+      />
+
+      <Space h={50} />
+      <Container size="xl">
+        <Image src={'/images/taxi/taxi_1.png'} alt={'Taxi Booking Payment Features'} />
+      </Container>
+
+      <Space h={50} />
+      <HeaderLabel
+        heading="Taxi Booking follows Flutter best practices with modular, reusable components that make customization and scaling effortless."
         subheading="Clean & Reusable Code"
-        heading="Built with Flutter’s best practices."
-        description="Small, reusable components. Ideal for scaling and maintaining taxi booking apps efficiently."
-        altText="Flutter Taxi Template Code Quality"
+        altText="Taxi Booking Code Best Practices"
+        description=""
       />
 
       <Space h={50} />
-
       <Container size="xl">
-        <Image src={'/images/taxi/taxi_4.png'} alt={'Taxi Booking App'} />
+        <Image src={'/images/taxi/taxi_2.png'} alt={'Taxi Booking Complete Solution'} />
       </Container>
 
       <Space h={50} />
-
       <HeaderLabel
         subheading="The Result"
-        heading="Accelerate development with 45+ minimal screens."
-        description="A customizable template to help developers focus on UX while leveraging prebuilt premium UI."
-        altText="Taxi Booking Flutter Result"
+        heading="Accelerate ride-sharing app development"
+        description="50+ premium screens covering real-time tracking, fare calculation, driver matching, and payment integration—everything you need for a complete taxi booking app. Reduce development time by 70%."
+        altText="Taxi Booking Outcome"
       />
 
       <Space h={50} />
-
       <AppPreviewBottomCard
-        title="Get the Taxi Booking App"
-        sourceCodeUrl="https://faizrhm1.gumroad.com/l/mhsymb"
-        previewUrl="https://faiz-rhm.github.io/taxi_passenger_complete/"
+        title="Get the Taxi Booking UI Kit Now"
+        sourceCodeUrl={'https://faizrhm1.gumroad.com/l/mhsymb'}
+        previewUrl={'https://faiz-rhm.github.io/taxi_passenger_complete/'}
       />
 
-      <Space h={20} />
       <CustomDivider />
+      <Space h={20} />
       <Footer />
       <Space h={50} />
     </>

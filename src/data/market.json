@@ -2,7 +2,7 @@
   "market": [
     {
       "id": "1",
-      "name": "FlutterShop: Premium Flutter E-Commerce Template",
+      "name": "E-Commerce UI Kit",
       "slug": "flutter-sale-ecommerce-ui-kit",
       "description": "FlutterShop is a premium E-Commerce UI Kit designed to help you build modern, high-performance shopping apps using Flutter—fully compatible with both Android & iOS. With over 70+ beautifully crafted minimal screens, FlutterShop includes everything you need to create a complete shopping experience. Features include Light & Dark Mode, effortless backend integration, fully customizable design system, and clean reusable code following Flutter best practices. Perfect for new app development, redesign projects, or migrating apps to Flutter. Launch your next shopping app faster with better UI and less effort.",
       "repository": "/flutter-sale-ecommerce-ui-kit",

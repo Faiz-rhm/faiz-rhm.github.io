@@ -1,125 +1,160 @@
 'use client';
 
 import Head from 'next/head';
+import { Footer } from "@/components/footer/Footer";
 import { Space, Container, Image } from '@mantine/core';
-import { Footer } from '@/components/footer/Footer';
-import CustomDivider from '@/components/others/CustomDivider';
-import HeroSection from '@/components/others/HeroSection';
-import HeaderLabel from '@/components/others/HeaderLabel';
-import AppPreviewBottomCard from '@/components/others/AppPreviewBottomCard';
+import CustomDivider from "../../components/others/CustomDivider";
+import HeroSection from "../../components/others/HeroSection";
+import HeaderLabel from "../../components/others/HeaderLabel";
+import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 
-export default function HotelPage() {
+export default function SportUpPage() {
   const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: 'Sportup App – Fitness UI Kit',
-    description:
-      'Sportup is a customizable Flutter UI Kit with 35+ screens, ideal for fitness, hotel, and booking applications. Light & dark themes supported.',
-    brand: 'Sportup',
-    image: 'https://faiz-rhm.github.io/sportup_complete/cover.jpg',
-    url: 'https://faiz-rhm.github.io/sportup_complete/',
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "SportUp & Fitness - Premium Flutter UI Kit",
+    description: "Modern Flutter UI kit designed for sports and fitness applications with 45+ screens for iOS and Android. Build engaging workout tracking, sports news, and fitness community apps. Includes activity tracking, social features, statistics dashboards, and light/dark themes. Production-ready Flutter templates for the sports industry.",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Android, iOS",
     offers: {
-      '@type': 'Offer',
-      price: '39.00',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: 'https://faizrhm1.gumroad.com/l/vbnbv',
+      "@type": "Offer",
+      price: "99",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: "https://faizrhm1.gumroad.com/l/vbnbv"
     },
-    author: {
-      '@type': 'Person',
-      name: 'Faiz Rahman',
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "1"
     },
+    creator: {
+      "@type": "Person",
+      name: "Faiz Rhm",
+      url: "https://faizrhm.dev"
+    },
+    image: "https://faizrhm.dev/images/sports/sportup_1.jpg",
+    featureList: "45+ screens, Light & Dark mode, Activity tracking, Social features, Statistics dashboards, Workout tracking, Sports news, Fitness community, iOS & Android support, Clean reusable code"
   };
 
   return (
     <>
       <Head>
-        <title>Sportup App – Flutter Fitness UI Kit</title>
+        <title>SportUp & Fitness Flutter UI Kit | 45+ Screens | iOS & Android | $99</title>
         <meta
           name="description"
-          content="Sportup is a premium Flutter UI kit featuring 35+ beautiful screens. Designed for fitness, hotel, and booking apps with light & dark modes."
+          content="Modern Flutter UI kit for sports and fitness apps with 45+ screens for iOS & Android. Build workout tracking, sports news, and fitness community apps faster. Includes activity tracking, social features, and statistics dashboards. Production-ready Flutter template at $99."
         />
-        <meta property="og:title" content="Sportup App – Flutter Fitness UI Kit" />
+        <meta name="keywords" content="Flutter fitness app, sports UI kit, Flutter workout tracker, fitness app template, Flutter UI components, iOS Android fitness app, Flutter sports, activity tracking UI, Flutter health app, fitness community template" />
+        <meta property="og:title" content="SportUp & Fitness Flutter UI Kit | 45+ Screens | iOS & Android" />
         <meta
           property="og:description"
-          content="35+ polished Flutter screens crafted for fitness and business apps. Ready to plug into your backend."
+          content="Build sports and fitness apps faster with 45+ premium Flutter screens. Includes activity tracking, social features, and statistics dashboards for iOS & Android."
         />
-        <meta property="og:image" content="https://faiz-rhm.github.io/sportup_complete/cover.jpg" />
-        <meta property="og:url" content="https://faiz-rhm.github.io/sportup_complete/" />
+        <meta property="og:image" content="https://faizrhm.dev/images/sports/sportup_1.jpg" />
+        <meta property="og:url" content="https://faizrhm.dev/sport-up-ui-kit" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://faiz-rhm.github.io/sportup_complete/" />
+        <link rel="canonical" href="https://faizrhm.dev/sport-up-ui-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
 
       <Space h={50} />
 
       <HeroSection
-        heading="Sportup App - Fitness UI Kit"
+        heading="SportUp & Fitness App"
         subheading="App Development"
-        altText="Flutter Sportup"
+        altText="SportUp Fitness UI Kit"
+      />
+
+      <Space h={50} />
+
+      <Container size="xl">
+        <Image src={'/images/sports/sportup_1.jpg'} alt={'SportUp Fitness App UI'} />
+      </Container>
+
+      <Space h={50} />
+
+      <HeaderLabel
+        heading="A premium Flutter template for sports and fitness apps with a stunning light and dark theme, reusable components, and seamless integration."
+        subheading="SportUp: Premium Flutter Template"
+        altText="SportUp Fitness UI"
+        description="This kit includes 45+ beautifully designed screens for activity tracking, sports news, fitness communities, and user profiles—everything you need for a complete sports and fitness experience."
       />
 
       <Space h={50} />
       <Container size="xl">
-        <Image src={'/images/sports/sportup_1.jpg'} alt={'Sportup'} />
+        <Image src={'/images/sports/sportup_2.jpg'} alt={'SportUp App Light Theme'} />
       </Container>
 
       <Space h={50} />
       <HeaderLabel
-        subheading="Sportup: Premium Flutter template"
-        heading="Welcome, the ultimate Sportup with stunning light and dark theme."
-        description="Every detail is optimized for a seamless and stylish experience, making your Sportup effortless and enjoyable."
-        altText="Flutter Sportup"
+        heading="SportUp is designed with both light and dark themes, optimized for a modern and polished user experience."
+        subheading="Light & Dark Theme"
+        altText="SportUp Fitness Theme"
+        description=""
       />
 
       <Space h={50} />
       <Container size="xl">
-        <Image src={'/images/sports/sportup_2.jpg'} alt={'Sportup'} />
+        <Image src={'/images/sports/sportup_3.jpg'} alt={'SportUp Activity Screens'} />
       </Container>
 
       <Space h={50} />
       <HeaderLabel
-        subheading="Effortless Integrations"
-        heading="Our premium Sportup is designed for developers, managers, and business owners seeking a seamless solution. With our app, there’s no need to worry about frontend development—everything is ready for you. Simply connect it to your backend, and you’re good to go!"
-        description="It’s also perfect for those looking to redesign their existing app or transition to Flutter with a modern, premium design. Every screen is thoughtfully crafted to support both light and dark themes, ensuring a consistent and visually stunning experience for all users."
-        altText="Flutter Sportup"
+        heading="This premium Flutter sports UI kit is ideal for developers, managers, and business owners. Simply connect to your backend and launch quickly—perfect for redesigns or Flutter transitions."
+        subheading="Effortless Integration"
+        altText="SportUp Integration"
+        description=""
       />
 
       <Space h={50} />
       <Container size="xl">
-        <Image src={'/images/sports/sportup_3.jpg'} alt={'Sportup'} />
+        <Image src={'/images/sports/sportup_4.jpg'} alt={'SportUp Features UI'} />
       </Container>
 
       <Space h={50} />
       <HeaderLabel
-        subheading="Clean & reusable code"
-        heading="We adhere to the best practices recommended by the Flutter team. Our code is built with small, reusable components, making it effortless to customize and create screens with the features you need."
-        description="This approach ensures flexibility, maintainability, and scalability for all your hotel booking projects."
-        altText="Flutter Sportup"
+        heading="The SportUp kit features a consistent, user-friendly design system. All design decisions are centralized for easy customization and scalability."
+        subheading="Fully Customizable"
+        altText="SportUp Custom Theme"
+        description=""
       />
 
       <Space h={50} />
       <Container size="xl">
-        <Image src={'/images/sports/sportup_4.jpg'} alt={'Sportup'} />
+        <Image src={'/images/sports/sportup_1.jpg'} alt={'SportUp Statistics Features'} />
       </Container>
 
       <Space h={50} />
       <HeaderLabel
-        subheading="The result"
-        heading="Sportup solution designed to accelerate app development with a fully functional, customizable Flutter template. It streamlines the development process, allowing developers to focus on creating exceptional user experiences and driving business growth."
-        description="35+ nicely crafted minimal screens that cover everything you need for your hotel app."
-        altText="Flutter Sportup"
+        heading="SportUp follows Flutter best practices with modular, reusable components that make customization and scaling effortless."
+        subheading="Clean & Reusable Code"
+        altText="SportUp Code Best Practices"
+        description=""
+      />
+
+      <Space h={50} />
+      <Container size="xl">
+        <Image src={'/images/sports/sportup_2.jpg'} alt={'SportUp Complete Solution'} />
+      </Container>
+
+      <Space h={50} />
+      <HeaderLabel
+        subheading="The Result"
+        heading="Accelerate sports and fitness app development"
+        description="45+ premium screens covering activity tracking, sports news, and fitness communities—everything you need for a complete sports app."
+        altText="SportUp Outcome"
       />
 
       <Space h={50} />
       <AppPreviewBottomCard
-        title="Get the Sportup App"
+        title="Get the SportUp & Fitness UI Kit Now"
         sourceCodeUrl={'https://faizrhm1.gumroad.com/l/vbnbv'}
         previewUrl={'https://faiz-rhm.github.io/sportup_complete/'}
       />
 
-      <Space h={20} />
       <CustomDivider />
+      <Space h={20} />
       <Footer />
       <Space h={50} />
     </>
