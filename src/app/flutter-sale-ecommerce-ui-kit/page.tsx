@@ -11,32 +11,45 @@ import AppPreviewBottomCard from "../../components/others/AppPreviewBottomCard";
 export default function ShopPage() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    name: "FlutterShop – E-commerce App Kit",
-    description: "A powerful Flutter e-commerce UI template with 70+ minimal screens, light/dark themes, and clean reusable code.",
+    "@type": "SoftwareApplication",
+    name: "FlutterShop – Premium Flutter E-Commerce UI Kit",
+    description: "Premium Flutter e-commerce UI kit with 70+ production-ready screens for iOS and Android. Build modern shopping apps faster with light/dark themes, customizable design system, clean code, and complete feature coverage for mobile commerce applications.",
+    applicationCategory: "DeveloperApplication",
     operatingSystem: "Android, iOS",
-    applicationCategory: "ShoppingApplication",
     offers: {
       "@type": "Offer",
       price: "99",
       priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
       url: "https://faizrhm1.gumroad.com/l/wgqcy"
     },
-    image: "https://faizrhm.dev/images/shop/shop_1.png"
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      ratingCount: "1"
+    },
+    creator: {
+      "@type": "Person",
+      name: "Faiz Rhm",
+      url: "https://faizrhm.dev"
+    },
+    image: "https://faizrhm.dev/images/shop/shop_1.png",
+    featureList: "70+ screens, Light & Dark mode, Customizable design system, Clean reusable code, iOS & Android support, Shopping cart, Product listings, Checkout flows, User authentication"
   };
 
   return (
     <>
       <Head>
-        <title>FlutterShop – E-commerce UI Kit for Flutter</title>
+        <title>FlutterShop - Premium Flutter E-Commerce UI Kit | 70+ Screens | Android & iOS</title>
         <meta
           name="description"
-          content="A premium Flutter UI kit for building beautiful and functional e-commerce apps. Includes 70+ screens, clean code, and light/dark themes."
+          content="Premium Flutter e-commerce UI kit with 70+ screens for iOS & Android. Build shopping apps faster with light/dark themes, clean code, and customizable design system. Production-ready Flutter templates starting at $99."
         />
-        <meta property="og:title" content="FlutterShop – E-commerce UI Kit for Flutter" />
+        <meta name="keywords" content="Flutter UI kit, e-commerce template, Flutter shopping app, mobile app UI, Flutter components, iOS Android template, Flutter marketplace, shopping cart UI, Flutter ecommerce, mobile commerce template" />
+        <meta property="og:title" content="FlutterShop - Premium Flutter E-Commerce UI Kit | 70+ Screens" />
         <meta
           property="og:description"
-          content="Build your next e-commerce app faster with our customizable FlutterShop UI kit. Optimized for Android and iOS."
+          content="Build your next shopping app faster with FlutterShop - 70+ premium screens, light/dark mode, and production-ready Flutter code for iOS & Android."
         />
         <meta property="og:image" content="https://faizrhm.dev/images/shop/shop_1.png" />
         <meta property="og:url" content="https://faizrhm.dev/flutter-sale-ecommerce-ui-kit" />
