@@ -18,11 +18,11 @@ export default function ShopPage() {
     applicationCategory: "ShoppingApplication",
     offers: {
       "@type": "Offer",
-      price: "49.99",
+      price: "99",
       priceCurrency: "USD",
       url: "https://faizrhm1.gumroad.com/l/wgqcy"
     },
-    image: "https://yourdomain.com/images/shop/shop_1.png"
+    image: "https://faizrhm.dev/images/shop/shop_1.png"
   };
 
   return (
@@ -38,10 +38,10 @@ export default function ShopPage() {
           property="og:description"
           content="Build your next e-commerce app faster with our customizable FlutterShop UI kit. Optimized for Android and iOS."
         />
-        <meta property="og:image" content="https://yourdomain.com/images/shop/shop_1.png" />
-        <meta property="og:url" content="https://yourdomain.com/shop" />
+        <meta property="og:image" content="https://faizrhm.dev/images/shop/shop_1.png" />
+        <meta property="og:url" content="https://faizrhm.dev/flutter-sale-ecommerce-ui-kit" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://yourdomain.com/shop" />
+        <link rel="canonical" href="https://faizrhm.dev/flutter-sale-ecommerce-ui-kit" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
 
