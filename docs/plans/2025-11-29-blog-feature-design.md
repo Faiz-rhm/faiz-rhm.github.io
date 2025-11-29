@@ -15,7 +15,8 @@ Add a blog section to the portfolio website that fetches and displays Medium art
 - **File:** `src/app/blog/page.tsx`
 
 ### Navigation Integration
-- Add "BLOG" link to HeaderMenu after "PROJECTS"
+- Add "BLOG" link to HeaderMenu after "MARKET"
+- Final order: `HOME → PROJECTS → MARKET → BLOG`
 - Update navigation arrays in `src/components/header/HeaderMenu.tsx`:
   - Lines 70-74 (desktop navigation)
   - Lines 194-198 (mobile drawer navigation)
@@ -60,12 +61,19 @@ interface MediumArticle {
 }
 ```
 
+### Caching Strategy
+- Client-side fetching on component mount
+- Store in localStorage with 1-hour expiration timestamp
+- Check cache age on subsequent visits
+- Use cached data if < 1 hour old
+- Show loading state only when fetching fresh data
+
 ### Technical Approach
 - Use `'use client'` directive (consistent with existing pages)
 - Client-side RSS fetching and parsing
 - State management for articles array
 - Loading and error states
-- Optional: localStorage caching to reduce API calls
+- localStorage caching to reduce API calls
 
 ## 3. Blog Card Component Design
 
