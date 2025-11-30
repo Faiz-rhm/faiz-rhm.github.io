@@ -4,6 +4,23 @@ import { MediumArticle, ArticleCache } from '@/types/blog';
 const CACHE_KEY = 'medium_articles_cache';
 const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 
+interface RSSFeedItem {
+  title?: string;
+  contentSnippet?: string;
+  description?: string;
+  link?: string;
+  pubDate?: string;
+  isoDate?: string;
+  categories?: string[];
+  content?: string;
+  'content:encoded'?: string;
+  thumbnail?: {
+    $?: {
+      url?: string;
+    };
+  };
+}
+
 const parser = new Parser({
   customFields: {
     item: [
@@ -22,7 +39,7 @@ function generateSlug(title: string): string {
     .trim();
 }
 
-function extractThumbnail(item: any): string {
+function extractThumbnail(item: RSSFeedItem): string {
   // Try to get thumbnail from media:thumbnail
   if (item.thumbnail?.$ && item.thumbnail.$.url) {
     return item.thumbnail.$.url;
@@ -55,7 +72,7 @@ export async function fetchMediumArticles(): Promise<MediumArticle[]> {
     const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(rssUrl)}`;
     const feed = await parser.parseURL(proxyUrl);
 
-    const articles: MediumArticle[] = feed.items.map((item: any) => ({
+    const articles: MediumArticle[] = feed.items.map((item: RSSFeedItem) => ({
       title: item.title || '',
       description: item.contentSnippet || item.description || '',
       link: item.link || '',

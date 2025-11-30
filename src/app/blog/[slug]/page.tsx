@@ -3,7 +3,7 @@
 import { Footer } from '@/components/footer/Footer';
 import CustomDivider from '@/components/others/CustomDivider';
 import { Text, Container, Space, Button, Badge, Group, Loader, Center, Box } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { MediumArticle } from '@/types/blog';
 import { fetchMediumArticles, getCachedArticles, setCachedArticles, getArticleBySlug, calculateReadingTime } from '@/lib/mediumRss';
@@ -18,11 +18,7 @@ export default function BlogDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    loadArticle();
-  }, [slug]);
-
-  const loadArticle = async () => {
+  const loadArticle = useCallback(async () => {
     setLoading(true);
     setError(null);
 
@@ -50,7 +46,11 @@ export default function BlogDetail() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug]);
+
+  useEffect(() => {
+    loadArticle();
+  }, [loadArticle]);
 
   if (loading) {
     return (
